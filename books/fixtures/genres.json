@@ -1,0 +1,130 @@
+[
+    {
+        "pk": 1,
+        "model": "books.genre",
+        "fields": {
+            "name": "action",
+            "friendly_name": "Action"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "books.genre",
+        "fields": {
+            "name": "adventure",
+            "friendly_name": "Adventure"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "books.genre",
+        "fields": {
+            "name": "comedy",
+            "friendly_name": "Comedy"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "books.genre",
+        "fields": {
+            "name": "crime_and_mystery",
+            "friendly_name": "Crime & Mystery"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "books.genre",
+        "fields": {
+            "name": "fantasy",
+            "friendly_name": "Fantasy"
+        }
+    },
+    {
+        "pk": 6,
+        "model": "books.genre",
+        "fields": {
+            "name": "historical",
+            "friendly_name": "Historical"
+        }
+    },
+    {
+        "pk": 7,
+        "model": "books.genre",
+        "fields": {
+            "name": "horror",
+            "friendly_name": "Horror"
+        }
+    },
+    {
+        "pk": 8,
+        "model": "books.genre",
+        "fields": {
+            "name": "romance",
+            "friendly_name": "Rsatireomance"
+        }
+    },
+    {
+        "pk": 9,
+        "model": "books.genre",
+        "fields": {
+            "name": "satire",
+            "friendly_name": "Satire"
+        }
+    },
+    {
+        "pk": 10,
+        "model": "books.genre",
+        "fields": {
+            "name": "satire",
+            "friendly_name": "Satire"
+        }
+    },
+    {
+        "pk": 11,
+        "model": "books.genre",
+        "fields": {
+            "name": "science_fiction",
+            "friendly_name": "Science Fiction"
+        }
+    },
+    {
+        "pk": 12,
+        "model": "books.genre",
+        "fields": {
+            "name": "cyberpunk",
+            "friendly_name": "Cyberpunk"
+        }
+    },
+    {
+        "pk": 13,
+        "model": "books.genre",
+        "fields": {
+            "name": "speculative",
+            "friendly_name": "Speculative"
+        }
+    },
+    {
+        "pk": 14,
+        "model": "books.genre",
+        "fields": {
+            "name": "thriller",
+            "friendly_name": "Thriller"
+        }
+    },
+    {
+        "pk": 15,
+        "model": "books.genre",
+        "fields": {
+            "name": "isekai",
+            "friendly_name": "Isekai"
+        }
+    },
+    {
+        "pk": 16,
+        "model": "books.genre",
+        "fields": {
+            "name": "non_fiction",
+            "friendly_name": "Non Fiction"
+        }
+    }
+]

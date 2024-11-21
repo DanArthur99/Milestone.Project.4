@@ -1,0 +1,1600 @@
+[
+  {
+    "pk": 1,
+    "model": "books.book",
+    "fields": {
+      "book_code": 11111,
+      "price": 9.99,
+      "author": "Chinua Achebe",
+      "country": "Nigeria",
+      "imageLink": "things-fall-apart.jpg",
+      "language": "English",
+      "pages": 209,
+      "genres": [1, 3],
+      "name": "Things Fall Apart",
+      "year": 1958
+    }
+  },
+  {
+    "pk": 2,
+    "model": "books.book",
+    "fields": {
+      "book_code": 11112,
+      "price": 9.99,
+      "author": "Hans Christian Andersen",
+      "country": "Denmark",
+      "imageLink": "fairy-tales.jpg",
+      "language": "Danish",
+      "pages": 784,
+      "name": "Fairy tales",
+      "year": 1836,
+      "genres": [1]
+    }
+  },
+  {
+    "pk": 3,
+    "model": "books.book",
+    "fields": {
+      "book_code": 11113,
+      "price": 9.99,
+      "author": "Dante Alighieri",
+      "country": "Italy",
+      "imageLink": "the-divine-comedy.jpg",
+      "genres": [1],
+      "language": "Italian",
+      "pages": 928,
+      "name": "The Divine Comedy",
+      "year": 1315
+    }
+  },
+  {
+    "pk": 4,
+    "model": "books.book",
+    "fields": {
+      "book_code": 11114,
+      "price": 9.99,
+      "author": "Unknown",
+      "country": "Sumer and Akkadian Empire",
+      "imageLink": "the-epic-of-gilgamesh.jpg",
+      "language": "Akkadian",
+      "genres": [2],
+      "pages": 160,
+      "name": "The Epic Of Gilgamesh",
+      "year": -1700
+    }
+  },
+  {
+    "pk": 5,
+    "model": "books.book",
+    "fields": {
+      "book_code": 11115,
+      "price": 9.99,
+      "author": "Unknown",
+      "country": "Achaemenid Empire",
+      "imageLink": "the-book-of-job.jpg",
+      "genres": [1],
+      "language": "Hebrew",
+      "pages": 176,
+      "name": "The Book Of Job",
+      "year": -600
+    }
+  },
+  {
+    "pk": 6,
+    "model": "books.book",
+    "fields": {
+      "book_code": 11116,
+      "price": 9.99,
+      "author": "Unknown",
+      "country": "India/Iran/Iraq/Egypt/Tajikistan",
+      "imageLink": "one-thousand-and-one-nights.jpg",
+      "genres": [1],
+      "language": "Arabic",
+      "pages": 288,
+      "name": "One Thousand and One Nights",
+      "year": 1200
+    }
+  },
+  {
+    "pk": 7,
+    "model": "books.book",
+    "fields": {
+      "book_code": 11117,
+      "price": 9.99,
+      "author": "Unknown",
+      "country": "Iceland",
+      "imageLink": "njals-saga.jpg",
+      "genres": [1],
+      "language": "Old Norse",
+      "pages": 384,
+      "name": "Nj\u00e1l's Saga",
+      "year": 1350
+    }
+  },
+  {
+    "pk": 8,
+    "model": "books.book",
+    "fields": {
+      "book_code": 11118,
+      "price": 9.99,
+      "author": "Jane Austen",
+      "country": "United Kingdom",
+      "imageLink": "pride-and-prejudice.jpg",
+      "genres": [1],
+      "language": "English",
+      "pages": 226,
+      "name": "Pride and Prejudice",
+      "year": 1813
+    }
+  },
+  {
+    "pk": 9,
+    "model": "books.book",
+    "fields": {
+      "book_code": 11119,
+      "price": 9.99,
+      "country": "France",
+      "imageLink": "le-pere-goriot.jpg",
+      "genres": [1],
+      "language": "French",
+      "pages": 443,
+      "name": "Le P\u00e8re Goriot",
+      "year": 1835
+    }
+  },
+  {
+    "pk": 10,
+    "model": "books.book",
+    "fields": {
+      "book_code": 11120,
+      "price": 9.99,
+      "genres": [1],
+      "author": "Samuel Beckett",
+      "country": "Republic of Ireland",
+      "imageLink": "molloy-malone-dies-the-unnamable.jpg",
+      "language": "English",
+      "pages": 256,
+      "name": "Molloy, Malone Dies, The Unnamable, the trilogy",
+      "year": 1952
+    }
+  },
+  {
+    "pk": 11,
+    "model": "books.book",
+    "fields": {
+      "book_code": 11121,
+      "price": 9.99,
+      "genres": [1],
+      "author": "Giovanni Boccaccio",
+      "country": "Italy",
+      "imageLink": "the-decameron.jpg",
+      "language": "Italian",
+      "pages": 1024,
+      "name": "The Decameron",
+      "year": 1351
+    }
+  },
+  {
+    "pk": 12,
+    "model": "books.book",
+    "fields": {
+      "book_code": 11122,
+      "price": 9.99,
+      "genres": [1],
+      "author": "Jorge Luis Borges",
+      "country": "Argentina",
+      "imageLink": "ficciones.jpg",
+      "language": "Spanish",
+      "pages": 224,
+      "name": "Ficciones",
+      "year": 1965
+    }
+  },
+  {
+    "pk": 13,
+    "model": "books.book",
+    "fields": {
+      "book_code": 11123,
+      "price": 9.99,
+      "genres": [1],
+      "author": "Emily Bront\u00eb",
+      "country": "United Kingdom",
+      "imageLink": "wuthering-heights.jpg",
+      "language": "English",
+      "pages": 342,
+      "name": "Wuthering Heights",
+      "year": 1847
+    }
+  },
+  {
+    "pk": 14,
+    "model": "books.book",
+    "fields": {
+      "book_code": 11124,
+      "price": 9.99,
+      "genres": [1],
+      "author": "Albert Camus",
+      "country": "Algeria, French Empire",
+      "imageLink": "l-etranger.jpg",
+      "language": "French",
+      "pages": 185,
+      "name": "The Stranger",
+      "year": 1942
+    }
+  },
+  {
+    "pk": 15,
+    "model": "books.book",
+    "fields": {
+      "book_code": 11125,
+      "price": 9.99,
+      "genres": [1],
+      "author": "Paul Celan",
+      "country": "Romania, France",
+      "imageLink": "poems-paul-celan.jpg",
+      "language": "German",
+      "pages": 320,
+      "name": "Poems",
+      "year": 1952
+    }
+  },
+  {
+    "pk": 16,
+    "model": "books.book",
+    "fields": {
+      "book_code": 11126,
+      "price": 9.99,
+      "genres": [1],
+      "author": "Louis-Ferdinand C\u00e9line",
+      "country": "France",
+      "imageLink": "voyage-au-bout-de-la-nuit.jpg",
+      "language": "French",
+      "pages": 505,
+      "name": "Journey to the End of the Night",
+      "year": 1932
+    }
+  },
+  {
+    "pk": 17,
+    "model": "books.book",
+    "fields": {
+      "book_code": 11127,
+      "price": 9.99,
+      "genres": [1],
+      "author": "Miguel de Cervantes",
+      "country": "Spain",
+      "imageLink": "don-quijote-de-la-mancha.jpg",
+      "pages": 1056,
+      "name": "Don Quijote De La Mancha",
+      "year": 1610
+    }
+  },
+  {
+    "pk": 18,
+    "model": "books.book",
+    "fields": {
+      "book_code": 11128,
+      "price": 9.99,
+      "genres": [1],
+      "author": "Geoffrey Chaucer",
+      "country": "England",
+      "imageLink": "the-canterbury-tales.jpg",
+      "language": "English",
+      "pages": 544,
+      "name": "The Canterbury Tales",
+      "year": 1450
+    }
+  },
+  {
+    "pk": 19,
+    "model": "books.book",
+    "fields": {
+      "book_code": 11129,
+      "price": 9.99,
+      "genres": [1],
+      "author": "Anton Chekhov",
+      "country": "Russia",
+      "imageLink": "stories-of-anton-chekhov.jpg",
+      "language": "Russian",
+      "pages": 194,
+      "name": "Stories",
+      "year": 1886
+    }
+  },
+  {
+    "pk": 20,
+    "model": "books.book",
+    "fields": {
+      "book_code": 11130,
+      "price": 9.99,
+      "genres": [1],
+      "author": "Joseph Conrad",
+      "country": "United Kingdom",
+      "imageLink": "nostromo.jpg",
+      "language": "English",
+      "pages": 320,
+      "name": "Nostromo",
+      "year": 1904
+    }
+  },
+  {
+    "pk": 21,
+    "model": "books.book",
+    "fields": {
+      "book_code": 11131,
+      "price": 9.99,
+      "genres": [1],
+      "author": "Charles Dickens",
+      "country": "United Kingdom",
+      "imageLink": "great-expectations.jpg",
+      "language": "English",
+      "pages": 194,
+      "name": "Great Expectations",
+      "year": 1861
+    }
+  },
+  {
+    "pk": 22,
+    "model": "books.book",
+    "fields": {
+      "book_code": 11132,
+      "price": 9.99,
+      "genres": [1],
+      "author": "Denis Diderot",
+      "country": "France",
+      "imageLink": "jacques-the-fatalist.jpg",
+      "language": "French",
+      "pages": 596,
+      "name": "Jacques the Fatalist",
+      "year": 1796
+    }
+  },
+  {
+    "pk": 23,
+    "model": "books.book",
+    "fields": {
+      "book_code": 11133,
+      "price": 9.99,
+      "genres": [1],
+      "author": "Alfred D\u00f6blin",
+      "country": "Germany",
+      "imageLink": "berlin-alexanderplatz.jpg",
+      "language": "German",
+      "pages": 600,
+      "name": "Berlin Alexanderplatz",
+      "year": 1929
+    }
+  },
+  {
+    "pk": 24,
+    "model": "books.book",
+    "fields": {
+      "book_code": 11134,
+      "price": 9.99,
+      "genres": [1],
+      "author": "Fyodor Dostoevsky",
+      "country": "Russia",
+      "imageLink": "crime-and-punishment.jpg",
+      "language": "Russian",
+      "pages": 551,
+      "name": "Crime and Punishment",
+      "year": 1866
+    }
+  },
+  {
+    "pk": 25,
+    "model": "books.book",
+    "fields": {
+      "book_code": 11135,
+      "price": 9.99,
+      "genres": [1],
+      "author": "Fyodor Dostoevsky",
+      "country": "Russia",
+      "imageLink": "the-idiot.jpg",
+      "language": "Russian",
+      "pages": 656,
+      "name": "The Idiot",
+      "year": 1869
+    }
+  },
+  {
+    "pk": 26,
+    "model": "books.book",
+    "fields": {
+      "book_code": 11136,
+      "price": 9.99,
+      "genres": [1],
+      "author": "Fyodor Dostoevsky",
+      "country": "Russia",
+      "imageLink": "the-possessed.jpg",
+      "language": "Russian",
+      "pages": 768,
+      "name": "The Possessed",
+      "year": 1872
+    }
+  },
+  {
+    "pk": 27,
+    "model": "books.book",
+    "fields": {
+      "book_code": 11137,
+      "price": 9.99,
+      "genres": [1],
+      "author": "Fyodor Dostoevsky",
+      "country": "Russia",
+      "imageLink": "the-brothers-karamazov.jpg",
+      "language": "Russian",
+      "pages": 824,
+      "name": "The Brothers Karamazov",
+      "year": 1880
+    }
+  },
+  {
+    "pk": 28,
+    "model": "books.book",
+    "fields": {
+      "book_code": 11138,
+      "price": 9.99,
+      "genres": [1],
+      "author": "George Eliot",
+      "country": "United Kingdom",
+      "imageLink": "middlemarch.jpg",
+      "language": "English",
+      "pages": 800,
+      "name": "Middlemarch",
+      "year": 1871
+    }
+  },
+  {
+    "pk": 29,
+    "model": "books.book",
+    "fields": {
+      "book_code": 11139,
+      "price": 9.99,
+      "genres": [1],
+      "author": "Ralph Ellison",
+      "country": "United States",
+      "imageLink": "invisible-man.jpg",
+      "language": "English",
+      "pages": 581,
+      "name": "Invisible Man",
+      "year": 1952
+    }
+  },
+  {
+    "pk": 30,
+    "model": "books.book",
+    "fields": {
+      "book_code": 11140,
+      "price": 9.99,
+      "genres": [1],
+      "author": "Euripides",
+      "country": "Greece",
+      "imageLink": "medea.jpg",
+      "language": "Greek",
+      "pages": 104,
+      "name": "Medea",
+      "year": -431
+    }
+  },
+  {
+    "pk": 31,
+    "model": "books.book",
+    "fields": {
+      "book_code": 11141,
+      "price": 9.99,
+      "genres": [1],
+      "author": "William Faulkner",
+      "country": "United States",
+      "imageLink": "absalom-absalom.jpg",
+      "language": "English",
+      "pages": 313,
+      "name": "Absalom, Absalom!",
+      "year": 1936
+    }
+  },
+  {
+    "pk": 32,
+    "model": "books.book",
+    "fields": {
+      "book_code": 11142,
+      "price": 9.99,
+      "genres": [1],
+      "author": "William Faulkner",
+      "country": "United States",
+      "imageLink": "the-sound-and-the-fury.jpg",
+      "language": "English",
+      "pages": 326,
+      "name": "The Sound and the Fury",
+      "year": 1929
+    }
+  },
+  {
+    "pk": 33,
+    "model": "books.book",
+    "fields": {
+      "book_code": 11143,
+      "price": 9.99,
+      "genres": [1],
+      "author": "Gustave Flaubert",
+      "country": "France",
+      "imageLink": "madame-bovary.jpg",
+      "language": "French",
+      "pages": 528,
+      "name": "Madame Bovary",
+      "year": 1857
+    }
+  },
+  {
+    "pk": 34,
+    "model": "books.book",
+    "fields": {
+      "book_code": 11144,
+      "price": 9.99,
+      "genres": [1],
+      "author": "Gustave Flaubert",
+      "country": "France",
+      "imageLink": "l-education-sentimentale.jpg",
+      "language": "French",
+      "pages": 606,
+      "name": "Sentimental Education",
+      "year": 1869
+    }
+  },
+  {
+    "pk": 35,
+    "model": "books.book",
+    "fields": {
+      "book_code": 11145,
+      "price": 9.99,
+      "genres": [1],
+      "author": "Federico Garc\u00eda Lorca",
+      "country": "Spain",
+      "imageLink": "gypsy-ballads.jpg",
+      "language": "Spanish",
+      "pages": 218,
+      "name": "Gypsy Ballads",
+      "year": 1928
+    }
+  },
+  {
+    "pk": 36,
+    "model": "books.book",
+    "fields": {
+      "book_code": 11146,
+      "price": 9.99,
+      "genres": [1],
+      "author": "Gabriel Garc\u00eda M\u00e1rquez",
+      "country": "Colombia",
+      "imageLink": "one-hundred-years-of-solitude.jpg",
+      "language": "Spanish",
+      "pages": 417,
+      "name": "One Hundred Years of Solitude",
+      "year": 1967
+    }
+  },
+  {
+    "pk": 37,
+    "model": "books.book",
+    "fields": {
+      "book_code": 11147,
+      "price": 9.99,
+      "genres": [1],
+      "author": "Gabriel Garc\u00eda M\u00e1rquez",
+      "country": "Colombia",
+      "imageLink": "love-in-the-time-of-cholera.jpg",
+      "language": "Spanish",
+      "pages": 368,
+      "name": "Love in the Time of Cholera",
+      "year": 1985
+    }
+  },
+  {
+    "pk": 38,
+    "model": "books.book",
+    "fields": {
+      "book_code": 11148,
+      "price": 9.99,
+      "genres": [1],
+      "author": "Johann Wolfgang von Goethe",
+      "country": "Saxe-Weimar",
+      "imageLink": "faust.jpg",
+      "language": "German",
+      "pages": 158,
+      "name": "Faust",
+      "year": 1832
+    }
+  },
+  {
+    "pk": 39,
+    "model": "books.book",
+    "fields": {
+      "book_code": 11149,
+      "price": 9.99,
+      "genres": [1],
+      "author": "Nikolai Gogol",
+      "country": "Russia",
+      "imageLink": "dead-souls.jpg",
+      "language": "Russian",
+      "pages": 432,
+      "name": "Dead Souls",
+      "year": 1842
+    }
+  },
+  {
+    "pk": 40,
+    "model": "books.book",
+    "fields": {
+      "book_code": 11150,
+      "price": 9.99,
+      "genres": [1],
+      "author": "G\u00fcnter Grass",
+      "country": "Germany",
+      "imageLink": "the-tin-drum.jpg",
+      "language": "German",
+      "pages": 600,
+      "name": "The Tin Drum",
+      "year": 1959
+    }
+  },
+  {
+    "pk": 41,
+    "model": "books.book",
+    "fields": {
+      "book_code": 11151,
+      "price": 9.99,
+      "genres": [1],
+      "author": "Jo\u00e3o Guimar\u00e3es Rosa",
+      "country": "Brazil",
+      "imageLink": "the-devil-to-pay-in-the-backlands.jpg",
+      "language": "Portuguese",
+      "pages": 494,
+      "name": "The Devil to Pay in the Backlands",
+      "year": 1956
+    }
+  },
+  {
+    "pk": 42,
+    "model": "books.book",
+    "fields": {
+      "book_code": 11152,
+      "price": 9.99,
+      "genres": [1],
+      "author": "Knut Hamsun",
+      "country": "Norway",
+      "imageLink": "hunger.jpg",
+      "language": "Norwegian",
+      "pages": 176,
+      "name": "Hunger",
+      "year": 1890
+    }
+  },
+  {
+    "pk": 43,
+    "model": "books.book",
+    "fields": {
+      "book_code": 11153,
+      "price": 9.99,
+      "genres": [1],
+      "author": "Ernest Hemingway",
+      "country": "United States",
+      "imageLink": "the-old-man-and-the-sea.jpg",
+      "language": "English",
+      "pages": 128,
+      "name": "The Old Man and the Sea",
+      "year": 1952
+    }
+  },
+  {
+    "pk": 44,
+    "model": "books.book",
+    "fields": {
+      "book_code": 11154,
+      "price": 9.99,
+      "genres": [1],
+      "author": "Homer",
+      "country": "Greece",
+      "imageLink": "the-iliad-of-homer.jpg",
+      "language": "Greek",
+      "pages": 608,
+      "name": "Iliad",
+      "year": -735
+    }
+  },
+  {
+    "pk": 45,
+    "model": "books.book",
+    "fields": {
+      "book_code": 11155,
+      "price": 9.99,
+      "genres": [1],
+      "author": "Homer",
+      "country": "Greece",
+      "imageLink": "the-odyssey-of-homer.jpg",
+      "language": "Greek",
+      "pages": 374,
+      "name": "Odyssey",
+      "year": -800
+    }
+  },
+  {
+    "pk": 46,
+    "model": "books.book",
+    "fields": {
+      "book_code": 11156,
+      "price": 9.99,
+      "genres": [1],
+      "author": "Henrik Ibsen",
+      "country": "Norway",
+      "imageLink": "a-Dolls-house.jpg",
+      "language": "Norwegian",
+      "pages": 68,
+      "name": "A Doll's House",
+      "year": 1879
+    }
+  },
+  {
+    "pk": 47,
+    "model": "books.book",
+    "fields": {
+      "book_code": 11157,
+      "price": 9.99,
+      "genres": [1],
+      "author": "James Joyce",
+      "country": "Irish Free State",
+      "imageLink": "ulysses.jpg",
+      "language": "English",
+      "pages": 228,
+      "name": "Ulysses",
+      "year": 1922
+    }
+  },
+  {
+    "pk": 48,
+    "model": "books.book",
+    "fields": {
+      "book_code": 11158,
+      "price": 9.99,
+      "genres": [1],
+      "author": "Franz Kafka",
+      "country": "Czechoslovakia",
+      "imageLink": "stories-of-franz-kafka.jpg",
+      "language": "German",
+      "pages": 488,
+      "name": "Stories",
+      "year": 1924
+    }
+  },
+  {
+    "pk": 49,
+    "model": "books.book",
+    "fields": {
+      "book_code": 11159,
+      "price": 9.99,
+      "genres": [1],
+      "author": "Franz Kafka",
+      "country": "Czechoslovakia",
+      "imageLink": "the-trial.jpg",
+      "language": "German",
+      "pages": 160,
+      "name": "The Trial",
+      "year": 1925
+    }
+  },
+  {
+    "pk": 50,
+    "model": "books.book",
+    "fields": {
+      "book_code": 11160,
+      "price": 9.99,
+      "genres": [1],
+      "author": "Franz Kafka",
+      "country": "Czechoslovakia",
+      "imageLink": "the-castle.jpg",
+      "language": "German",
+      "pages": 352,
+      "name": "The Castle",
+      "year": 1926
+    }
+  },
+  {
+    "pk": 51,
+    "model": "books.book",
+    "fields": {
+      "book_code": 11161,
+      "price": 9.99,
+      "genres": [1],
+      "author": "K\u0101lid\u0101sa",
+      "country": "India",
+      "imageLink": "the-recognition-of-shakuntala.jpg",
+      "language": "Sanskrit",
+      "pages": 147,
+      "name": "The recognition of Shakuntala",
+      "year": 150
+    }
+  },
+  {
+    "pk": 52,
+    "model": "books.book",
+    "fields": {
+      "book_code": 11162,
+      "price": 9.99,
+      "genres": [1],
+      "author": "Yasunari Kawabata",
+      "country": "Japan",
+      "imageLink": "the-sound-of-the-mountain.jpg",
+      "language": "Japanese",
+      "pages": 288,
+      "name": "The Sound of the Mountain",
+      "year": 1954
+    }
+  },
+  {
+    "pk": 53,
+    "model": "books.book",
+    "fields": {
+      "book_code": 11163,
+      "price": 9.99,
+      "genres": [1],
+      "author": "Nikos Kazantzakis",
+      "country": "Greece",
+      "imageLink": "zorba-the-greek.jpg",
+      "language": "Greek",
+      "pages": 368,
+      "name": "Zorba the Greek",
+      "year": 1946
+    }
+  },
+  {
+    "pk": 54,
+    "model": "books.book",
+    "fields": {
+      "book_code": 11164,
+      "price": 9.99,
+      "genres": [1],
+      "author": "D. H. Lawrence",
+      "country": "United Kingdom",
+      "imageLink": "sons-and-lovers.jpg",
+      "language": "English",
+      "pages": 432,
+      "name": "Sons and Lovers",
+      "year": 1913
+    }
+  },
+  {
+    "pk": 55,
+    "model": "books.book",
+    "fields": {
+      "book_code": 11165,
+      "price": 9.99,
+      "genres": [1],
+      "author": "Halld\u00f3r Laxness",
+      "country": "Iceland",
+      "imageLink": "independent-people.jpg",
+      "language": "Icelandic",
+      "pages": 470,
+      "name": "Independent People",
+      "year": 1934
+    }
+  },
+  {
+    "pk": 56,
+    "model": "books.book",
+    "fields": {
+      "book_code": 11166,
+      "price": 9.99,
+      "genres": [1],
+      "author": "Giacomo Leopardi",
+      "country": "Italy",
+      "imageLink": "poems-giacomo-leopardi.jpg",
+      "language": "Italian",
+      "pages": 184,
+      "name": "Poems",
+      "year": 1818
+    }
+  },
+  {
+    "pk": 57,
+    "model": "books.book",
+    "fields": {
+      "book_code": 11167,
+      "price": 9.99,
+      "genres": [1],
+      "author": "Doris Lessing",
+      "country": "United Kingdom",
+      "imageLink": "the-golden-notebook.jpg",
+      "language": "English",
+      "pages": 688,
+      "name": "The Golden Notebook",
+      "year": 1962
+    }
+  },
+  {
+    "pk": 58,
+    "model": "books.book",
+    "fields": {
+      "book_code": 11168,
+      "price": 9.99,
+      "genres": [1],
+      "author": "Astrid Lindgren",
+      "country": "Sweden",
+      "imageLink": "pippi-longstocking.jpg",
+      "language": "Swedish",
+      "pages": 160,
+      "name": "Pippi Longstocking",
+      "year": 1945
+    }
+  },
+  {
+    "pk": 59,
+    "model": "books.book",
+    "fields": {
+      "book_code": 11169,
+      "price": 9.99,
+      "genres": [1],
+      "author": "Lu Xun",
+      "country": "China",
+      "imageLink": "diary-of-a-madman.jpg",
+      "language": "Chinese",
+      "pages": 389,
+      "name": "Diary of a Madman",
+      "year": 1918
+    }
+  },
+  {
+    "pk": 60,
+    "model": "books.book",
+    "fields": {
+      "book_code": 11170,
+      "price": 9.99,
+      "genres": [1],
+      "author": "Naguib Mahfouz",
+      "country": "Egypt",
+      "imageLink": "children-of-gebelawi.jpg",
+      "language": "Arabic",
+      "pages": 355,
+      "name": "Children of Gebelawi",
+      "year": 1959
+    }
+  },
+  {
+    "pk": 61,
+    "model": "books.book",
+    "fields": {
+      "book_code": 11171,
+      "price": 9.99,
+      "genres": [1],
+      "author": "Thomas Mann",
+      "country": "Germany",
+      "imageLink": "buddenbrooks.jpg",
+      "language": "German",
+      "pages": 736,
+      "name": "Buddenbrooks",
+      "year": 1901
+    }
+  },
+  {
+    "pk": 62,
+    "model": "books.book",
+    "fields": {
+      "book_code": 11172,
+      "price": 9.99,
+      "genres": [1],
+      "author": "Thomas Mann",
+      "country": "Germany",
+      "imageLink": "the-magic-mountain.jpg",
+      "language": "German",
+      "pages": 720,
+      "name": "The Magic Mountain",
+      "year": 1924
+    }
+  },
+  {
+    "pk": 63,
+    "model": "books.book",
+    "fields": {
+      "book_code": 11173,
+      "price": 9.99,
+      "genres": [1],
+      "author": "Herman Melville",
+      "country": "United States",
+      "imageLink": "moby-dick.jpg",
+      "language": "English",
+      "pages": 378,
+      "name": "Moby Dick",
+      "year": 1851
+    }
+  },
+  {
+    "pk": 64,
+    "model": "books.book",
+    "fields": {
+      "book_code": 11174,
+      "price": 9.99,
+      "genres": [1],
+      "author": "Michel de Montaigne",
+      "country": "France",
+      "imageLink": "essais.jpg",
+      "language": "French",
+      "pages": 404,
+      "name": "Essays",
+      "year": 1595
+    }
+  },
+  {
+    "pk": 65,
+    "model": "books.book",
+    "fields": {
+      "book_code": 11175,
+      "price": 9.99,
+      "genres": [1],
+      "author": "Elsa Morante",
+      "country": "Italy",
+      "imageLink": "history.jpg",
+      "language": "Italian",
+      "pages": 600,
+      "name": "History",
+      "year": 1974
+    }
+  },
+  {
+    "pk": 66,
+    "model": "books.book",
+    "fields": {
+      "book_code": 11176,
+      "price": 9.99,
+      "genres": [1],
+      "author": "Toni Morrison",
+      "country": "United States",
+      "imageLink": "beloved.jpg",
+      "language": "English",
+      "pages": 321,
+      "name": "Beloved",
+      "year": 1987
+    }
+  },
+  {
+    "pk": 67,
+    "model": "books.book",
+    "fields": {
+      "book_code": 11177,
+      "price": 9.99,
+      "genres": [1],
+      "author": "Murasaki Shikibu",
+      "country": "Japan",
+      "imageLink": "the-tale-of-genji.jpg",
+      "language": "Japanese",
+      "pages": 1360,
+      "name": "The Tale of Genji",
+      "year": 1006
+    }
+  },
+  {
+    "pk": 68,
+    "model": "books.book",
+    "fields": {
+      "book_code": 11178,
+      "price": 9.99,
+      "genres": [1],
+      "author": "Robert Musil",
+      "country": "Austria",
+      "imageLink": "the-man-without-qualities.jpg",
+      "language": "German",
+      "pages": 365,
+      "name": "The Man Without Qualities",
+      "year": 1931
+    }
+  },
+  {
+    "pk": 69,
+    "model": "books.book",
+    "fields": {
+      "book_code": 11179,
+      "price": 9.99,
+      "genres": [1],
+      "author": "Vladimir Nabokov",
+      "country": "Russia/United States",
+      "imageLink": "lolita.jpg",
+      "language": "English",
+      "pages": 317,
+      "name": "Lolita",
+      "year": 1955
+    }
+  },
+  {
+    "pk": 70,
+    "model": "books.book",
+    "fields": {
+      "book_code": 11180,
+      "price": 9.99,
+      "genres": [1],
+      "author": "George Orwell",
+      "country": "United Kingdom",
+      "imageLink": "nineteen-eighty-four.jpg",
+      "language": "English",
+      "pages": 272,
+      "name": "Nineteen Eighty-Four",
+      "year": 1949
+    }
+  },
+  {
+    "pk": 71,
+    "model": "books.book",
+    "fields": {
+      "book_code": 11181,
+      "price": 9.99,
+      "genres": [1],
+      "author": "Ovid",
+      "country": "Roman Empire",
+      "imageLink": "the-metamorphoses-of-ovid.jpg",
+      "language": "Classical Latin",
+      "pages": 576,
+      "name": "Metamorphoses",
+      "year": 100
+    }
+  },
+  {
+    "pk": 72,
+    "model": "books.book",
+    "fields": {
+      "book_code": 11182,
+      "price": 9.99,
+      "genres": [1],
+      "author": "Fernando Pessoa",
+      "country": "Portugal",
+      "imageLink": "the-book-of-disquiet.jpg",
+      "language": "Portuguese",
+      "pages": 272,
+      "name": "The Book of Disquiet",
+      "year": 1928
+    }
+  },
+  {
+    "pk": 73,
+    "model": "books.book",
+    "fields": {
+      "book_code": 11183,
+      "price": 9.99,
+      "genres": [1],
+      "author": "Edgar Allan Poe",
+      "country": "United States",
+      "imageLink": "tales-and-poems-of-edgar-allan-poe.jpg",
+      "language": "English",
+      "pages": 842,
+      "name": "Tales",
+      "year": 1950
+    }
+  },
+  {
+    "pk": 74,
+    "model": "books.book",
+    "fields": {
+      "book_code": 11184,
+      "price": 9.99,
+      "genres": [1],
+      "author": "Marcel Proust",
+      "country": "France",
+      "imageLink": "a-la-recherche-du-temps-perdu.jpg",
+      "language": "French",
+      "pages": 2408,
+      "name": "In Search of Lost Time",
+      "year": 1920
+    }
+  },
+  {
+    "pk": 75,
+    "model": "books.book",
+    "fields": {
+      "book_code": 11185,
+      "price": 9.99,
+      "genres": [1],
+      "author": "Fran\u00e7ois Rabelais",
+      "country": "France",
+      "imageLink": "gargantua-and-pantagruel.jpg",
+      "language": "French",
+      "pages": 623,
+      "name": "Gargantua and Pantagruel",
+      "year": 1533
+    }
+  },
+  {
+    "pk": 76,
+    "model": "books.book",
+    "fields": {
+      "book_code": 11186,
+      "price": 9.99,
+      "genres": [1],
+      "author": "Juan Rulfo",
+      "country": "Mexico",
+      "imageLink": "pedro-paramo.jpg",
+      "language": "Spanish",
+      "pages": 124,
+      "name": "Pedro P\u00e1ramo",
+      "year": 1955
+    }
+  },
+  {
+    "pk": 77,
+    "model": "books.book",
+    "fields": {
+      "book_code": 11187,
+      "price": 9.99,
+      "genres": [1],
+      "author": "Rumi",
+      "country": "Sultanate of Rum",
+      "imageLink": "the-masnavi.jpg",
+      "language": "Persian",
+      "pages": 438,
+      "name": "The Masnavi",
+      "year": 1236
+    }
+  },
+  {
+    "pk": 78,
+    "model": "books.book",
+    "fields": {
+      "book_code": 11188,
+      "price": 9.99,
+      "genres": [1],
+      "author": "Salman Rushdie",
+      "country": "United Kingdom, India",
+      "imageLink": "midnights-children.jpg",
+      "language": "English",
+      "pages": 536,
+      "name": "Midnight's Children",
+      "year": 1981
+    }
+  },
+  {
+    "pk": 79,
+    "model": "books.book",
+    "fields": {
+      "book_code": 11189,
+      "price": 9.99,
+      "genres": [1],
+      "author": "Saadi",
+      "country": "Persia, Persian Empire",
+      "imageLink": "bostan.jpg",
+      "language": "Persian",
+      "pages": 298,
+      "name": "Bostan",
+      "year": 1257
+    }
+  },
+  {
+    "pk": 80,
+    "model": "books.book",
+    "fields": {
+      "book_code": 11190,
+      "price": 9.99,
+      "genres": [1],
+      "author": "Tayeb Salih",
+      "country": "Sudan",
+      "imageLink": "season-of-migration-to-the-north.jpg",
+      "language": "Arabic",
+      "pages": 139,
+      "name": "Season of Migration to the North",
+      "year": 1966
+    }
+  },
+  {
+    "pk": 81,
+    "model": "books.book",
+    "fields": {
+      "book_code": 11191,
+      "price": 9.99,
+      "genres": [1],
+      "author": "Jos\u00e9 Saramago",
+      "country": "Portugal",
+      "imageLink": "blindness.jpg",
+      "language": "Portuguese",
+      "pages": 352,
+      "name": "Blindness",
+      "year": 1995
+    }
+  },
+  {
+    "pk": 82,
+    "model": "books.book",
+    "fields": {
+      "book_code": 11192,
+      "price": 9.99,
+      "genres": [1],
+      "author": "William Shakespeare",
+      "country": "England",
+      "imageLink": "hamlet.jpg",
+      "language": "English",
+      "pages": 432,
+      "name": "Hamlet",
+      "year": 1603
+    }
+  },
+  {
+    "pk": 83,
+    "model": "books.book",
+    "fields": {
+      "book_code": 11193,
+      "price": 9.99,
+      "genres": [1],
+      "author": "William Shakespeare",
+      "country": "England",
+      "imageLink": "king-lear.jpg",
+      "language": "English",
+      "pages": 384,
+      "name": "King Lear",
+      "year": 1608
+    }
+  },
+  {
+    "pk": 84,
+    "model": "books.book",
+    "fields": {
+      "book_code": 11194,
+      "price": 9.99,
+      "genres": [1],
+      "author": "William Shakespeare",
+      "country": "England",
+      "imageLink": "othello.jpg",
+      "language": "English",
+      "pages": 314,
+      "name": "Othello",
+      "year": 1609
+    }
+  },
+  {
+    "pk": 85,
+    "model": "books.book",
+    "fields": {
+      "book_code": 11195,
+      "price": 9.99,
+      "genres": [1],
+      "author": "Sophocles",
+      "country": "Greece",
+      "imageLink": "oedipus-the-king.jpg",
+      "language": "Greek",
+      "pages": 88,
+      "name": "Oedipus the King",
+      "year": -430
+    }
+  },
+  {
+    "pk": 86,
+    "model": "books.book",
+    "fields": {
+      "book_code": 11196,
+      "price": 9.99,
+      "genres": [1],
+      "author": "Stendhal",
+      "country": "France",
+      "imageLink": "le-rouge-et-le-noir.jpg",
+      "language": "French",
+      "pages": 576,
+      "name": "The Red and the Black",
+      "year": 1830
+    }
+  },
+  {
+    "pk": 87,
+    "model": "books.book",
+    "fields": {
+      "book_code": 11197,
+      "price": 9.99,
+      "genres": [1],
+      "author": "Laurence Sterne",
+      "country": "England",
+      "imageLink": "the-life-and-opinions-of-tristram-shandy.jpg",
+      "language": "English",
+      "pages": 640,
+      "name": "The Life And Opinions of Tristram Shandy",
+      "year": 1760
+    }
+  },
+  {
+    "pk": 88,
+    "model": "books.book",
+    "fields": {
+      "book_code": 11198,
+      "price": 9.99,
+      "genres": [1],
+      "author": "Italo Svevo",
+      "country": "Italy",
+      "imageLink": "confessions-of-zeno.jpg",
+      "language": "Italian",
+      "pages": 412,
+      "name": "Confessions of Zeno",
+      "year": 1923
+    }
+  },
+  {
+    "pk": 89,
+    "model": "books.book",
+    "fields": {
+      "book_code": 11199,
+      "price": 9.99,
+      "genres": [1],
+      "author": "Jonathan Swift",
+      "country": "Ireland",
+      "imageLink": "gullivers-travels.jpg",
+      "language": "English",
+      "pages": 178,
+      "name": "Gulliver's Travels",
+      "year": 1726
+    }
+  },
+  {
+    "pk": 90,
+    "model": "books.book",
+    "fields": {
+      "book_code": 11200,
+      "price": 9.99,
+      "genres": [1],
+      "author": "Leo Tolstoy",
+      "country": "Russia",
+      "imageLink": "war-and-peace.jpg",
+      "language": "Russian",
+      "pages": 1296,
+      "name": "War and Peace",
+      "year": 1867
+    }
+  },
+  {
+    "pk": 91,
+    "model": "books.book",
+    "fields": {
+      "book_code": 11201,
+      "price": 9.99,
+      "genres": [1],
+      "author": "Leo Tolstoy",
+      "country": "Russia",
+      "imageLink": "anna-karenina.jpg",
+      "language": "Russian",
+      "pages": 864,
+      "name": "Anna Karenina",
+      "year": 1877
+    }
+  },
+  {
+    "pk": 92,
+    "model": "books.book",
+    "fields": {
+      "book_code": 11202,
+      "price": 9.99,
+      "genres": [1],
+      "author": "Leo Tolstoy",
+      "country": "Russia",
+      "imageLink": "the-death-of-ivan-ilyich.jpg",
+      "language": "Russian",
+      "pages": 92,
+      "name": "The Death of Ivan Ilyich",
+      "year": 1886
+    }
+  },
+  {
+    "pk": 93,
+    "model": "books.book",
+    "fields": {
+      "book_code": 11203,
+      "price": 9.99,
+      "genres": [1],
+      "author": "Mark Twain",
+      "country": "United States",
+      "imageLink": "the-adventures-of-huckleberry-finn.jpg",
+      "language": "English",
+      "pages": 224,
+      "name": "The Adventures of Huckleberry Finn",
+      "year": 1884
+    }
+  },
+  {
+    "pk": 94,
+    "model": "books.book",
+    "fields": {
+      "book_code": 11204,
+      "price": 9.99,
+      "genres": [1],
+      "author": "Valmiki",
+      "country": "India",
+      "imageLink": "ramayana.jpg",
+      "language": "Sanskrit",
+      "pages": 152,
+      "name": "Ramayana",
+      "year": -450
+    }
+  },
+  {
+    "pk": 95,
+    "model": "books.book",
+    "fields": {
+      "book_code": 11205,
+      "price": 9.99,
+      "genres": [1],
+      "author": "Virgil",
+      "country": "Roman Empire",
+      "imageLink": "the-aeneid.jpg",
+      "language": "Classical Latin",
+      "pages": 442,
+      "name": "The Aeneid",
+      "year": -23
+    }
+  },
+  {
+    "pk": 96,
+    "model": "books.book",
+    "fields": {
+      "book_code": 11206,
+      "price": 9.99,
+      "genres": [1],
+      "author": "Vyasa",
+      "country": "India",
+      "imageLink": "the-mahab-harata.jpg",
+      "language": "Sanskrit",
+      "pages": 276,
+      "name": "Mahabharata",
+      "year": -700
+    }
+  },
+  {
+    "pk": 97,
+    "model": "books.book",
+    "fields": {
+      "book_code": 11207,
+      "price": 9.99,
+      "genres": [1],
+      "author": "Walt Whitman",
+      "country": "United States",
+      "imageLink": "leaves-of-grass.jpg",
+      "language": "English",
+      "pages": 152,
+      "name": "Leaves of Grass",
+      "year": 1855
+    }
+  },
+  {
+    "pk": 98,
+    "model": "books.book",
+    "fields": {
+      "book_code": 11208,
+      "price": 9.99,
+      "genres": [1],
+      "author": "Virginia Woolf",
+      "country": "United Kingdom",
+      "imageLink": "mrs-dalloway.jpg",
+      "language": "English",
+      "pages": 216,
+      "name": "Mrs Dalloway",
+      "year": 1925
+    }
+  },
+  {
+    "pk": 99,
+    "model": "books.book",
+    "fields": {
+      "book_code": 11209,
+      "price": 9.99,
+      "genres": [1],
+      "author": "Virginia Woolf",
+      "country": "United Kingdom",
+      "imageLink": "to-the-lighthouse.jpg",
+      "language": "English",
+      "pages": 209,
+      "name": "To the Lighthouse",
+      "year": 1927
+    }
+  },
+  {
+    "pk": 100,
+    "model": "books.book",
+    "fields": {
+      "book_code": 11210,
+      "price": 9.99,
+      "genres": [1],
+      "author": "Marguerite Yourcenar",
+      "country": "France/Belgium",
+      "imageLink": "memoirs-of-hadrian.jpg",
+      "language": "French",
+      "pages": 408,
+      "name": "Memoirs of Hadrian",
+      "year": 1951
+    }
+  }
+]
