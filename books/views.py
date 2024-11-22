@@ -57,3 +57,14 @@ def all_books(request):
     }
 
     return render(request, 'books/books.html', context)
+
+def about_book(request, book_id):
+    """ A view to show individual product details """
+
+    book = get_object_or_404(Book, pk=book_id)
+
+    context = {
+        'book': book,
+    }
+
+    return render(request, 'books/about_book.html', context)
