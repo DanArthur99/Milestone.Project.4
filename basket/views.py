@@ -13,92 +13,75 @@ def view_basket(request):
     return render(request, 'basket/basket.html')
 
 
-def add_to_basket(request, item_id):
+def add_to_basket(request, book_id):
     """ Add a quantity of the specified book to the shopping basket """
 
-    book = get_object_or_404(Book, pk=item_id)
+    book = get_object_or_404(Book, pk=book_id)
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
     basket = request.session.get('basket', {})
 
 
-    if item_id in list(basket.keys()):
-        basket[item_id] += quantity
+    if book_id in list(basket.keys()):
+        basket[book_id] += quantity
         messages.success(request,
                         (f'Updated {book.name} '
-                        f'quantity to {basket[item_id]}'))
+                        f'quantity to {basket[book_id]}'))
     else:
-        basket[item_id] = quantity
+        basket[book_id] = quantity
         messages.success(request, f'Added {book.name} to your basket')
 
     request.session['basket'] = basket
     return redirect(redirect_url)
 
 
-def adjust_basket(request, item_id):
+def adjust_basket(request, book_id):
     """Adjust the quantity of the specified book to the specified amount"""
 
-    book = get_object_or_404(Book, pk=item_id)
+    book = get_object_or_404(Book, pk=book_id)
     quantity = int(request.POST.get('quantity'))
-    size = None
-    if 'book_size' in request.POST:
-        size = request.POST['book_size']
     basket = request.session.get('basket', {})
 
-    if size:
-        if quantity > 0:
-            basket[item_id]['items_by_size'][size] = quantity
-            messages.success(request,
-                             (f'Updated size {size.upper()} '
-                              f'{book.name} quantity to '
-                              f'{basket[item_id]["items_by_size"][size]}'))
-        else:
-            del basket[item_id]['items_by_size'][size]
-            if not basket[item_id]['items_by_size']:
-                basket.pop(item_id)
-            messages.success(request,
-                             (f'Removed size {size.upper()} '
-                              f'{book.name} from your basket'))
+    
+    if quantity > 0:
+        basket[book_id] = quantity
+        messages.success(request,
+                        (f'Updated {book.name} '
+                        f'quantity to {basket[book_id]}'))
     else:
-        if quantity > 0:
-            basket[item_id] = quantity
-            messages.success(request,
-                             (f'Updated {book.name} '
-                              f'quantity to {basket[item_id]}'))
-        else:
-            basket.pop(item_id)
-            messages.success(request,
-                             (f'Removed {book.name} '
-                              f'from your basket'))
+        basket.pop(book_id)
+        messages.success(request,
+                        (f'Removed {book.name} '
+                        f'from your basket'))
 
     request.session['basket'] = basket
     return redirect(reverse('view_basket'))
 
 
-def remove_from_basket(request, item_id):
-    """Remove the item from the shopping basket"""
+def remove_from_basket(request, book_id):
+    """Remove the book from the shopping basket"""
 
     try:
-        book = get_object_or_404(Book, pk=item_id)
+        book = get_object_or_404(Book, pk=book_id)
         size = None
         if 'book_size' in request.POST:
             size = request.POST['book_size']
         basket = request.session.get('basket', {})
 
         if size:
-            del basket[item_id]['items_by_size'][size]
-            if not basket[item_id]['items_by_size']:
-                basket.pop(item_id)
+            del basket[book_id]['books_by_size'][size]
+            if not basket[book_id]['books_by_size']:
+                basket.pop(book_id)
             messages.success(request,
                              (f'Removed size {size.upper()} '
                               f'{book.name} from your basket'))
         else:
-            basket.pop(item_id)
+            basket.pop(book_id)
             messages.success(request, f'Removed {book.name} from your basket')
 
         request.session['basket'] = basket
         return HttpResponse(status=200)
 
     except Exception as e:
-        messages.error(request, f'Error removing item: {e}')
+        messages.error(request, f'Error removing book: {e}')
         return HttpResponse(status=500)

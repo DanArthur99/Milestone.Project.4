@@ -68,3 +68,4 @@ def about_book(request, book_id):
     }
 
     return render(request, 'books/about_book.html', context)
+
