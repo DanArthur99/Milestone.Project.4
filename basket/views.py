@@ -63,21 +63,10 @@ def remove_from_basket(request, book_id):
 
     try:
         book = get_object_or_404(Book, pk=book_id)
-        size = None
-        if 'book_size' in request.POST:
-            size = request.POST['book_size']
         basket = request.session.get('basket', {})
 
-        if size:
-            del basket[book_id]['books_by_size'][size]
-            if not basket[book_id]['books_by_size']:
-                basket.pop(book_id)
-            messages.success(request,
-                             (f'Removed size {size.upper()} '
-                              f'{book.name} from your basket'))
-        else:
-            basket.pop(book_id)
-            messages.success(request, f'Removed {book.name} from your basket')
+        basket.pop(book_id)
+        messages.success(request, f'Removed {book.name} from your basket')
 
         request.session['basket'] = basket
         return HttpResponse(status=200)
