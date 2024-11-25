@@ -5,7 +5,7 @@ from .models import UserProfile
 class UserProfileForm(forms.ModelForm):
     class Meta:
         model = UserProfile
-        exclude = ('user',)
+        exclude = ('user', 'favourite_genres', 'reading_list')
 
     def __init__(self, *args, **kwargs):
         """
@@ -34,3 +34,14 @@ class UserProfileForm(forms.ModelForm):
                                                         'rounded-0 '
                                                         'profile-form-input')
             self.fields[field].label = False
+
+class SetGenresForm(forms.ModelForm):
+    class Meta:
+        model = UserProfile
+        fields = ('favorite_genres',)
+        
+        def __init__(self, *args, **kwargs):
+            super().__init__(*args, **kwargs)
+            placeholders = {
+                
+            }

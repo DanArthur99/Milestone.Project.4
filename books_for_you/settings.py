@@ -57,6 +57,9 @@ INSTALLED_APPS = [
     'basket',
     'checkout',
     'profiles',
+
+    'crispy_forms',
+    'storages',
 ]
 
 MIDDLEWARE = [
@@ -71,6 +74,10 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'books_for_you.urls'
+
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+
+CRISPY_TEMPLATE_PACK = "bootstrap5"
 
 TEMPLATES = [
     {
@@ -89,6 +96,10 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'basket.contexts.basket_contents',
             ],
+            'builtins': [
+                'crispy_forms.templatetags.crispy_forms_tags',
+                'crispy_forms.templatetags.crispy_forms_field',
+            ]
         },
     },
 ]
@@ -174,3 +185,8 @@ ACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = True
 ACCOUNT_USERNAME_MIN_LENGTH = 4
 LOGIN_URL = '/accounts/login/'
 LOGIN_REDIRECT_URL = '/'
+
+STRIPE_PUBLIC_KEY = "pk_test_51QJiuCHqhQhm6K4Xn6youSABlkwfQLYFDpq46wRRdC4i3vmUdBFkIslthu63yjdKxb9y3bSoFwZwVZlj0mvuJ3bk0098jwRPAK"
+STRIPE_SECRET_KEY = "sk_test_51QJiuCHqhQhm6K4X2uC1QlH2JaskYdjK1PW0mCPnmcuVdxgBt378BGqaj380L3F3ZpUvfYpJNqugTyD6j8VTk4Yb00zqBHHOin"
+STRIPE_WH_SECRET = "whsec_426eccc6aabd3b9626a0fac97dc4aeaffbf6019e964d608a7b012b9f0baabb84"
+STRIPE_CURRENCY = "usd"

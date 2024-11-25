@@ -3,7 +3,7 @@
     "pk": 1,
     "model": "books.book",
     "fields": {
-      "book_code": 11111,
+      "sku": 11111,
       "price": 9.99,
       "author": "Chinua Achebe",
       "country": "Nigeria",
@@ -19,7 +19,7 @@
     "pk": 2,
     "model": "books.book",
     "fields": {
-      "book_code": 11112,
+      "sku": 11112,
       "price": 9.99,
       "author": "Hans Christian Andersen",
       "country": "Denmark",
@@ -35,7 +35,7 @@
     "pk": 3,
     "model": "books.book",
     "fields": {
-      "book_code": 11113,
+      "sku": 11113,
       "price": 9.99,
       "author": "Dante Alighieri",
       "country": "Italy",
@@ -51,7 +51,7 @@
     "pk": 4,
     "model": "books.book",
     "fields": {
-      "book_code": 11114,
+      "sku": 11114,
       "price": 9.99,
       "author": "Unknown",
       "country": "Sumer and Akkadian Empire",
@@ -67,7 +67,7 @@
     "pk": 5,
     "model": "books.book",
     "fields": {
-      "book_code": 11115,
+      "sku": 11115,
       "price": 9.99,
       "author": "Unknown",
       "country": "Achaemenid Empire",
@@ -83,7 +83,7 @@
     "pk": 6,
     "model": "books.book",
     "fields": {
-      "book_code": 11116,
+      "sku": 11116,
       "price": 9.99,
       "author": "Unknown",
       "country": "India/Iran/Iraq/Egypt/Tajikistan",
@@ -99,7 +99,7 @@
     "pk": 7,
     "model": "books.book",
     "fields": {
-      "book_code": 11117,
+      "sku": 11117,
       "price": 9.99,
       "author": "Unknown",
       "country": "Iceland",
@@ -115,7 +115,7 @@
     "pk": 8,
     "model": "books.book",
     "fields": {
-      "book_code": 11118,
+      "sku": 11118,
       "price": 9.99,
       "author": "Jane Austen",
       "country": "United Kingdom",
@@ -131,7 +131,7 @@
     "pk": 9,
     "model": "books.book",
     "fields": {
-      "book_code": 11119,
+      "sku": 11119,
       "price": 9.99,
       "country": "France",
       "imageLink": "le-pere-goriot.jpg",
@@ -146,7 +146,7 @@
     "pk": 10,
     "model": "books.book",
     "fields": {
-      "book_code": 11120,
+      "sku": 11120,
       "price": 9.99,
       "genres": [1],
       "author": "Samuel Beckett",
@@ -162,7 +162,7 @@
     "pk": 11,
     "model": "books.book",
     "fields": {
-      "book_code": 11121,
+      "sku": 11121,
       "price": 9.99,
       "genres": [1],
       "author": "Giovanni Boccaccio",
@@ -178,7 +178,7 @@
     "pk": 12,
     "model": "books.book",
     "fields": {
-      "book_code": 11122,
+      "sku": 11122,
       "price": 9.99,
       "genres": [1],
       "author": "Jorge Luis Borges",
@@ -194,7 +194,7 @@
     "pk": 13,
     "model": "books.book",
     "fields": {
-      "book_code": 11123,
+      "sku": 11123,
       "price": 9.99,
       "genres": [1],
       "author": "Emily Bront\u00eb",
@@ -210,7 +210,7 @@
     "pk": 14,
     "model": "books.book",
     "fields": {
-      "book_code": 11124,
+      "sku": 11124,
       "price": 9.99,
       "genres": [1],
       "author": "Albert Camus",
@@ -226,7 +226,7 @@
     "pk": 15,
     "model": "books.book",
     "fields": {
-      "book_code": 11125,
+      "sku": 11125,
       "price": 9.99,
       "genres": [1],
       "author": "Paul Celan",
@@ -242,7 +242,7 @@
     "pk": 16,
     "model": "books.book",
     "fields": {
-      "book_code": 11126,
+      "sku": 11126,
       "price": 9.99,
       "genres": [1],
       "author": "Louis-Ferdinand C\u00e9line",
@@ -258,7 +258,7 @@
     "pk": 17,
     "model": "books.book",
     "fields": {
-      "book_code": 11127,
+      "sku": 11127,
       "price": 9.99,
       "genres": [1],
       "author": "Miguel de Cervantes",
@@ -273,7 +273,7 @@
     "pk": 18,
     "model": "books.book",
     "fields": {
-      "book_code": 11128,
+      "sku": 11128,
       "price": 9.99,
       "genres": [1],
       "author": "Geoffrey Chaucer",
@@ -289,7 +289,7 @@
     "pk": 19,
     "model": "books.book",
     "fields": {
-      "book_code": 11129,
+      "sku": 11129,
       "price": 9.99,
       "genres": [1],
       "author": "Anton Chekhov",
@@ -305,7 +305,7 @@
     "pk": 20,
     "model": "books.book",
     "fields": {
-      "book_code": 11130,
+      "sku": 11130,
       "price": 9.99,
       "genres": [1],
       "author": "Joseph Conrad",
@@ -321,7 +321,7 @@
     "pk": 21,
     "model": "books.book",
     "fields": {
-      "book_code": 11131,
+      "sku": 11131,
       "price": 9.99,
       "genres": [1],
       "author": "Charles Dickens",
@@ -337,7 +337,7 @@
     "pk": 22,
     "model": "books.book",
     "fields": {
-      "book_code": 11132,
+      "sku": 11132,
       "price": 9.99,
       "genres": [1],
       "author": "Denis Diderot",
@@ -353,7 +353,7 @@
     "pk": 23,
     "model": "books.book",
     "fields": {
-      "book_code": 11133,
+      "sku": 11133,
       "price": 9.99,
       "genres": [1],
       "author": "Alfred D\u00f6blin",
@@ -369,7 +369,7 @@
     "pk": 24,
     "model": "books.book",
     "fields": {
-      "book_code": 11134,
+      "sku": 11134,
       "price": 9.99,
       "genres": [1],
       "author": "Fyodor Dostoevsky",
@@ -385,7 +385,7 @@
     "pk": 25,
     "model": "books.book",
     "fields": {
-      "book_code": 11135,
+      "sku": 11135,
       "price": 9.99,
       "genres": [1],
       "author": "Fyodor Dostoevsky",
@@ -401,7 +401,7 @@
     "pk": 26,
     "model": "books.book",
     "fields": {
-      "book_code": 11136,
+      "sku": 11136,
       "price": 9.99,
       "genres": [1],
       "author": "Fyodor Dostoevsky",
@@ -417,7 +417,7 @@
     "pk": 27,
     "model": "books.book",
     "fields": {
-      "book_code": 11137,
+      "sku": 11137,
       "price": 9.99,
       "genres": [1],
       "author": "Fyodor Dostoevsky",
@@ -433,7 +433,7 @@
     "pk": 28,
     "model": "books.book",
     "fields": {
-      "book_code": 11138,
+      "sku": 11138,
       "price": 9.99,
       "genres": [1],
       "author": "George Eliot",
@@ -449,7 +449,7 @@
     "pk": 29,
     "model": "books.book",
     "fields": {
-      "book_code": 11139,
+      "sku": 11139,
       "price": 9.99,
       "genres": [1],
       "author": "Ralph Ellison",
@@ -465,7 +465,7 @@
     "pk": 30,
     "model": "books.book",
     "fields": {
-      "book_code": 11140,
+      "sku": 11140,
       "price": 9.99,
       "genres": [1],
       "author": "Euripides",
@@ -481,7 +481,7 @@
     "pk": 31,
     "model": "books.book",
     "fields": {
-      "book_code": 11141,
+      "sku": 11141,
       "price": 9.99,
       "genres": [1],
       "author": "William Faulkner",
@@ -497,7 +497,7 @@
     "pk": 32,
     "model": "books.book",
     "fields": {
-      "book_code": 11142,
+      "sku": 11142,
       "price": 9.99,
       "genres": [1],
       "author": "William Faulkner",
@@ -513,7 +513,7 @@
     "pk": 33,
     "model": "books.book",
     "fields": {
-      "book_code": 11143,
+      "sku": 11143,
       "price": 9.99,
       "genres": [1],
       "author": "Gustave Flaubert",
@@ -529,7 +529,7 @@
     "pk": 34,
     "model": "books.book",
     "fields": {
-      "book_code": 11144,
+      "sku": 11144,
       "price": 9.99,
       "genres": [1],
       "author": "Gustave Flaubert",
@@ -545,7 +545,7 @@
     "pk": 35,
     "model": "books.book",
     "fields": {
-      "book_code": 11145,
+      "sku": 11145,
       "price": 9.99,
       "genres": [1],
       "author": "Federico Garc\u00eda Lorca",
@@ -561,7 +561,7 @@
     "pk": 36,
     "model": "books.book",
     "fields": {
-      "book_code": 11146,
+      "sku": 11146,
       "price": 9.99,
       "genres": [1],
       "author": "Gabriel Garc\u00eda M\u00e1rquez",
@@ -577,7 +577,7 @@
     "pk": 37,
     "model": "books.book",
     "fields": {
-      "book_code": 11147,
+      "sku": 11147,
       "price": 9.99,
       "genres": [1],
       "author": "Gabriel Garc\u00eda M\u00e1rquez",
@@ -593,7 +593,7 @@
     "pk": 38,
     "model": "books.book",
     "fields": {
-      "book_code": 11148,
+      "sku": 11148,
       "price": 9.99,
       "genres": [1],
       "author": "Johann Wolfgang von Goethe",
@@ -609,7 +609,7 @@
     "pk": 39,
     "model": "books.book",
     "fields": {
-      "book_code": 11149,
+      "sku": 11149,
       "price": 9.99,
       "genres": [1],
       "author": "Nikolai Gogol",
@@ -625,7 +625,7 @@
     "pk": 40,
     "model": "books.book",
     "fields": {
-      "book_code": 11150,
+      "sku": 11150,
       "price": 9.99,
       "genres": [1],
       "author": "G\u00fcnter Grass",
@@ -641,7 +641,7 @@
     "pk": 41,
     "model": "books.book",
     "fields": {
-      "book_code": 11151,
+      "sku": 11151,
       "price": 9.99,
       "genres": [1],
       "author": "Jo\u00e3o Guimar\u00e3es Rosa",
@@ -657,7 +657,7 @@
     "pk": 42,
     "model": "books.book",
     "fields": {
-      "book_code": 11152,
+      "sku": 11152,
       "price": 9.99,
       "genres": [1],
       "author": "Knut Hamsun",
@@ -673,7 +673,7 @@
     "pk": 43,
     "model": "books.book",
     "fields": {
-      "book_code": 11153,
+      "sku": 11153,
       "price": 9.99,
       "genres": [1],
       "author": "Ernest Hemingway",
@@ -689,7 +689,7 @@
     "pk": 44,
     "model": "books.book",
     "fields": {
-      "book_code": 11154,
+      "sku": 11154,
       "price": 9.99,
       "genres": [1],
       "author": "Homer",
@@ -705,7 +705,7 @@
     "pk": 45,
     "model": "books.book",
     "fields": {
-      "book_code": 11155,
+      "sku": 11155,
       "price": 9.99,
       "genres": [1],
       "author": "Homer",
@@ -721,7 +721,7 @@
     "pk": 46,
     "model": "books.book",
     "fields": {
-      "book_code": 11156,
+      "sku": 11156,
       "price": 9.99,
       "genres": [1],
       "author": "Henrik Ibsen",
@@ -737,7 +737,7 @@
     "pk": 47,
     "model": "books.book",
     "fields": {
-      "book_code": 11157,
+      "sku": 11157,
       "price": 9.99,
       "genres": [1],
       "author": "James Joyce",
@@ -753,7 +753,7 @@
     "pk": 48,
     "model": "books.book",
     "fields": {
-      "book_code": 11158,
+      "sku": 11158,
       "price": 9.99,
       "genres": [1],
       "author": "Franz Kafka",
@@ -769,7 +769,7 @@
     "pk": 49,
     "model": "books.book",
     "fields": {
-      "book_code": 11159,
+      "sku": 11159,
       "price": 9.99,
       "genres": [1],
       "author": "Franz Kafka",
@@ -785,7 +785,7 @@
     "pk": 50,
     "model": "books.book",
     "fields": {
-      "book_code": 11160,
+      "sku": 11160,
       "price": 9.99,
       "genres": [1],
       "author": "Franz Kafka",
@@ -801,7 +801,7 @@
     "pk": 51,
     "model": "books.book",
     "fields": {
-      "book_code": 11161,
+      "sku": 11161,
       "price": 9.99,
       "genres": [1],
       "author": "K\u0101lid\u0101sa",
@@ -817,7 +817,7 @@
     "pk": 52,
     "model": "books.book",
     "fields": {
-      "book_code": 11162,
+      "sku": 11162,
       "price": 9.99,
       "genres": [1],
       "author": "Yasunari Kawabata",
@@ -833,7 +833,7 @@
     "pk": 53,
     "model": "books.book",
     "fields": {
-      "book_code": 11163,
+      "sku": 11163,
       "price": 9.99,
       "genres": [1],
       "author": "Nikos Kazantzakis",
@@ -849,7 +849,7 @@
     "pk": 54,
     "model": "books.book",
     "fields": {
-      "book_code": 11164,
+      "sku": 11164,
       "price": 9.99,
       "genres": [1],
       "author": "D. H. Lawrence",
@@ -865,7 +865,7 @@
     "pk": 55,
     "model": "books.book",
     "fields": {
-      "book_code": 11165,
+      "sku": 11165,
       "price": 9.99,
       "genres": [1],
       "author": "Halld\u00f3r Laxness",
@@ -881,7 +881,7 @@
     "pk": 56,
     "model": "books.book",
     "fields": {
-      "book_code": 11166,
+      "sku": 11166,
       "price": 9.99,
       "genres": [1],
       "author": "Giacomo Leopardi",
@@ -897,7 +897,7 @@
     "pk": 57,
     "model": "books.book",
     "fields": {
-      "book_code": 11167,
+      "sku": 11167,
       "price": 9.99,
       "genres": [1],
       "author": "Doris Lessing",
@@ -913,7 +913,7 @@
     "pk": 58,
     "model": "books.book",
     "fields": {
-      "book_code": 11168,
+      "sku": 11168,
       "price": 9.99,
       "genres": [1],
       "author": "Astrid Lindgren",
@@ -929,7 +929,7 @@
     "pk": 59,
     "model": "books.book",
     "fields": {
-      "book_code": 11169,
+      "sku": 11169,
       "price": 9.99,
       "genres": [1],
       "author": "Lu Xun",
@@ -945,7 +945,7 @@
     "pk": 60,
     "model": "books.book",
     "fields": {
-      "book_code": 11170,
+      "sku": 11170,
       "price": 9.99,
       "genres": [1],
       "author": "Naguib Mahfouz",
@@ -961,7 +961,7 @@
     "pk": 61,
     "model": "books.book",
     "fields": {
-      "book_code": 11171,
+      "sku": 11171,
       "price": 9.99,
       "genres": [1],
       "author": "Thomas Mann",
@@ -977,7 +977,7 @@
     "pk": 62,
     "model": "books.book",
     "fields": {
-      "book_code": 11172,
+      "sku": 11172,
       "price": 9.99,
       "genres": [1],
       "author": "Thomas Mann",
@@ -993,7 +993,7 @@
     "pk": 63,
     "model": "books.book",
     "fields": {
-      "book_code": 11173,
+      "sku": 11173,
       "price": 9.99,
       "genres": [1],
       "author": "Herman Melville",
@@ -1009,7 +1009,7 @@
     "pk": 64,
     "model": "books.book",
     "fields": {
-      "book_code": 11174,
+      "sku": 11174,
       "price": 9.99,
       "genres": [1],
       "author": "Michel de Montaigne",
@@ -1025,7 +1025,7 @@
     "pk": 65,
     "model": "books.book",
     "fields": {
-      "book_code": 11175,
+      "sku": 11175,
       "price": 9.99,
       "genres": [1],
       "author": "Elsa Morante",
@@ -1041,7 +1041,7 @@
     "pk": 66,
     "model": "books.book",
     "fields": {
-      "book_code": 11176,
+      "sku": 11176,
       "price": 9.99,
       "genres": [1],
       "author": "Toni Morrison",
@@ -1057,7 +1057,7 @@
     "pk": 67,
     "model": "books.book",
     "fields": {
-      "book_code": 11177,
+      "sku": 11177,
       "price": 9.99,
       "genres": [1],
       "author": "Murasaki Shikibu",
@@ -1073,7 +1073,7 @@
     "pk": 68,
     "model": "books.book",
     "fields": {
-      "book_code": 11178,
+      "sku": 11178,
       "price": 9.99,
       "genres": [1],
       "author": "Robert Musil",
@@ -1089,7 +1089,7 @@
     "pk": 69,
     "model": "books.book",
     "fields": {
-      "book_code": 11179,
+      "sku": 11179,
       "price": 9.99,
       "genres": [1],
       "author": "Vladimir Nabokov",
@@ -1105,7 +1105,7 @@
     "pk": 70,
     "model": "books.book",
     "fields": {
-      "book_code": 11180,
+      "sku": 11180,
       "price": 9.99,
       "genres": [1],
       "author": "George Orwell",
@@ -1121,7 +1121,7 @@
     "pk": 71,
     "model": "books.book",
     "fields": {
-      "book_code": 11181,
+      "sku": 11181,
       "price": 9.99,
       "genres": [1],
       "author": "Ovid",
@@ -1137,7 +1137,7 @@
     "pk": 72,
     "model": "books.book",
     "fields": {
-      "book_code": 11182,
+      "sku": 11182,
       "price": 9.99,
       "genres": [1],
       "author": "Fernando Pessoa",
@@ -1153,7 +1153,7 @@
     "pk": 73,
     "model": "books.book",
     "fields": {
-      "book_code": 11183,
+      "sku": 11183,
       "price": 9.99,
       "genres": [1],
       "author": "Edgar Allan Poe",
@@ -1169,7 +1169,7 @@
     "pk": 74,
     "model": "books.book",
     "fields": {
-      "book_code": 11184,
+      "sku": 11184,
       "price": 9.99,
       "genres": [1],
       "author": "Marcel Proust",
@@ -1185,7 +1185,7 @@
     "pk": 75,
     "model": "books.book",
     "fields": {
-      "book_code": 11185,
+      "sku": 11185,
       "price": 9.99,
       "genres": [1],
       "author": "Fran\u00e7ois Rabelais",
@@ -1201,7 +1201,7 @@
     "pk": 76,
     "model": "books.book",
     "fields": {
-      "book_code": 11186,
+      "sku": 11186,
       "price": 9.99,
       "genres": [1],
       "author": "Juan Rulfo",
@@ -1217,7 +1217,7 @@
     "pk": 77,
     "model": "books.book",
     "fields": {
-      "book_code": 11187,
+      "sku": 11187,
       "price": 9.99,
       "genres": [1],
       "author": "Rumi",
@@ -1233,7 +1233,7 @@
     "pk": 78,
     "model": "books.book",
     "fields": {
-      "book_code": 11188,
+      "sku": 11188,
       "price": 9.99,
       "genres": [1],
       "author": "Salman Rushdie",
@@ -1249,7 +1249,7 @@
     "pk": 79,
     "model": "books.book",
     "fields": {
-      "book_code": 11189,
+      "sku": 11189,
       "price": 9.99,
       "genres": [1],
       "author": "Saadi",
@@ -1265,7 +1265,7 @@
     "pk": 80,
     "model": "books.book",
     "fields": {
-      "book_code": 11190,
+      "sku": 11190,
       "price": 9.99,
       "genres": [1],
       "author": "Tayeb Salih",
@@ -1281,7 +1281,7 @@
     "pk": 81,
     "model": "books.book",
     "fields": {
-      "book_code": 11191,
+      "sku": 11191,
       "price": 9.99,
       "genres": [1],
       "author": "Jos\u00e9 Saramago",
@@ -1297,7 +1297,7 @@
     "pk": 82,
     "model": "books.book",
     "fields": {
-      "book_code": 11192,
+      "sku": 11192,
       "price": 9.99,
       "genres": [1],
       "author": "William Shakespeare",
@@ -1313,7 +1313,7 @@
     "pk": 83,
     "model": "books.book",
     "fields": {
-      "book_code": 11193,
+      "sku": 11193,
       "price": 9.99,
       "genres": [1],
       "author": "William Shakespeare",
@@ -1329,7 +1329,7 @@
     "pk": 84,
     "model": "books.book",
     "fields": {
-      "book_code": 11194,
+      "sku": 11194,
       "price": 9.99,
       "genres": [1],
       "author": "William Shakespeare",
@@ -1345,7 +1345,7 @@
     "pk": 85,
     "model": "books.book",
     "fields": {
-      "book_code": 11195,
+      "sku": 11195,
       "price": 9.99,
       "genres": [1],
       "author": "Sophocles",
@@ -1361,7 +1361,7 @@
     "pk": 86,
     "model": "books.book",
     "fields": {
-      "book_code": 11196,
+      "sku": 11196,
       "price": 9.99,
       "genres": [1],
       "author": "Stendhal",
@@ -1377,7 +1377,7 @@
     "pk": 87,
     "model": "books.book",
     "fields": {
-      "book_code": 11197,
+      "sku": 11197,
       "price": 9.99,
       "genres": [1],
       "author": "Laurence Sterne",
@@ -1393,7 +1393,7 @@
     "pk": 88,
     "model": "books.book",
     "fields": {
-      "book_code": 11198,
+      "sku": 11198,
       "price": 9.99,
       "genres": [1],
       "author": "Italo Svevo",
@@ -1409,7 +1409,7 @@
     "pk": 89,
     "model": "books.book",
     "fields": {
-      "book_code": 11199,
+      "sku": 11199,
       "price": 9.99,
       "genres": [1],
       "author": "Jonathan Swift",
@@ -1425,7 +1425,7 @@
     "pk": 90,
     "model": "books.book",
     "fields": {
-      "book_code": 11200,
+      "sku": 11200,
       "price": 9.99,
       "genres": [1],
       "author": "Leo Tolstoy",
@@ -1441,7 +1441,7 @@
     "pk": 91,
     "model": "books.book",
     "fields": {
-      "book_code": 11201,
+      "sku": 11201,
       "price": 9.99,
       "genres": [1],
       "author": "Leo Tolstoy",
@@ -1457,7 +1457,7 @@
     "pk": 92,
     "model": "books.book",
     "fields": {
-      "book_code": 11202,
+      "sku": 11202,
       "price": 9.99,
       "genres": [1],
       "author": "Leo Tolstoy",
@@ -1473,7 +1473,7 @@
     "pk": 93,
     "model": "books.book",
     "fields": {
-      "book_code": 11203,
+      "sku": 11203,
       "price": 9.99,
       "genres": [1],
       "author": "Mark Twain",
@@ -1489,7 +1489,7 @@
     "pk": 94,
     "model": "books.book",
     "fields": {
-      "book_code": 11204,
+      "sku": 11204,
       "price": 9.99,
       "genres": [1],
       "author": "Valmiki",
@@ -1505,7 +1505,7 @@
     "pk": 95,
     "model": "books.book",
     "fields": {
-      "book_code": 11205,
+      "sku": 11205,
       "price": 9.99,
       "genres": [1],
       "author": "Virgil",
@@ -1521,7 +1521,7 @@
     "pk": 96,
     "model": "books.book",
     "fields": {
-      "book_code": 11206,
+      "sku": 11206,
       "price": 9.99,
       "genres": [1],
       "author": "Vyasa",
@@ -1537,7 +1537,7 @@
     "pk": 97,
     "model": "books.book",
     "fields": {
-      "book_code": 11207,
+      "sku": 11207,
       "price": 9.99,
       "genres": [1],
       "author": "Walt Whitman",
@@ -1553,7 +1553,7 @@
     "pk": 98,
     "model": "books.book",
     "fields": {
-      "book_code": 11208,
+      "sku": 11208,
       "price": 9.99,
       "genres": [1],
       "author": "Virginia Woolf",
@@ -1569,7 +1569,7 @@
     "pk": 99,
     "model": "books.book",
     "fields": {
-      "book_code": 11209,
+      "sku": 11209,
       "price": 9.99,
       "genres": [1],
       "author": "Virginia Woolf",
@@ -1585,7 +1585,7 @@
     "pk": 100,
     "model": "books.book",
     "fields": {
-      "book_code": 11210,
+      "sku": 11210,
       "price": 9.99,
       "genres": [1],
       "author": "Marguerite Yourcenar",

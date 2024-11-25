@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Book, Genre
+from .models import Book, Genre, Review
 
 # Register your models here.
 
@@ -12,5 +12,7 @@ class GenreAdmin(admin.ModelAdmin):
         'friendly_name',
     )
 
-admin.site.register(Book)
+admin.site.register(Book, BookAdmin)
 admin.site.register(Genre, GenreAdmin)
+admin.site.register(Review)
+

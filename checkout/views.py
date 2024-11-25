@@ -30,7 +30,7 @@ def cache_checkout_data(request):
         })
         stripe.PaymentIntent.modify(
             pid, 
-            receipt_email="danielarthur99@hotmail.co.uk",
+            receipt_email=request.user.email,
         )
         return HttpResponse(status=200)
     except Exception as e:
@@ -64,7 +64,7 @@ def checkout(request):
             order = order_form.save(commit=False)
             pid = request.POST.get('client_secret').split('_secret')[0]
             order.stripe_pid = pid
-            order.original_basket = json.dumps(basket)
+            order.original_bag = json.dumps(basket)
             order.save()
             for item_id, item_data in basket.items():
                 try:
