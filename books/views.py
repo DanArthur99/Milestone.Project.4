@@ -5,7 +5,7 @@ from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
 
-from .models import Book, Genre
+from .models import Book, Genre, Review
 from .forms import BookForm
 # Create your views here.
 
@@ -64,8 +64,11 @@ def about_book(request, book_id):
 
     book = get_object_or_404(Book, pk=book_id)
 
+    reviews = Review.objects.filter(book_id=book.id)
+
     context = {
         'book': book,
+        'reviews': reviews
     }
 
     return render(request, 'books/about_book.html', context)

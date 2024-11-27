@@ -33,7 +33,8 @@ class Book(models.Model):
         return self.name
     
 class Review(models.Model):
-    book = models.ForeignKey('Book', null=False, blank=True, on_delete=models.CASCADE)
-    user = models.ForeignKey('profiles.UserProfile', null=False, blank=False, on_delete=models.CASCADE)
-    user_rating = models.IntegerField(validators=[MinValueValidator(1), MaxValueValidator(5)])
-    content = models.CharField(max_length=1000)
+    book_id = models.ForeignKey('Book', null=False, blank=False, on_delete=models.CASCADE)
+    user_id = models.ForeignKey('profiles.UserProfile', null=False, blank=False, on_delete=models.CASCADE)
+    title = models.CharField(max_length=25, null=True, blank=False)
+    user_rating = models.IntegerField(validators=[MinValueValidator(1), MaxValueValidator(5)], null=False, blank=False)
+    content = models.CharField(max_length=1000, null=True, blank=True)

@@ -83,6 +83,24 @@
                                 <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="Add to Bag">
                             </div>
                             <input type="hidden" name="redirect_url" value="{{ request.path }}">
+
+                            <div class="reviews">
+                                {% if reviews %}
+                                {% for review in reviews %}
+                                <div class="card" style="width: 18rem;">
+                                    <div class="card-body">
+                                      <h5 class="card-title">{{ review.title }}</h5>
+                                      <h6 class="card-subtitle mb-2 text-body-secondary">{{ review.user_rating }}</h6>
+                                      <p class="card-text">{{ review.content }}</p>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                                {% else %}
+                                <div class="no-reviews">
+                                    <h4>Looks like there are no reviews to show</h4>
+                                </div>
+                                {% endif %}
+                            </div> 
                         </div>
                     </form>
                 </div>
@@ -94,4 +112,5 @@
 {% block postloadjs %}
 {{ block.super }}
 {% include 'books/includes/script.html' %}
+<script src="{% static '/books/js/reviewscript.js' %}"></script>
 {% endblock %}
