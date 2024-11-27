@@ -84,6 +84,10 @@
                             </div>
                             <input type="hidden" name="redirect_url" value="{{ request.path }}">
 
+    
+                            <a href="{% url 'add_review' book.id %}">Add Review</a>
+                            
+
                             <div class="reviews">
                                 {% if reviews %}
                                 {% for review in reviews %}
@@ -112,5 +116,5 @@
 {% block postloadjs %}
 {{ block.super }}
 {% include 'books/includes/script.html' %}
-<script src="{% static '/books/js/reviewscript.js' %}"></script>
+<script src="{% static 'books/js/reviewscript.js' %}"></script>
 {% endblock %}

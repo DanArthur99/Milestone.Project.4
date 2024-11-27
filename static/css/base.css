@@ -19,6 +19,10 @@ body {
     width: 1.5rem;
 }
 
+.img-fluid {
+    max-width: 50% !important;
+}
+
 .logo-font {
     text-transform: uppercase;
 }

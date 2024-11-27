@@ -5,7 +5,8 @@ from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
 
-from .models import Book, Genre, Review
+from .models import Book, Genre
+from reviews.models import Review
 from .forms import BookForm
 # Create your views here.
 
@@ -45,7 +46,7 @@ def all_books(request):
                                ("You didn't enter any search criteria!"))
                 return redirect(reverse('books'))
 
-            queries = Q(name__icontains=query) | Q(description__icontains=query)
+            queries = Q(name__icontains=query) | Q(author__icontains=query)
             books = books.filter(queries)
 
     current_sorting = f'{sort}_{direction}'
@@ -85,7 +86,7 @@ def add_book(request):
         if form.is_valid():
             book = form.save()
             messages.success(request, 'Successfully added book!')
-            return redirect(reverse('book_detail', args=[book.id]))
+            return redirect(reverse('about_book', args=[book.id]))
         else:
             messages.error(request,
                            ('Failed to add book. '

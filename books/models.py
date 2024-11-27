@@ -1,7 +1,7 @@
 from django.db import models
-from django.core.validators import MaxValueValidator, MinValueValidator
 import profiles
-
+from django_countries.fields import CountryField
+from django.core.validators import MaxValueValidator, MinValueValidator
 # Create your models here.
 
 class Genre(models.Model):
@@ -19,11 +19,11 @@ class Genre(models.Model):
 class Book(models.Model):
     author =  models.CharField(max_length=254)
     name = models.CharField(max_length=254)
-    sku = models.CharField(max_length=254, null=True, blank=True)
+    sku = models.CharField(max_length=254, null=True, blank=True, unique=True)
     language = models.CharField(max_length=254)
     pages = models.IntegerField()
     year = models.IntegerField()
-    country = models.CharField(max_length=254)
+    country = CountryField(blank_label='Country', null=True, blank=True)
     rating = models.FloatField(validators=[MinValueValidator(0.0), MaxValueValidator(5.0)], null=True)
     genres = models.ManyToManyField(Genre, related_name="books_with_this_genre")
     price = models.DecimalField(max_digits=6, decimal_places=2)
@@ -31,10 +31,3 @@ class Book(models.Model):
 
     def __str__(self):
         return self.name
-    
-class Review(models.Model):
-    book_id = models.ForeignKey('Book', null=False, blank=False, on_delete=models.CASCADE)
-    user_id = models.ForeignKey('profiles.UserProfile', null=False, blank=False, on_delete=models.CASCADE)
-    title = models.CharField(max_length=25, null=True, blank=False)
-    user_rating = models.IntegerField(validators=[MinValueValidator(1), MaxValueValidator(5)], null=False, blank=False)
-    content = models.CharField(max_length=1000, null=True, blank=True)
