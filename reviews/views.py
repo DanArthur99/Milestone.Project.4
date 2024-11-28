@@ -7,6 +7,8 @@ from django.db.models.functions import Lower
 
 from .models import Review
 from .forms import ReviewForm
+from profiles.models import UserProfile
+from books.models import Book
 
 # Create your views here.
 
@@ -15,11 +17,18 @@ def add_review(request, book_id):
 
     if request.method == 'POST':
         form = ReviewForm(request.POST, request.FILES)
-        if form.is_valid():
+        userprofile = get_object_or_404(UserProfile, user=request.user)
+        book = get_object_or_404(Book, pk=book_id)
+        if form.is_valid():  
+            form.instance.user = userprofile
+            form.instance.book = book
             review = form.save()
-            review.book_id = book_id
-            review.user_id = request.user.id
-            messages.success(request, 'Successfully added review')
+            all_reviews = Review.objects.filter(book=book)
+            book_rating = 0
+            for rev in all_reviews:
+                book_rating += rev.user_rating
+            book.rating = book_rating / len(all_reviews)
+            book.save()
             return redirect(reverse('about_book', args=[book_id]))
         else:
             messages.error(request,

@@ -1,0 +1,1 @@
+web: gunicorn books_for_you.wsgi:application

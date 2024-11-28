@@ -12,10 +12,19 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 
 from pathlib import Path
 import os
+import environ
+
+env = environ.Env(
+    # set casting, default value
+    DEBUG=(bool, False)
+)
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+# Take environment variables from .env file
+environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
@@ -188,7 +197,7 @@ ACCOUNT_USERNAME_MIN_LENGTH = 4
 LOGIN_URL = '/accounts/login/'
 LOGIN_REDIRECT_URL = '/'
 
-STRIPE_PUBLIC_KEY = "pk_test_51QJiuCHqhQhm6K4Xn6youSABlkwfQLYFDpq46wRRdC4i3vmUdBFkIslthu63yjdKxb9y3bSoFwZwVZlj0mvuJ3bk0098jwRPAK"
-STRIPE_SECRET_KEY = "sk_test_51QJiuCHqhQhm6K4X2uC1QlH2JaskYdjK1PW0mCPnmcuVdxgBt378BGqaj380L3F3ZpUvfYpJNqugTyD6j8VTk4Yb00zqBHHOin"
-STRIPE_WH_SECRET = "whsec_426eccc6aabd3b9626a0fac97dc4aeaffbf6019e964d608a7b012b9f0baabb84"
+STRIPE_PUBLIC_KEY = env('STRIPE_PUBLIC_KEY')
+STRIPE_SECRET_KEY = env('STRIPE_SECRET_KEY')
+STRIPE_WH_SECRET = env('STRIPE_WH_SECRET')
 STRIPE_CURRENCY = "usd"

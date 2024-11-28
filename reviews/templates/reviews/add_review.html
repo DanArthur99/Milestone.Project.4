@@ -15,8 +15,7 @@
         <div class="row">
             <div class="col-12 col-md-6">
                 <hr>
-                <h2 class="logo-font mb-4">Book Management</h2>
-                <h5 class="text-muted">Add a Review</h5>
+                <h2 class="logo-font mb-4">Add Review</h2>
                 <hr>
             </div>
         </div>
@@ -25,10 +24,10 @@
             <div class="col-12 col-md-6">
                 <form method="POST" action="{% url 'add_review' book_id %}" class="form mb-2" enctype="multipart/form-data">
                     {% csrf_token %}
-                    {% crispy form %}
+                    {{ form.as_p }}
                     <div class="text-right">
                         <a class="btn btn-outline-black rounded-0" href="{% url 'about_book' book_id %}">Cancel</a>
-                        <button class="btn btn-black rounded-0" type="submit">Add Book</button>
+                        <button class="btn btn-black rounded-0" type="submit">Add Review</button>
                     </div>
                 </form>
             </div>            

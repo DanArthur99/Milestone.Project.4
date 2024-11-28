@@ -1,6 +1,10 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block extra_css %}
+ <link rel="stylesheet" href="{% static 'books/css/book_style.css' %}" type="text/css">
+{% endblock %}
+
 {% block page_header %}
     <div class="container header-container">
         <div class="row">
@@ -66,6 +70,13 @@
                                 <div class="card-body pb-0">
                                     <p class="mb-0">{{ book.name }}</p>
                                 </div>
+                                <div class="card-body pb-0">
+                                    {% if book.rating %}
+                                    <p class="mb-0">Rating: {{ book.rating | floatformat:1 }} / 10</p>
+                                    {% else %}
+                                    <p class="mb-0"><em>No rating for the book yet</em></p>
+                                    {% endif %}
+                                </div>
                                 <div class="card-footer bg-white pt-0 border-0 text-left">
                                     <div class="row">
                                         <div class="col">
@@ -91,22 +102,22 @@
                             </div>
                         </div>
                         {% if forloop.counter|divisibleby:1 %}
-                            <div class="col-12 d-sm-none mb-5">
+                            <div class="col-12 line-break d-sm-none mb-5">
                                 <hr>
                             </div>
                         {% endif %}                        
                         {% if forloop.counter|divisibleby:2 %}
-                            <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-5">
+                            <div class="col-12 line-break d-none d-sm-block d-md-block d-lg-none mb-5">
                                 <hr>
                             </div>
                         {% endif %}
                         {% if forloop.counter|divisibleby:3 %}
-                            <div class="col-12 d-none d-lg-block d-xl-none mb-5">
+                            <div class="col-12 line-breakd-none d-lg-block d-xl-none mb-5">
                                 <hr>
                             </div>
                         {% endif %}
                         {% if forloop.counter|divisibleby:4 %}
-                            <div class="col-12 d-none d-xl-block mb-5">
+                            <div class="col-12 line-break d-none d-xl-block mb-5">
                                 <hr>
                             </div>
                         {% endif %}

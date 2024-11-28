@@ -71,7 +71,6 @@ form.addEventListener('submit', function(ev) {
                 billing_details: {
                     name: form.full_name.value.trim(),
                     phone: form.phone_number.value.trim(),
-                    email: form.email.value.trim(),
                     address:{
                         line1: form.street_address1.value.trim(),
                         line2: form.street_address2.value.trim(),
