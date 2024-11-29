@@ -132,7 +132,7 @@ WSGI_APPLICATION = 'books_for_you.wsgi.application'
 #     }
 # }
 
-DEBUG = True
+
 
 DATABASES = {
      'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
@@ -218,4 +218,4 @@ LOGIN_REDIRECT_URL = '/'
 STRIPE_PUBLIC_KEY = os.environ.get('STRIPE_PUBLIC_KEY')
 STRIPE_SECRET_KEY = os.environ.get('STRIPE_SECRET_KEY')
 STRIPE_WH_SECRET = os.environ.get('STRIPE_WH_SECRET')
-STRIPE_CURRENCY = "gbp"
+STRIPE_CURRENCY = "usd"
