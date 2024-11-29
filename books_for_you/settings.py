@@ -132,6 +132,8 @@ WSGI_APPLICATION = 'books_for_you.wsgi.application'
 #     }
 # }
 
+DEBUG = True
+
 DATABASES = {
      'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
 }
