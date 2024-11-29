@@ -38,7 +38,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 
 DEBUG = False
 
-ALLOWED_HOSTS = ['books-for-you.herokuapp.com', '']
+ALLOWED_HOSTS = ['books-for-you-19d767033b76.herokuapp.com']
 
 
 AUTHENTICATION_BACKENDS = [ 
