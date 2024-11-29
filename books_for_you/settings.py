@@ -36,8 +36,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
-DEBUG = False
-
+DEBUG = True
 ALLOWED_HOSTS = ['books-for-you-19d767033b76.herokuapp.com']
 
 
@@ -132,10 +131,8 @@ WSGI_APPLICATION = 'books_for_you.wsgi.application'
 #     }
 # }
 
-
-
 DATABASES = {
-     'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+     'default': dj_database_url.parse('postgresql://ualmvha4ifk:JQRkraPzPaTJ@ep-gentle-mountain-a23bxz6h-pooler.eu-central-1.aws.neon.tech/shine_math_wrath_433076')
 }
 
 
@@ -218,4 +215,4 @@ LOGIN_REDIRECT_URL = '/'
 STRIPE_PUBLIC_KEY = os.environ.get('STRIPE_PUBLIC_KEY')
 STRIPE_SECRET_KEY = os.environ.get('STRIPE_SECRET_KEY')
 STRIPE_WH_SECRET = os.environ.get('STRIPE_WH_SECRET')
-STRIPE_CURRENCY = "usd"
+STRIPE_CURRENCY = "gbp"
