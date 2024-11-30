@@ -2,6 +2,7 @@ from django.db import models
 import profiles
 from django_countries.fields import CountryField
 from django.core.validators import MaxValueValidator, MinValueValidator
+from cloudinary.models import CloudinaryField
 # Create your models here.
 
 class Genre(models.Model):
@@ -27,7 +28,7 @@ class Book(models.Model):
     rating = models.FloatField(validators=[MinValueValidator(0.0), MaxValueValidator(10.0)], null=True, blank=True)
     genres = models.ManyToManyField(Genre, related_name="books_with_this_genre")
     price = models.DecimalField(max_digits=6, decimal_places=2)
-    imageLink = models.ImageField(max_length=1024, null=True, blank=True)
+    imageLink = CloudinaryField('image', blank=True, null=True, help_text="Book Image")
 
     def __str__(self):
         return self.name
