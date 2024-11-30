@@ -183,7 +183,7 @@ CLOUDINARY_STORAGE = {
 }
     
 STORAGES = {
-    "default": {
+    "staticfiles": {
         "BACKEND": 'cloudinary_storage.storage.MediaCloudinaryStorage',
     },
 }
