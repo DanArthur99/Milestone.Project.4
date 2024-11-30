@@ -40,7 +40,7 @@ SECRET_KEY = env('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
-DEBUG = True
+DEBUG = False
 ALLOWED_HOSTS = ['books-for-you-19d767033b76.herokuapp.com', '127.0.0.1']
 
 
@@ -185,7 +185,7 @@ CLOUDINARY_STORAGE = {
     'API_SECRET': os.environ.get('CLOUDINARY_API_SECRET'),
 }
 
-STATICILES_STORAGE = 'cloudinary_storage.storage.StaticCloudinaryStorage'
+STATICFILES_STORAGE = 'cloudinary_storage.storage.MediacCloudinaryStorage'
 
 
 
