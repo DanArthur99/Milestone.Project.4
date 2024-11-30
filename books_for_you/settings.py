@@ -15,7 +15,7 @@ import os
 import dj_database_url
 
 import environ
-import cloudinary
+import cloudinary_storage
 
 env = environ.Env(
     # set casting, default value
@@ -62,6 +62,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.sites',
+    'django.contrib.staticfiles',
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
@@ -71,12 +72,9 @@ INSTALLED_APPS = [
     'checkout',
     'profiles',
     'reviews',
-    'crispy_forms',
-    'crispy_bootstrap5',
-    'storages',
-    'cloudinary_storage',
-    'django.contrib.staticfiles',
     'cloudinary',
+    'cloudinary_storage',
+    
 ]
 
 MIDDLEWARE = [
@@ -185,8 +183,6 @@ CLOUDINARY_STORAGE = {
 }
 
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
-
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
 
 
 
