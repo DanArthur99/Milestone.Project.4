@@ -33,10 +33,10 @@ environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-# if 'DATABASE_URL' in os.environ:
-#     SECRET_KEY = os.environ.get('SECRET_KEY')
-# else:
-SECRET_KEY = env('SECRET_KEY')
+if 'DATABASE_URL' in os.environ:
+    SECRET_KEY = os.environ.get('SECRET_KEY')
+else:
+    SECRET_KEY = env('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 ALLOWED_HOSTS = ['books-for-you-19d767033b76.herokuapp.com', '127.0.0.1']
