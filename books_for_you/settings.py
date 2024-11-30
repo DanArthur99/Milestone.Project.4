@@ -39,8 +39,6 @@ environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
 SECRET_KEY = env('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-
-DEBUG = False
 ALLOWED_HOSTS = ['books-for-you-19d767033b76.herokuapp.com', '127.0.0.1']
 
 
