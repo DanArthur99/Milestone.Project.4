@@ -13,6 +13,12 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 from pathlib import Path
 import os
 import dj_database_url
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
+
+
+
 
 import environ
 import cloudinary_storage
@@ -22,7 +28,9 @@ env = environ.Env(
     DEBUG=(bool, False)
 )
 
-DEBUG = True
+
+
+DEBUG = False
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -42,6 +50,18 @@ else:
 # SECURITY WARNING: don't run with debug turned on in production!
 ALLOWED_HOSTS = ['books-for-you-19d767033b76.herokuapp.com', '127.0.0.1']
 
+if 'DATABASE_URL' in os.environ:
+    cloudinary.config( 
+  	cloud_name = os.getenv('CLOUDINARY_CLOUD_NAME'),
+  	api_key = os.getenv('CLOUDINARY_API_KEY'),
+  	api_secret = os.getenv('CLOUDINARY_API_SECRET')
+    )  
+else:
+    cloudinary.config( 
+  	cloud_name = env('CLOUDINARY_CLOUD_NAME'),
+  	api_key = env('CLOUDINARY_API_KEY'),
+  	api_secret = env('CLOUDINARY_API_SECRET')
+    ) 
 
 AUTHENTICATION_BACKENDS = [ 
     # Needed to login by username in Django admin, regardless of `allauth`
@@ -182,12 +202,7 @@ CLOUDINARY_STORAGE = {
     'API_SECRET': os.getenv('CLOUDINARY_API_SECRET'),
 }
     
-STORAGES = {
-    "staticfiles": {
-        "BACKEND": 'cloudinary_storage.storage.StaticCloudinaryStorage',
-    },
-}
-
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 
 # Default primary key field type
