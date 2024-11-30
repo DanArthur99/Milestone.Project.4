@@ -115,10 +115,6 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'basket.contexts.basket_contents',
             ],
-            'builtins': [
-                'crispy_forms.templatetags.crispy_forms_tags',
-                'crispy_forms.templatetags.crispy_forms_field',
-            ]
         },
     },
 ]
@@ -189,7 +185,7 @@ CLOUDINARY_STORAGE = {
     'API_SECRET': os.environ.get('CLOUDINARY_API_SECRET'),
 }
 
-STATICILES_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+STATICILES_STORAGE = 'cloudinary_storage.storage.StaticCloudinaryStorage'
 
 
 
