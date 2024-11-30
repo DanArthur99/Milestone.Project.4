@@ -24,7 +24,7 @@ class Book(models.Model):
     pages = models.IntegerField()
     year = models.IntegerField()
     country = CountryField(blank_label='Country', null=True, blank=True)
-    rating = models.FloatField(validators=[MinValueValidator(0.0), MaxValueValidator(10.0)], null=True)
+    rating = models.FloatField(validators=[MinValueValidator(0.0), MaxValueValidator(10.0)], null=True, blank=True)
     genres = models.ManyToManyField(Genre, related_name="books_with_this_genre")
     price = models.DecimalField(max_digits=6, decimal_places=2)
     imageLink = models.ImageField(max_length=1024, null=True, blank=True)
