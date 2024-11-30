@@ -183,7 +183,7 @@ CLOUDINARY_STORAGE = {
     'API_SECRET': os.environ.get('CLOUDINARY_API_SECRET'),
 }
 
-STATICFILES_STORAGE = 'cloudinary_storage.storage.MediacCloudinaryStorage'
+STATICFILES_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 
 
