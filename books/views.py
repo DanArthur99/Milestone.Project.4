@@ -14,10 +14,23 @@ def all_books(request):
     """ A view to show all books, including sorting and search queries """
 
     books = Book.objects.all()
+    reviews = Review.objects
     query = None
     genres = None
     sort = None
     direction = None
+
+    for book in books:
+        new_rating = 0
+        reviews = Review.objects.filter(book=book)
+        if reviews:
+            for review in reviews:
+                new_rating += review.user_rating    
+            book.rating = new_rating / len(reviews)
+            book.save()
+        else:
+            book.rating = None
+            book.save()
 
     if request.GET:
         if 'sort' in request.GET:
@@ -65,7 +78,13 @@ def about_book(request, book_id):
 
     book = get_object_or_404(Book, pk=book_id)
 
-    reviews = Review.objects.filter(book_id=book.id)
+    new_rating = 0
+    reviews = Review.objects.filter(book=book)
+    if reviews:
+        for review in reviews:
+            new_rating += review.user_rating    
+        book.rating = new_rating / len(reviews)
+        book.save()
 
     context = {
         'book': book,
@@ -107,7 +126,7 @@ def edit_book(request, book_id):
     """ Edit a book in the store """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
-        return redirect(reverse('home'))
+        return redirect(reverse('homepage'))
 
     book = get_object_or_404(Book, pk=book_id)
     if request.method == 'POST':
@@ -115,7 +134,7 @@ def edit_book(request, book_id):
         if form.is_valid():
             form.save()
             messages.success(request, 'Successfully updated book!')
-            return redirect(reverse('book_detail', args=[book.id]))
+            return redirect(reverse('about_book', args=[book.id]))
         else:
             messages.error(request,
                            ('Failed to update book. '

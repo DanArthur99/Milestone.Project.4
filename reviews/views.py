@@ -14,7 +14,6 @@ from books.models import Book
 
 @login_required
 def add_review(request, book_id):
-
     if request.method == 'POST':
         form = ReviewForm(request.POST, request.FILES)
         userprofile = get_object_or_404(UserProfile, user=request.user)
@@ -40,6 +39,41 @@ def add_review(request, book_id):
     template = 'reviews/add_review.html'
     context = {
         'book_id': book_id,
+        'form': form,
+    }
+
+    return render(request, template, context)
+
+@login_required
+def edit_review(request, review_id):
+    """"""
+    review = get_object_or_404(Review, pk=review_id)
+    book = review.book
+    book_id = book.id
+
+    if not request.user.is_superuser and request.user != review.user :
+        messages.error(request, "Oops, looks like this page's access is forbidden")
+        return redirect(reverse('homepage'))
+    
+    if request.method == 'POST':
+        form = ReviewForm(request.POST, request.FILES, instance=review)
+        if form.is_valid():  
+            form.save()
+            messages.success(request, 'Successfully updated review!')
+            # Updates average rating
+            return redirect(reverse('about_book', args=[book_id]))
+        else:
+            messages.error(request,
+                           ('Failed to add review. '
+                            'Please ensure the form is valid.'))
+    else:
+        form =  ReviewForm(instance=review)
+        messages.info(request, f'You are editing a review for {book.name}')
+
+    template = 'reviews/edit_review.html'
+    context = {
+        'book_id': book_id,
+        'review_id': review_id,
         'form': form,
     }
 

@@ -13,13 +13,13 @@ class UserProfile(models.Model):
     delivery information and order history
     """
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    default_phone_number = models.CharField(max_length=20, null=True, blank=True)
-    default_street_address1 = models.CharField(max_length=80, null=True, blank=True)
-    default_street_address2 = models.CharField(max_length=80, null=True, blank=True)
-    default_town_or_city = models.CharField(max_length=40, null=True, blank=True)
-    default_county = models.CharField(max_length=80, null=True, blank=True)
-    default_postcode = models.CharField(max_length=20, null=True, blank=True)
-    default_country = CountryField(blank_label='Country', null=True, blank=True)
+    phone_number = models.CharField(max_length=20, null=True, blank=True)
+    street_address1 = models.CharField(max_length=80, null=True, blank=True)
+    street_address2 = models.CharField(max_length=80, null=True, blank=True)
+    town_or_city = models.CharField(max_length=40, null=True, blank=True)
+    county = models.CharField(max_length=80, null=True, blank=True)
+    postcode = models.CharField(max_length=20, null=True, blank=True)
+    country = CountryField(blank_label='Country', null=True, blank=True)
     favorite_genres = models.ManyToManyField(books.models.Genre, related_name='users_who_like_this_genre', null=True, blank=True)
     reading_list = models.ManyToManyField(books.models.Book, related_name='users_who_are_interested_in_this_book', null=True, blank=True)
 
