@@ -184,7 +184,7 @@ CLOUDINARY_STORAGE = {
     
 STORAGES = {
     "staticfiles": {
-        "BACKEND": 'cloudinary_storage.storage.MediaCloudinaryStorage',
+        "BACKEND": 'cloudinary_storage.storage.StaticCloudinaryStorage',
     },
 }
 
