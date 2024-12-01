@@ -37,6 +37,9 @@
                     </a>
                 </p>
                 {% endif %}
+                {% if book.rating %}
+                <p class="small mt-1 mb-0">Rating: <span id="rating">{{ book.rating | floatformat:1 }}</span> / 10</p>
+                {% endif %}
                 {% if request.user.is_superuser %}
                 <small class="ml-3">
                     <a href="{% url 'edit_book' book.id %}">Edit</a> |
@@ -52,7 +55,7 @@
                                 <div class="input-group input-group-{{ book.id }}">
                                     <div class="input-group-prepend">
                                         <button
-                                            class="decrement-qty btn btn-black rounded-0 decrement-qty_{{ book.id }}"
+                                            class="decrement-qty btn btn-black rounded-start-5 decrement-qty_{{ book.id }}"
                                             data-book_id="{{ book.id }}">
                                             <span class="icon">
                                                 <i class="fas fa-minus"></i>
@@ -63,7 +66,7 @@
                                         name="quantity" value="1" min="1" max="99" data-book_id="{{ book.id }}">
                                     <div class="input-group-append">
                                         <button
-                                            class="increment-qty btn btn-black rounded-0 increment-qty_{{ book.id }}"
+                                            class="increment-qty btn btn-black rounded-end-5 increment-qty_{{ book.id }}"
                                             data-book_id="{{ book.id }}">
                                             <span class="icon">
                                                 <i class="fas fa-plus"></i>
@@ -75,45 +78,64 @@
                         </div>
 
                         <div class="col{% if s %}-12 mt-2{% endif %}">
-                            <a href="{% url 'books' %}" class="btn btn-outline-black rounded-0 mt-5">
+                            <a href="{% url 'books' %}" class="btn btn-outline-black rounded-3 mt-5">
                                 <span class="icon">
                                     <i class="fas fa-chevron-left"></i>
                                 </span>
                                 <span class="text-uppercase">Keep Shopping</span>
                             </a>
-                            <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="Add to Bag">
+                            <input type="submit" class="btn btn-black rounded-3 text-uppercase mt-5" value="Add to Bag">
                         </div>
                         <input type="hidden" name="redirect_url" value="{{ request.path }}">
                     </div>
                 </form>
-
-                <div class="col-12">
-                    <a href="{% url 'add_review' book.id %}">Add Review</a>
+                <div class="row justify-content-center">
+                    <div class="col-10">
+                        <a href="{% url 'add_review' book.id %}" class="btn btn-primary m-4">Add Review</a>
+                    </div>
+    
                 </div>
+                
+            </div>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col">
+            <div class="row reviews justify-content-center">
+                <h4 class="col-4">Reviews</h4>
+                <select id="sort-selector" class=" col-4 custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
+                    <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
+                    <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low to high)</option>
+                    <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price (high to low)</option>
+                    <option value="rating_asc" {% if current_sorting == 'rating_asc' %}selected{% endif %}>Rating (low to high)</option>
+                    <option value="rating_desc" {% if current_sorting == 'rating_desc' %}selected{% endif %}>Rating (high to low)</option>
+                    <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>Name (A-Z)</option>
+                    <option value="name_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>Name (Z-A)</option>
+                    <option value="genres_asc" {% if current_sorting == 'genres_asc' %}selected{% endif %}>Genre (A-Z)</option>
+                    <option value="genres_desc" {% if current_sorting == 'genres_desc' %}selected{% endif %}>Genre (Z-A)</option>
+                </select>
+                {% if reviews %}
+                {% for review in reviews %}
+                <div class="card col-sm-6 col-md-4 col-lg-2 m-3" style="width: 18rem;">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">{{ review.title }}</h5>
+                        <h6 class="card-subtitle mb-2 text-body-secondary">{{ review.user_rating }} / 10</h6>
+                        <h6 class="card-subtitle mb-2 text-body-primary">review by: {{ review.user }}</h6>
+                        <p class="card-text">{{ review.content }}</p>
+                        {% if request.user.is_superuser or review.user == request.user %}
+                        <a href="{% url 'edit_review' review.id %}">Edit</a>
+                        {% endif %}
+                    </div>
+                </div>
+                {% endfor %}
+                {% else %}
+                <div class="no-reviews col-sm-6 col-md-4 col-lg-2 m-3">
+                    <h4>Looks like there are no reviews to show</h4>
+                </div>
+                {% endif %}
+            </div>
+        </div>
 
-            </div>
-        </div>
-        <div class="reviews col-12">
-            {% if reviews %}
-            {% for review in reviews %}
-            <div class="card col-sm-6 col-md-4 col-lg-3" style="width: 18rem;">
-                <div class="card-body">
-                    <h5 class="card-title">{{ review.title }}</h5>
-                    <h6 class="card-subtitle mb-2 text-body-secondary">{{ review.user_rating }} / 10</h6>
-                    <h6 class="card-subtitle mb-2 text-body-primary">review by: {{ review.user }}</h6>
-                    <p class="card-text">{{ review.content }}</p>
-                    {% if request.user.is_superuser or review.user == request.user %}
-                    <a href="{% url 'edit_review' review.id %}">Edit</a>
-                    {% endif %}
-                </div> 
-            </div>
-            {% endfor %}
-            {% else %}
-            <div class="no-reviews">
-                <h4>Looks like there are no reviews to show</h4>
-            </div>
-            {% endif %}
-        </div>
     </div>
 </div>
 {% endblock %}
@@ -121,5 +143,27 @@
 {% block postloadjs %}
 {{ block.super }}
 {% include 'books/includes/script.html' %}
+<script type="text/javascript">
+    $('#sort-selector').change(function() {
+        var selector = $(this);
+        var currentUrl = new URL(window.location);
+
+        var selectedVal = selector.val();
+        if(selectedVal != "reset"){
+            var sort = selectedVal.split("_")[0];
+            var direction = selectedVal.split("_")[1];
+
+            currentUrl.searchParams.set("sort", sort);
+            currentUrl.searchParams.set("direction", direction);
+
+            window.location.replace(currentUrl);
+        } else {
+            currentUrl.searchParams.delete("sort");
+            currentUrl.searchParams.delete("direction");
+
+            window.location.replace(currentUrl);
+        }
+    })
+</script>
 <script src="{% static 'books/js/reviewscript.js' %}"></script>
 {% endblock %}
