@@ -35,6 +35,7 @@ class StripeWH_Handler:
             [cust_email],
             fail_silently=False,
         )
+        
 
     def handle_event(self, event):
         """
@@ -79,7 +80,7 @@ class StripeWH_Handler:
 
         order_exists = False
         attempt = 1
-        while attempt < 100:
+        while attempt >= 1:
             try:
                 order = Order.objects.get(
                     full_name=shipping_details.name,
