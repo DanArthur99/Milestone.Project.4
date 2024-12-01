@@ -114,7 +114,7 @@ def checkout(request):
                 profile = UserProfile.objects.get(user=request.user)
                 order_form = OrderForm(initial={
                     'full_name': profile.user.get_full_name(),
-                    'email': profile.user.email,
+                    'email': request.user.email,
                     'phone_number': profile.phone_number,
                     'country': profile.country,
                     'postcode': profile.postcode,
@@ -159,15 +159,13 @@ def checkout_success(request, order_number):
         # Save the user's info
         if save_info:
             profile_data = {
-                'default_phone_number': order.phone_number,
-                'default_country': order.country,
-                'default_postcode': order.postcode,
-                'default_town_or_city': order.town_or_city,
-                'default_street_address1': order.street_address1,
-                'default_street_address2': order.street_address2,
-                'default_county': order.county,
-                'favorite_genres': profile.favorite_genres,
-                'reading_list': profile.reading_list
+                'phone_number': order.phone_number,
+                'country': order.country,
+                'postcode': order.postcode,
+                'town_or_city': order.town_or_city,
+                'street_address1': order.street_address1,
+                'street_address2': order.street_address2,
+                'county': order.county,
             }
             
             user_profile_form = UserProfileForm(profile_data, instance=profile)
@@ -176,7 +174,7 @@ def checkout_success(request, order_number):
 
     messages.success(request, f'Order successfully processed! \
         Your order number is {order_number}. A confirmation \
-        email will be sent to {order.email}.')
+        email will be sent to {request.user.email}.')
 
     if 'basket' in request.session:
         del request.session['basket']
