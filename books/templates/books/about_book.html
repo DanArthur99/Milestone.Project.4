@@ -38,7 +38,7 @@
                 </p>
                 {% endif %}
                 {% if book.rating %}
-                <p class="small mt-1 mb-0">Rating: <span id="rating">{{ book.rating | floatformat:1 }}</span> / 10</p>
+                <p class="small mt-1 mb-0">Rating: <span id="rating" class="text-border"><strong>{{ book.rating | floatformat:1 }}</strong></span> / 10</p>
                 {% endif %}
                 {% if request.user.is_superuser %}
                 <small class="ml-3">
