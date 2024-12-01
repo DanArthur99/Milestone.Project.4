@@ -2,6 +2,7 @@ from django.http import HttpResponse
 from django.core.mail import send_mail
 from django.template.loader import render_to_string
 from django.conf import settings
+from django.shortcuts import get_object_or_404
 
 from .models import Order, OrderLineItem
 from books.models import Book
@@ -78,23 +79,26 @@ class StripeWH_Handler:
 
         order_exists = False
         attempt = 1
-        try:
-            order = Order.objects.get(
-                full_name=shipping_details.name,
-                email=email,
-                phone_number=shipping_details.phone,
-                country=shipping_details.address.country,
-                postcode=shipping_details.address.postal_code,
-                town_or_city=shipping_details.address.city,
-                street_address1=shipping_details.address.line1,
-                grand_total=grand_total,
-                original_bag=basket,
-                stripe_pid=pid,
-            )
-            order_exists = True
-        except Order.DoesNotExist:
-            attempt += 1
-            time.sleep(1)
+        while attempt < 100:
+            try:
+                order = Order.objects.get(
+                    full_name=shipping_details.name,
+                    email=email,
+                    phone_number=shipping_details.phone,
+                    country=shipping_details.address.country,
+                    postcode=shipping_details.address.postal_code,
+                    town_or_city=shipping_details.address.city,
+                    street_address1=shipping_details.address.line1,
+                    grand_total=grand_total,
+                    original_bag=basket,
+                    stripe_pid=pid,
+                )
+                order_exists = True
+                break
+            except Order.DoesNotExist:
+                attempt += 1
+                time.sleep(1)
+                
         if order_exists:
             self._send_confirmation_email(order, email)
             return HttpResponse(
