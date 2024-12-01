@@ -85,10 +85,27 @@ def about_book(request, book_id):
             new_rating += review.user_rating    
         book.rating = new_rating / len(reviews)
         book.save()
+    
+    sort = None
+    direction = None
+
+    if request.GET:
+        if 'sort' in request.GET:
+            sortkey = request.GET['sort']
+            sort = sortkey
+            reviews = reviews.order_by(sortkey)
+            if 'direction' in request.GET:
+                direction = request.GET['direction']
+                if direction == 'desc':
+                    sortkey = f'-{sortkey}'
+            reviews = reviews.order_by(sortkey)
+
+    current_sorting = f'{sort}-{direction}'
 
     context = {
         'book': book,
-        'reviews': reviews
+        'reviews': reviews,
+        'current_sorting': current_sorting,
     }
 
     return render(request, 'books/about_book.html', context)
