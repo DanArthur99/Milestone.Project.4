@@ -5,8 +5,8 @@ $('.message-remover-success').on('click', function() {
     $('.success-alert').css('display', 'none')
 })
 $('.message-remover-info').on('click', function() {
-    $('.danger-info').css('display', 'none')
+    $('.info-alert').css('display', 'none')
 })
 $('.message-remover-warning').on('click', function() {
-    $('.danger-warning').css('display', 'none')
+    $('.warning-alert').css('display', 'none')
 })
