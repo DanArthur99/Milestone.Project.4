@@ -37,20 +37,21 @@
 </head>
 
 <body>
-    <header class="container-fluid fixed-top">
+    <header class="container-fluid">
         <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
                 <a href="{% url 'homepage' %}" class="nav-link main-logo-link">
                     <h2 class="logo-font text-black my-0">Books For <em>You</em></h2>
                 </a>
             </div>
+            
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
                 <form method="GET" action="{% url 'books' %}">
                     <div class="input-group w-100">
-                        <input class="form-control border border-black rounded-0" type="text" name="q"
+                        <input class="form-control border border-black rounded-start-5" type="text" name="q"
                             placeholder="Search our site">
                         <div class="input-group-append">
-                            <button class="form-control btn btn-black border border-black rounded-0" type="submit">
+                            <button class="form-control btn btn-black border border-black rounded-end-5" type="submit">
                                 <span class="icon">
                                     <i class="fas fa-search"></i>
                                 </span>
@@ -109,30 +110,39 @@
     </header>
 
     {% if messages %}
-        <div class="message-container">
-            {% for message in messages %}
-                {% with message.level as level %}
-                    {% if level == 40 %}
-                    <div class="alert alert-danger" role="alert">
-                        {{ message }}
-                    </div>
-                    {% elif level == 30 %}
-                    <div class="alert alert-warning" role="alert">
-                        {{ message }}
-                    </div>  
-                    {% elif level == 25 %}
-                    <div class="alert alert-success" role="alert">
-                        {{ message }}
-                    </div>
-                    {% else %}
-                    <div class="alert alert-info" role="alert">
-                        {{ message }}
-                    </div>
-                    {% endif %}
-                {% endwith %}
-            {% endfor %}
+    <div class="row g-0">
+        <div class="col-12 text-center">
+            <div class="message-container w-100">
+                {% for message in messages %}
+                    {% with message.level as level %}
+                        {% if level == 40 %}
+                        <div class="alert success-danger rounded-0 m-0 p-0" role="alert">
+                            <span class="text-white">{{ message }}</span>
+                            <button type="button" class="message-remover-r btn text-white"><i class="x-danger fa-solid fa-x"></i></button>
+                        </div>
+                        {% elif level == 30 %}
+                        <div class="alert success-warning rounded-0 m-0 p-0" role="alert">
+                            <span class="text-black">{{ message }}</span>
+                            <button type="button" class="message-remover-y btn text-black"><i class="x-warning fa-solid fa-x"></i></button>
+                        </div>  
+                        {% elif level == 25 %}
+                        <div class="alert success-alert rounded-0 m-0 p-0" role="alert">
+                            <span class="text-white">{{ message }}</span>
+                            <button type="button" class="message-remover-g btn text-white"><i class="x-success fa-solid fa-x"></i></button>
+                        </div>
+                        {% else %}
+                        <div class="alert success-info rounded-0 m-0 p-0" role="alert">
+                            <span class="text-white">{{ message }}</span>
+                            <button type="button" class="message-remover-b btn text-white"><i class="x-info fa-solid fa-x"></i></button>
+                        </div>
+                        {% endif %}
+                    {% endwith %}
+                {% endfor %}
+            </div>
+        {% endif %}
         </div>
-    {% endif %}
+    </div>
+        
 
     {% block page_header %}
     {% endblock %}
