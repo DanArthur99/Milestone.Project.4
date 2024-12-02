@@ -1,61 +1,57 @@
-{% extends "account/base_entrance.html" %}
+{% extends "base.html" %}
+{% load static %}
 {% load i18n %}
-{% load allauth account %}
-{% block head_title %}
-    {% trans "Sign In" %}
-{% endblock head_title %}
+{% load account socialaccount %}
+
+{% block head_title %}{% trans "Sign In" %}{% endblock %}
+
 {% block content %}
-    {% element h1 %}
-        {% trans "Sign In" %}
-    {% endelement %}
-    {% if not SOCIALACCOUNT_ONLY %}
-        {% setvar link %}
-            <a href="{{ signup_url }}">
-            {% endsetvar %}
-            {% setvar end_link %}
-            </a>
-        {% endsetvar %}
-        {% element p %}
-            {% blocktranslate %}If you have not created an account yet, then please {{ link }}sign up{{ end_link }} first.{% endblocktranslate %}
-        {% endelement %}
-        {% url 'account_login' as login_url %}
-        {% element form form=form method="post" action=login_url tags="entrance,login" %}
-            {% slot body %}
-                {% csrf_token %}
-                {% element fields form=form unlabeled=True %}
-                {% endelement %}
-                {{ redirect_field }}
-            {% endslot %}
-            {% slot actions %}
-                {% element button type="submit" tags="prominent,login" %}
-                    {% trans "Sign In" %}
-                {% endelement %}
-            {% endslot %}
-        {% endelement %}
-    {% endif %}
-    {% if LOGIN_BY_CODE_ENABLED or PASSKEY_LOGIN_ENABLED %}
-        {% element hr %}
-        {% endelement %}
-        {% element button_group vertical=True %}
-            {% if PASSKEY_LOGIN_ENABLED %}
-                {% element button type="submit" form="mfa_login" id="passkey_login" tags="prominent,login,outline,primary" %}
-                    {% trans "Sign in with a passkey" %}
-                {% endelement %}
-            {% endif %}
-            {% if LOGIN_BY_CODE_ENABLED %}
-                {% element button href=request_login_code_url tags="prominent,login,outline,primary" %}
-                    {% trans "Mail me a sign-in code" %}
-                {% endelement %}
-            {% endif %}
-        {% endelement %}
-    {% endif %}
-    {% if SOCIALACCOUNT_ENABLED %}
-        {% include "socialaccount/snippets/login.html" with page_layout="entrance" %}
-    {% endif %}
-{% endblock content %}
-{% block extra_body %}
-    {{ block.super }}
-    {% if PASSKEY_LOGIN_ENABLED %}
-        {% include "mfa/webauthn/snippets/login_script.html" with button_id="passkey_login" %}
-    {% endif %}
+
+<div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6 col-lg-4">
+            <div class="card-sign-up shadow p-4">
+                <h2 class="text-center mb-4 font-primary fw-bold text-uppercase">{% trans "Sign In" %}</h2>
+
+                <form method="POST" action="{% url 'account_login' %}">
+                    {% csrf_token %}
+                
+                    <!-- Login field -->
+                    <div class="input-group mb-2 justify-content-center">
+                        <span class="input-group-text"><i class="fas fa-user"></i></span>
+                        {{ form.login }}
+                    </div>
+                
+                    <!-- Password field -->
+                    <div class="input-group mb-4 justify-content-center">
+                        <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                        {{ form.password }}
+                    </div>
+
+                    <div class="d-flex justify-content-center gap-3">
+                    <!-- Submit button -->
+                    <div class="text-center mb-2">
+                        <button type="submit" class="btn btn-primary adopt-now-button">{% trans "Sign In" %}</button>
+                    </div>
+                    <!-- Forgot password link -->
+                    <div class="pt-2">
+                        <a href="{% url 'account_reset_password' %}" class="text-decoration-none color-primary">
+                            {% trans "Forgot Password?" %}
+                        </a>
+                    </div>
+                    </div>
+                
+                
+                    <!-- Sign-up link -->
+                    <p class="text-center">
+                        If you have not created an account yet, then please
+                        <a href="{{ signup_url }}" class="color-primary">sign up</a> first.
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 {% endblock %}
