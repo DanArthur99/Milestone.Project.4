@@ -116,24 +116,24 @@
                 {% for message in messages %}
                     {% with message.level as level %}
                         {% if level == 40 %}
-                        <div class="alert success-danger rounded-0 m-0 p-0" role="alert">
+                        <div class="alert danger-alert rounded-0 m-0 p-0" role="alert">
                             <span class="text-white">{{ message }}</span>
-                            <button type="button" class="message-remover-r btn text-white"><i class="x-danger fa-solid fa-x"></i></button>
+                            <button type="button" class="message-remover-danger btn text-white"><i class="x-danger fa-solid fa-x"></i></button>
                         </div>
                         {% elif level == 30 %}
-                        <div class="alert success-warning rounded-0 m-0 p-0" role="alert">
+                        <div class="alert warning-alert rounded-0 m-0 p-0" role="alert">
                             <span class="text-black">{{ message }}</span>
-                            <button type="button" class="message-remover-y btn text-black"><i class="x-warning fa-solid fa-x"></i></button>
+                            <button type="button" class="message-remover-warning btn text-black"><i class="x-warning fa-solid fa-x"></i></button>
                         </div>  
                         {% elif level == 25 %}
                         <div class="alert success-alert rounded-0 m-0 p-0" role="alert">
                             <span class="text-white">{{ message }}</span>
-                            <button type="button" class="message-remover-g btn text-white"><i class="x-success fa-solid fa-x"></i></button>
+                            <button type="button" class="message-remover-success btn text-white"><i class="x-success fa-solid fa-x"></i></button>
                         </div>
                         {% else %}
-                        <div class="alert success-info rounded-0 m-0 p-0" role="alert">
+                        <div class="alert info-alert rounded-0 m-0 p-0" role="alert">
                             <span class="text-white">{{ message }}</span>
-                            <button type="button" class="message-remover-b btn text-white"><i class="x-info fa-solid fa-x"></i></button>
+                            <button type="button" class="message-remover-info btn text-white"><i class="x-info fa-solid fa-x"></i></button>
                         </div>
                         {% endif %}
                     {% endwith %}

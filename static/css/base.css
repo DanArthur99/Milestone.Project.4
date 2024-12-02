@@ -114,7 +114,7 @@ input[name='q']::placeholder {
     color: #aab7c4;
 }
 
-/* ------------------------------- bootstrap toasts */
+/* ------------------------------- message containers --------  */
 
 .message-container {
     top: 72px;
@@ -126,19 +126,17 @@ input[name='q']::placeholder {
     border-color: #00963e;
 }
 
-.success-danger, .x-danger {
+.danger-alert, .x-danger {
     background-color: #d40000;
     border-color: #d40000;
 }
 
-.me
-
-.success-info, .x-info {
+.info-alert, .x-info {
     background-color: #009ba7;
     border-color: #009ba7;
 }
 
-.success-warning, .x-warning {
+.warning-alert, .x-warning {
     background-color: #ff9900;
     border-color: #ff9900;
 }
