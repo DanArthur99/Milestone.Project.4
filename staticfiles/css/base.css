@@ -37,6 +37,10 @@ body {
     min-width: 260px;
 }
 
+.text-border {
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
 .btn-black {
     background: black;
     color: white;
@@ -110,22 +114,41 @@ input[name='q']::placeholder {
     color: #aab7c4;
 }
 
-/* ------------------------------- bootstrap toasts */
+/* ------------------------------- message containers --------  */
 
 .message-container {
-    position: fixed;
     top: 72px;
-    right: 15px;
-    z-index: 99999999999;
+    z-index: 99999999998;
 }
 
-.custom-toast {
-    overflow: visible;
+.success-alert, .x-success {
+    background-color: #00963e;
+    border-color: #00963e;
 }
 
-.toast-capper {
-    height: 2px;
+.danger-alert, .x-danger {
+    background-color: #d40000;
+    border-color: #d40000;
 }
+
+.info-alert, .x-info {
+    background-color: #009ba7;
+    border-color: #009ba7;
+}
+
+.warning-alert, .x-warning {
+    background-color: #ff9900;
+    border-color: #ff9900;
+}
+
+.x-success:hover, .x-danger:hover, .x-info:hover {
+    color: black;
+}
+
+.x-warning:hover {
+    color: white;
+}
+
 
 /* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
 .arrow-up {
