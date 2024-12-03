@@ -3,13 +3,21 @@ html {
 }
 
 body {
-    background: url('/media/homepage_background_cropped.jpg') no-repeat center center fixed;
+    background: url('/media/homepage-background.png') no-repeat center center fixed;
+    background-color: #111;
     background-size: cover;
-    height: calc(100vh - 164px);
+    height: calc(100vh - 164px); 
     color: #555;
     font-family: 'Georgia';
 }
 
+header {
+    background-color: #111;
+}
+
+.topnav, nav {
+    background-color: 000;
+}
 /* from Bulma */
 .icon {
     align-items: center;
@@ -39,6 +47,19 @@ body {
 
 .text-border {
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+.text-shadow-white {
+    text-shadow: 0.3rem 0.3rem 3px #fff, 0.6rem 0.6rem 4px #fff, 0.9rem 0.9rem 5px #fff, 1.2rem 1.2rem 6px #fff;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0%
+    }
+    to {
+        opacity: 100%
+    }
 }
 
 .btn-black {
@@ -87,8 +108,18 @@ body {
 	top: 0;
 	left: 0;
 	position: fixed;
-	background: white;
+	background: #000;
+    opacity: 0.5;
 	z-index: -1;
+}
+
+.card,.card-footer {
+    background-color: rgba(245, 245, 245, 0)
+}
+
+.dropdown-item:hover {
+    background-color: #222;
+    color: white;
 }
 
 a.category-badge > span.badge:hover {

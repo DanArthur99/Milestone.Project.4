@@ -9,26 +9,26 @@
 
 <div class="container my-5">
     <div class="row justify-content-center">
-        <div class="col-md-6 col-lg-4">
-            <div class="card-sign-up shadow p-4">
-                <h2 class="text-center mb-4 font-primary fw-bold text-uppercase">{% trans "Sign In" %}</h2>
+        <div class="col-md-8 col-lg-6">
 
-                <form method="POST" action="{% url 'account_login' %}">
-                    {% csrf_token %}
-                
-                    <!-- Login field -->
-                    <div class="input-group mb-2 justify-content-center">
-                        <span class="input-group-text"><i class="fas fa-user"></i></span>
-                        {{ form.login }}
-                    </div>
-                
-                    <!-- Password field -->
-                    <div class="input-group mb-4 justify-content-center">
-                        <span class="input-group-text"><i class="fas fa-lock"></i></span>
-                        {{ form.password }}
-                    </div>
+            <h2 class="text-center mb-4 font-primary fw-bold text-uppercase">Sign In</h2>
 
-                    <div class="d-flex justify-content-center gap-3">
+            <form method="POST" action="{% url 'account_login' %}">
+                {% csrf_token %}
+
+                <!-- Login field -->
+                <div class="mb-2 justify-content-center input-group">
+                    <label for="login" class="form-label w-100 text-center">Enter username:</label>
+                    {{ form.login }}
+                </div>
+
+                <!-- Password field -->
+                <div class="input-group mb-4 justify-content-center">
+                    <label for="password" class="form-label w-100 text-center">Enter password:</label>
+                    {{ form.password }}
+                </div>
+
+                <div class="d-flex justify-content-center gap-3">
                     <!-- Submit button -->
                     <div class="text-center mb-2">
                         <button type="submit" class="btn btn-primary adopt-now-button">{% trans "Sign In" %}</button>
@@ -39,16 +39,15 @@
                             {% trans "Forgot Password?" %}
                         </a>
                     </div>
-                    </div>
-                
-                
-                    <!-- Sign-up link -->
-                    <p class="text-center">
-                        If you have not created an account yet, then please
-                        <a href="{{ signup_url }}" class="color-primary">sign up</a> first.
-                    </p>
-                </form>
-            </div>
+                </div>
+
+
+                <!-- Sign-up link -->
+                <p class="text-center">
+                    If you have not created an account yet, then please
+                    <a href="{{ signup_url }}" class="color-primary">sign up</a> first.
+                </p>
+            </form>
         </div>
     </div>
 </div>
