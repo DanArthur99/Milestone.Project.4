@@ -18,6 +18,7 @@ header {
 .topnav, nav {
     background-color: 000;
 }
+
 /* from Bulma */
 .icon {
     align-items: center;
@@ -148,8 +149,9 @@ input[name='q']::placeholder {
 /* ------------------------------- message containers --------  */
 
 .message-container {
-    top: 72px;
+    margin-top: 64px;
     z-index: 99999999998;
+    position: fixed;
 }
 
 .success-alert, .x-success {
