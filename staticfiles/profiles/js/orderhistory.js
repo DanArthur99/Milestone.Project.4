@@ -6,7 +6,7 @@ table = $('#order-history-table')
 
 $('#order-history-button').on('click', function() {
     if (table.css)
-    $(this).html($(this).text() == 'Hide Order History' ? 'Show Order History': 'Hide Order Historu')
+    $(this).html($(this).text() == 'Hide Order History' ? 'View Order History': 'Hide Order History');
     $('#order-history-table').toggle()
 })
    
