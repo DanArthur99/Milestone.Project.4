@@ -32,5 +32,5 @@ class BookForm(forms.ModelForm):
         )
         self.fields['genres'].choices = friendly_names
         for field_name, field in self.fields.items():
-            field.widget.attrs['class'] = 'border-black rounded-0 form-control'
+            field.widget.attrs['class'] = 'form-control border-black rounded-3'
 

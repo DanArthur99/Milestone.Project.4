@@ -2,6 +2,8 @@
 
 html {
     height: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 body {
@@ -13,12 +15,24 @@ body {
     font-family: 'Georgia';
 }
 
+.order-table {
+    --bs-table-bg: black;
+}
+
+html, body {
+    max-width: 100%;
+}
+
 header {
     background-color: #111;
 }
 
 .topnav, nav {
     background-color: 000;
+}
+
+th, td {
+    color: white !important;
 }
 
 /* from Bulma */
@@ -70,6 +84,14 @@ header {
     margin-top: 15vh;
 }
 
+label {
+    color: white;
+    width: 100%;
+}
+
+#id_genres {
+    max-width: 388px;
+}
 /*------- Animations --------*/
 .fadein {
     animation-name: fadein;
