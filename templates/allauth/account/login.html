@@ -16,7 +16,11 @@
 
             <form method="POST" action="{% url 'account_login' %}">
                 {% csrf_token %}
-
+                <ul class="errorlist">
+                    {% for key, value in form.errors.items %}
+                        <li>{% if key != '__all__' %}{{ key }} {% endif %}{{ value }}</li>
+                    {% endfor %}
+                </ul>
                 <!-- Login field -->
                 <div class="mb-2 justify-content-center input-group">
                     <label for="login" class="form-label w-100 text-center text-white">Enter Username:</label>
