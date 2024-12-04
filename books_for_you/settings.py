@@ -92,6 +92,7 @@ INSTALLED_APPS = [
     'reviews',
     'cloudinary',
     'cloudinary_storage',
+    'widget_tweaks',
     
 ]
 

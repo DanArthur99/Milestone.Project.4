@@ -28,8 +28,8 @@
         </div>
         <div class="col-12 col-md-6 col-lg-4">
             <div class="book-details-container mb-5 mt-md-5">
-                <p class="mb-0">{{ book.name }}</p>
-                <p class="lead mb-0 text-left font-weight-bold">£{{ book.price }}</p>
+                <p class="mb-0 text-white">{{ book.name }}</p>
+                <p class="lead mb-0 text-left text-white font-weight-bold">£{{ book.price }}</p>
                 {% if book.genre %}
                 <p class="small mt-1 mb-0">
                     <a class="text-muted" href="{% url 'books' %}?genre={{ book.genre.name }}">
@@ -38,19 +38,19 @@
                 </p>
                 {% endif %}
                 {% if book.rating %}
-                <p class="small mt-1 mb-0">Rating: <span id="rating" class="text-border"><strong>{{ book.rating | floatformat:1 }}</strong></span> / 10</p>
+                <p class="small text-white mt-1 mb-0">Rating: <span id="rating" class="text-border lead"><strong>{{ book.rating | floatformat:1 }}</strong></span> / 10</p>
                 {% endif %}
                 {% if request.user.is_superuser %}
                 <small class="ml-3">
-                    <a href="{% url 'edit_book' book.id %}">Edit</a> |
-                    <a class="text-danger" href="{% url 'delete_book' book.id %}">Delete</a>
+                    <a class="btn btn-primary" href="{% url 'edit_book' book.id %}">Edit</a> |
+                    <a class="btn btn-danger" href="{% url 'delete_book' book.id %}">Delete</a>
                 </small>
                 {% endif %}
                 <form class="form" action="{% url 'add_to_basket' book.id %}" method="POST">
                     {% csrf_token %}
                     <div class="form-row">
                         <div class="col-12">
-                            <p class="mt-3"><strong>Quantity:</strong></p>
+                            <p class="mt-3 text-white"><strong>Quantity:</strong></p>
                             <div class="form-group w-50">
                                 <div class="input-group input-group-{{ book.id }}">
                                     <div class="input-group-prepend">
@@ -91,7 +91,7 @@
                 </form>
                 <div class="row justify-content-center">
                     <div class="col-10">
-                        <a href="{% url 'add_review' book.id %}" class="btn btn-primary m-4">Add Review</a>
+                        <a href="{% url 'add_review' book.id %}" class="btn btn-brown m-4">Add Review</a>
                     </div>
     
                 </div>
@@ -102,8 +102,8 @@
     <div class="row justify-content-center">
         <div class="col">
             <div class="row justify-content-center">
-                <h4 class="col-4">Reviews</h4>
-                <select id="sort-selector" class=" col-4 custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
+                <h4 class="col-sm-4 text-white">Reviews</h4>
+                <select id="sort-selector" class="col-4 custom-select custom-select-sm rounded-3 border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
                     <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
                     <option value="user_rating-asc" {% if current_sorting == 'user_rating-asc' %}selected{% endif %}>Rating (low to high)</option>
                     <option value="user_rating-desc" {% if current_sorting == 'user_rating-desc' %}selected{% endif %}>Rating (high to low)</option>
@@ -112,7 +112,7 @@
             <div class="row reviews justify-content-center">
                 {% if reviews %}
                 {% for review in reviews %}
-                <div class="card col-sm-6 col-md-4 col-lg-2 m-3" style="width: 18rem;">
+                <div class="card bg-white col-sm-6 col-md-4 col-lg-2 m-3" style="width: 18rem;">
                     <div class="card-body text-center">
                         <h5 class="card-title">{{ review.title }}</h5>
                         <h6 class="card-subtitle mb-2 text-body-secondary">{{ review.user_rating }} / 10</h6>

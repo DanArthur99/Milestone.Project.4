@@ -2,55 +2,57 @@
 
 {% load i18n %}
 
+{% load widget_tweaks %}
+
 {% block head_title %}{% trans "Sign Up" %}{% endblock %}
 
 {% block content %}
 
+<div class="overlay"></div>
 <div class="container my-5">
     <div class="row justify-content-center">
-        <div class="col-md-6 col-lg-4">
+        <div class="col-md-6 col-lg-4 sign-up-form">
             <div class="card-sign-up shadow p-4">
-                <h2 class="text-center mb-4 font-primary fw-bold text-uppercase">{% trans "Sign Up" %}</h2>
+                <h2 class="text-center mb-4 font-primary fw-bold text-uppercase text-white">{% trans "Sign Up" %}</h2>
 
                 <form method="POST" action="{% url 'account_signup' %}">
                     {% csrf_token %}
 
-                    
                     <div class="input-group mb-2 justify-content-center">
-                        <span class="input-group-text"><i class="fas fa-user"></i></span>
-                        {{ form.username }}
+                        <label for="username" class="form-label w-100 text-center text-white">Username:</label>
+                        {{ form.username|attr:"class:form-control rounded-3" }}
                     </div>
 
             
                     <div class="input-group mb-2 justify-content-center">
-                        <span class="input-group-text"><i class="fas fa-envelope"></i></span>
-                        {{ form.email }}
+                        <label for="email" class="form-label w-100 text-center text-white">Email:</label>
+                        {{ form.email|attr:"class:form-control rounded-3" }}
                     </div>
 
                     
                     <div class="input-group mb-2 justify-content-center">
-                      <span class="input-group-text"><i class="fas fa-envelope"></i></span>
-                      {{ form.email2 }} 
-                  </div>
+                        <label for="email2" class="form-label w-100 text-center text-white">Confirm Email:</label>
+                        {{ form.email2|attr:"class:form-control rounded-3" }} 
+                    </div>
                    
                     <div class="input-group mb-2 justify-content-center">
-                        <span class="input-group-text"><i class="fas fa-lock"></i></span>
-                        {{ form.password1 }}
+                        <label for="login" class="form-label w-100 text-center text-white">Password:</label>
+                        {{ form.password1|attr:"class:form-control rounded-3" }}
                     </div>
 
                     
                     <div class="input-group mb-4 justify-content-center">
-                        <span class="input-group-text"><i class="fas fa-lock"></i></span>
-                        {{ form.password2 }}
+                        <label for="login" class="form-label w-100 text-center text-white">Confirm Password:</label>
+                        {{ form.password2|attr:"class:form-control rounded-3" }}
                     </div>
 
                     <div class="text-center">
-                    <button type="submit" class="btn btn-primary adopt-now-button">{% trans "Sign Up" %}</button>
+                    <button type="submit" class="btn btn-brown adopt-now-button">{% trans "Sign Up" %}</button>
                     </div>                        
                    
-                    <p class="text-center mt-3">
+                    <p class="text-center text-white mt-3">
                         {% trans "Already have an account?" %}
-                        <a href="{% url 'account_login' %}" class="color-primary">{% trans "Sign In" %}</a>
+                        <a href="{% url 'account_login' %}" class="text-pale">{% trans "Sign In" %}</a>
                     </p>
                 </form>
             </div>

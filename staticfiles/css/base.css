@@ -1,3 +1,5 @@
+/*---- Overall styling ----*/
+
 html {
     height: 100%;
 }
@@ -28,6 +30,10 @@ header {
     width: 1.5rem;
 }
 
+.fa:hover {
+    color: gray;
+}
+
 .img-fluid {
     max-width: 50% !important;
 }
@@ -47,25 +53,68 @@ header {
 }
 
 .text-border {
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    text-shadow: -1px -1px 0 #2c2b2b, 1px -1px 0 #2c2b2b, -1px 1px 0 #2c2b2b, 1px 1px 0 #2c2b2b;
 }
 
 .text-shadow-white {
     text-shadow: 0.3rem 0.3rem 3px #fff, 0.6rem 0.6rem 4px #fff, 0.9rem 0.9rem 5px #fff, 1.2rem 1.2rem 6px #fff;
 }
 
+/*-------- Login pages --------*/
+
+.login-form {
+    margin-top: 30vh;
+}
+
+.sign-up-form {
+    margin-top: 15vh;
+}
+
+/*------- Animations --------*/
+.fadein {
+    animation-name: fadein;
+    animation-duration: 3s;
+}
+
+.slidein {
+    animation-name: slidein;
+    animation-duration: 3s;
+}
+
 @keyframes fadein {
     from {
-        opacity: 0%
+        opacity: 0;
     }
     to {
-        opacity: 100%
+        opacity: 1;
     }
 }
+
+@keyframes slidein {
+    from {
+        transform: translateY(30%);
+    }
+    to {
+        transform: translateY(0%);
+    }
+}
+
+/*--------- Button styling -------------*/
 
 .btn-black {
     background: black;
     color: white;
+}
+
+
+.btn-brown {
+    background: #532600;
+    color: white;
+}
+
+.btn-brown:hover {
+    background: #532600;
+    color: black;
 }
 
 .btn-outline-black {
@@ -93,6 +142,10 @@ header {
 
 .text-black {
     color: #000 !important;
+}
+
+.text-pale {
+    color: #ffe3d1;
 }
 
 .border-black {
@@ -146,7 +199,7 @@ input[name='q']::placeholder {
     color: #aab7c4;
 }
 
-/* ------------------------------- message containers --------  */
+/* ------------------------------- Message Containers -------- */
 
 .message-container {
     margin-top: 64px;
@@ -181,7 +234,6 @@ input[name='q']::placeholder {
 .x-warning:hover {
     color: white;
 }
-
 
 /* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
 .arrow-up {
