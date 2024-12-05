@@ -52,7 +52,7 @@
                             <p class="my-0 small text-white">Qty: {{ item.quantity }}</p>
                         </div>
                         <div class="col-3 text-right">
-                            <p class="my-0 small text-white">${{ item.book.price | calc_subtotal:item.quantity }}</p>
+                            <p class="my-0 small text-white">£{{ item.book.price | calc_subtotal:item.quantity }}</p>
                         </div>
                     </div>
                 {% endfor %}
@@ -62,7 +62,7 @@
                         <p class="my-0 text-white">Order Total:</p>
                     </div>
                     <div class="col-3">
-                        <p class="my-0 text-white"><strong>${{ total | floatformat:2 }}</strong></p>
+                        <p class="my-0 text-white"><strong>£{{ total | floatformat:2 }}</strong></p>
                     </div>
                 </div>
             </div>
@@ -123,7 +123,7 @@
 							<span class="icon">
 								<i class="fas fa-exclamation-circle text-white"></i>
 							</span>
-							<span class="text-white">Your card will be charged <strong>${{ total|floatformat:2 }}</strong></span>
+							<span class="text-white">Your card will be charged <strong>£{{ total|floatformat:2 }}</strong></span>
 						</p>
 					</div>
                 </form>
