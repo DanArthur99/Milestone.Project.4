@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="container h-100">
+        <div class="row h-100">
+            <div class="col-12 my-auto">
+                <div>
+                    <h1 class="display-4 logo-font text-black text-center text-shadow-white">
+                        505 Error
+                    </h1>
+                    <p class="logo-font text-black text-center text-shadow-white">Looks like we're having some trouble down our end.</p>
+                </div>
+                <div class="my-5 text-center">
+                    <h4>
+                        <a href="{% url 'homepage' %}" class="shop-now-button btn btn-lg rounded-5 text-uppercase py-3">Back to safety</a>
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

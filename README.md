@@ -108,16 +108,6 @@ The goal of the project was to create a simple, easy to use online bookstore, wh
 
 #### Typography
 
-The Website primarily uses 3 different fonts throughout, obtained from Google Fonts. These fonts were:
-
-Bungee Tint ('sans-serif')
-Montserrat ('sans-serif')
-New Amsterdam ('sans-serif')
-
-"Bungee Tint" is used for the title page, as it is a very stylish looking font.
-
-"Montserrat" is used as the default font for the website text, and "New Amsterdam" is used for the titles of each page, as it is a much bolder looking font, while not being as overly stylistic as "Bungee Tint."
-
 #### Colour Palette
 
 ![Colour Palette](media/colour-palette.png)
