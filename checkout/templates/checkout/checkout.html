@@ -20,20 +20,20 @@
         <div class="row">
             <div class="col">
                 <hr>
-                <h2 class="logo-font mb-4">Checkout</h2>
+                <h2 class="logo-font text-white mb-4">Checkout</h2>
                 <hr>
             </div>
         </div>
 
         <div class="row">
             <div class="col-12 col-lg-6 order-lg-last mb-5">
-                <p class="text-muted">Order Summary ({{ book_count }})</p>
+                <p class="text-white">Order Summary ({{ book_count }})</p>
                 <div class="row">
                     <div class="col-7 offset-2">
-                        <p class="mb-1 mt-0 small text-muted">Item</p>
+                        <p class="mb-1 mt-0 small text-white">Item</p>
                     </div>
                     <div class="col-3 text-right">
-                        <p class="mb-1 mt-0 small text-muted">Subtotal</p>
+                        <p class="mb-1 mt-0 small text-white">Subtotal</p>
                     </div>
                 </div>
                 {% for item in basket_items %}
@@ -49,34 +49,34 @@
                         </div>
                         <div class="col-7">
                             <p class="my-0"><strong>{{ item.book.name }}</strong></p>
-                            <p class="my-0 small text-muted">Qty: {{ item.quantity }}</p>
+                            <p class="my-0 small text-white">Qty: {{ item.quantity }}</p>
                         </div>
                         <div class="col-3 text-right">
-                            <p class="my-0 small text-muted">${{ item.book.price | calc_subtotal:item.quantity }}</p>
+                            <p class="my-0 small text-white">${{ item.book.price | calc_subtotal:item.quantity }}</p>
                         </div>
                     </div>
                 {% endfor %}
                 <hr class="my-0">
                 <div class="row text-black text-right">
                     <div class="col-7 offset-2">
-                        <p class="my-0">Order Total:</p>
+                        <p class="my-0 text-white">Order Total:</p>
                     </div>
                     <div class="col-3">
-                        <p class="my-0"><strong>${{ total | floatformat:2 }}</strong></p>
+                        <p class="my-0 text-white"><strong>${{ total | floatformat:2 }}</strong></p>
                     </div>
                 </div>
             </div>
             <div class="col-12 col-lg-6">
-                <p class="text-muted">Please fill out the form below to complete your order</p>
+                <p class="text-white">Please fill out the form below to complete your order</p>
                 <form action="{% url 'checkout' %}" method="POST" id="payment-form">
                     {% csrf_token %}
                     <fieldset class="rounded px-3 mb-5">
-                        <legend class="fieldset-label small text-black px-2 w-auto">Details</legend>
+                        <legend class="fieldset-label small text-white px-2 w-auto">Details</legend>
                         {{ order_form.full_name }}
                         {{ order_form.email }}
                     </fieldset>
                     <fieldset class="rounded px-3 mb-5">
-                        <legend class="fieldset-label small text-black px-2 w-auto">Delivery</legend>
+                        <legend class="fieldset-label small text-white px-2 w-auto">Delivery</legend>
                         {{ order_form.phone_number }}
                         {{ order_form.street_address1 }}
                         {{ order_form.street_address2 }}
@@ -86,18 +86,18 @@
                         {{ order_form.country }}
                         <div class="form-check form-check-inline float-right mr-0">
 							{% if user.is_authenticated %}
-								<label class="form-check-label" for="id-save-info">Save this delivery information to my profile</label>
-                                <input class="form-check-input ml-2 mr-0" type="checkbox" id="id-save-info" name="save-info" checked>
+								<label class="form-check-label text-white" for="id-save-info">Save this delivery information to my profile</label>
+                                <input class="form-check-input text-white ml-2 mr-0" type="checkbox" id="id-save-info" name="save-info" checked>
 							{% else %}
 								<label class="form-check-label" for="id-save-info">
-                                    <a class="text-info" href="{% url 'account_signup' %}">Create an account</a> or 
-                                    <a class="text-info" href="{% url 'account_login' %}">login</a> to save this information
+                                    <a class="text-white" href="{% url 'account_signup' %}">Create an account</a> or 
+                                    <a class="text-white" href="{% url 'account_login' %}">login</a> to save this information
                                 </label>
 							{% endif %}
 						</div>
                     </fieldset>
                     <fieldset class="px-3">
-                        <legend class="fieldset-label small text-black px-2 w-auto">Payment</legend>
+                        <legend class="fieldset-label small text-white px-2 w-auto">Payment</legend>
                         <!-- A Stripe card element will go here -->
                         <div class="mb-3" id="card-element"></div>
                         <!-- Used to display form errors -->
@@ -109,21 +109,21 @@
                     <div class="submit-button text-right mt-5 mb-2">                    
 						<a href="{% url 'view_basket' %}" class="btn btn-outline-black rounded-0">
 							<span class="icon">
-								<i class="fas fa-chevron-left"></i>
+								<i class="fas text-white fa-chevron-left"></i>
 							</span>
-							<span class="font-weight-bold">Adjust Basket</span>
+							<span class="font-weight-bold text-white">Adjust Basket</span>
 						</a>
 						<button id="submit-button" class="btn btn-black rounded-0">
-							<span class="font-weight-bold">Complete Order</span>
+							<span class="font-weight-bold text-white">Complete Order</span>
 							<span class="icon">
-								<i class="fas fa-lock"></i>
+								<i class="fas fa-lock text-white"></i>
 							</span>
 						</button>
 						<p class="small text-danger my-0">
 							<span class="icon">
-								<i class="fas fa-exclamation-circle"></i>
+								<i class="fas fa-exclamation-circle text-white"></i>
 							</span>
-							<span>Your card will be charged <strong>${{ total|floatformat:2 }}</strong></span>
+							<span class="text-white">Your card will be charged <strong>${{ total|floatformat:2 }}</strong></span>
 						</p>
 					</div>
                 </form>
