@@ -111,19 +111,29 @@ The goal of the project was to create a simple, easy to use online bookstore, wh
 
 ##### About Book Page
 
+###### Desktop
+
+![About Book Desktop](media/about-book-desktop.png)
+
+###### Phone
+
+![About Book Phone](media/about-book-phone.png)
 
 ##### Checkout Page
 
+###### Desktop
 
-##### Order Success Page
+![Checkout Desktop](media/checkout-desktop.png)
 
+###### Phone
 
+![Checkout Phone](media/checkout-phone.png)
 
 #### Typography
 
 #### Colour Palette
 
-![Coolor]
+![Color Palette](media/color-pallette.png)
 
 ### Technologies Used
 
