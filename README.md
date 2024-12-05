@@ -70,23 +70,43 @@ The goal of the project was to create a simple, easy to use online bookstore, wh
 
 ##### Home Page
 
+###### Desktop
+
 ![Home Desktop](media/homepage-wireframe-desktop.png)
+
+###### Phone
+
 ![Home Phone](media/homepage-wireframe-phone.png)
 
 
 ##### Book Search Page 
 
+###### Desktop
+
 ![Search Desktop](media/book-search-desktop.png)
+
+###### Phone
+
 ![Search Phone](media/book-search-phone.png)
 
 ##### Add Book Page 
 
+###### Desktop
+
 ![Add Book Desktop](media/add-book-desktop.png)
+
+###### Phone
+
 ![Add Book Phone](media/add-book-phone.png)
 
 ##### Add Review Page 
 
+###### Desktop
+
 ![Add Review Desktop](media/add-review-desktop.png)
+
+###### Phone
+
 ![Add Review Phone](media/add-review-phone.png)
 
 ##### About Book Page

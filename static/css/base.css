@@ -13,6 +13,8 @@ body {
     height: calc(100vh - 164px);
     color: #fff;
     font-family: "Crimson Text", serif;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 .order-table {
