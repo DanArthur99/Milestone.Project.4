@@ -70,47 +70,38 @@ The goal of the project was to create a simple, easy to use online bookstore, wh
 
 ##### Home Page
 
-###### Logged Out
+![Home Desktop](media/homepage-wireframe-desktop.png)
+![Home Phone](media/homepage-wireframe-phone.png)
 
-![Home Page Logged Out](docs/wireframes/home-page-logged-out.png)
 
-###### Logged In
+##### Book Search Page 
 
-![Home Page Logged In](docs/wireframes/home-page-logged-in.png)
+![Search Desktop](media/book-search-desktop.png)
+![Search Phone](media/book-search-phone.png)
 
-###### Mobile View
+##### Add Book Page 
 
-![Home Page Logged Out](docs/wireframes/home-page-mobile.png)
 
-##### Search Page 
-
-![Search Page](docs/wireframes/search-page.png)
-
-##### Add Product Page 
-
-![Add Product](docs/wireframes/add-product.png)
 
 ##### Add Review Page 
 
-![Add Review](docs/wireframes/add-review.png)
 
-##### About Gear Page
 
-![About Gear](docs/wireframes/about-gear.png)
+##### About Book Page
 
-##### Categories Page
 
-![Categories](docs/wireframes/categories-page.png)
+##### Checkout Page
 
-##### Brands Page
 
-![Brands](docs/wireframes/brands-page.png)
+##### Order Success Page
+
+
 
 #### Typography
 
 #### Colour Palette
 
-![Colour Palette](media/colour-palette.png)
+
 
 ### Technologies Used
 
@@ -149,7 +140,7 @@ The programming languages used for this project were:
 
 #### Main User Features
 
-* Search functionality for the 
+* 
 
 ##### 
 
