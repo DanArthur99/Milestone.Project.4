@@ -81,11 +81,13 @@ The goal of the project was to create a simple, easy to use online bookstore, wh
 
 ##### Add Book Page 
 
-
+![Add Book Desktop](media/add-book-desktop.png)
+![Add Book Phone](media/add-book-phone.png)
 
 ##### Add Review Page 
 
-
+![Add Review Desktop](media/add-review-desktop.png)
+![Add Review Phone](media/add-review-phone.png)
 
 ##### About Book Page
 
@@ -101,7 +103,7 @@ The goal of the project was to create a simple, easy to use online bookstore, wh
 
 #### Colour Palette
 
-
+![Coolor]
 
 ### Technologies Used
 

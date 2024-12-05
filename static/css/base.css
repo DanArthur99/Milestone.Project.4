@@ -10,7 +10,8 @@ body {
     background: url('/static/images/homepage-background.jpg') no-repeat center center fixed;
     background-color: #111;
     background-size: cover;
-    height: calc(100vh - 164px); 
+    height: calc(100vh - 164px);
+    color: #fff;
     font-family: "Crimson Text", serif;
 }
 
@@ -101,7 +102,7 @@ label {
 }
 
 #id_genres {
-    max-width: 388px;
+    max-width: 320px;
 }
 /*------- Animations --------*/
 .fadein {
