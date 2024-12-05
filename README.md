@@ -159,26 +159,27 @@ The programming languages used for this project were:
 
 #### Main User Features
 
-
+* Search functionality for the 
 
 ##### 
 
 #### Admin Only Features 
 
+* The ability to add, edit and delete books from the database.
+
+* The ability to add, edit and delete any user review from the database
 
 #### Potential Future Feautures
 
-Some potential features that I would like to include include:
+Some potential features that I would like to include in the future:
 
-* Admin users being able to change whether other users are admin or not
-* More interactivity, such as having a phyical star rating that they can select, rather than a drop down 0-5 menu
-* I would have liked to add some time stamps on the user reviews, so that people can see the times they were created/edited
+* Enable users to have their own reading lists, where they can simply add books to this list that they may want to purchase in the future.
+* To have the site recommend some books to the user depending on their previous purchases. For example, if the user has bought a few horror books recently, then the site will recommend some more horror books
 
 ## Database Schema
 
 ### Entity Relationship Diagram
 
-![Entity Relationship Diagram](docs/readme-images/entity-relationship-diagram.png)
 
 ### Tables and Relationships
 

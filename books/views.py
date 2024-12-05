@@ -177,6 +177,13 @@ def delete_book(request, book_id):
         return redirect(reverse('home'))
 
     book = get_object_or_404(Book, pk=book_id)
-    book.delete()
-    messages.success(request, 'Book deleted!')
-    return redirect(reverse('books'))
+    if request.method == "POST":
+        book.delete()
+        messages.success(request, 'Book deleted!')
+        return redirect(reverse('books'))
+    
+    template = 'books/delete_book.html'
+    context = {
+        'book': book
+    }
+    return render(request, template, context)
