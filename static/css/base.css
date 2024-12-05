@@ -60,9 +60,10 @@ th, td {
     text-transform: uppercase;
 }
 
-.table>:not(caption)>*>* {
-    background-color: rgba(245, 245, 245, 0) !important;
+.table {
+    --bs-table-bg: rgba(245, 245, 245, 0);
 }
+
 
 .main-logo-link {
     width: fit-content;
