@@ -60,8 +60,8 @@ th, td {
     text-transform: uppercase;
 }
 
-th, td {
-    background: rgba(245, 245, 245, 0) !important; 
+.table>:not(caption)>*>* {
+    background-color: rgba(245, 245, 245, 0) !important;
 }
 
 .main-logo-link {
