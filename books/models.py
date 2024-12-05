@@ -1,5 +1,6 @@
 from django.db import models
 import profiles
+import datetime
 from django_countries.fields import CountryField
 from django.core.validators import MaxValueValidator, MinValueValidator
 from cloudinary.models import CloudinaryField
@@ -22,8 +23,8 @@ class Book(models.Model):
     name = models.CharField(max_length=254)
     sku = models.CharField(max_length=254, null=True, blank=True, unique=True)
     language = models.CharField(max_length=254)
-    pages = models.IntegerField()
-    year = models.IntegerField()
+    pages = models.PositiveIntegerField()
+    year = models.IntegerField(validators=[MaxValueValidator(datetime.date.today().year)])
     country = CountryField(blank_label='Country', null=True, blank=True)
     rating = models.FloatField(validators=[MinValueValidator(0.0), MaxValueValidator(10.0)], null=True, blank=True)
     genres = models.ManyToManyField(Genre, related_name="books_with_this_genre")
