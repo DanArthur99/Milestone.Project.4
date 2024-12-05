@@ -1,8 +1,6 @@
-# Music Gear Review Site
+# 'Books For You' online Book Store
 
-![Review Site shown on various screens](docs/readme-images/responsive.png)
-
-Deployed Website: [Music Gear Review Site](https://gear-review-0801b9de8ec9.herokuapp.com/)
+Deployed Website: [Books For You](https://books-for-you-19d767033b76.herokuapp.com/)
 
 ![W3C HTML: Validated](https://img.shields.io/badge/W3C_HTML-VALIDATED-orange)
 ![W3C CSS: Validated](https://img.shields.io/badge/W3C_CSS-VALIDATED-blue)
@@ -47,9 +45,7 @@ Deployed Website: [Music Gear Review Site](https://gear-review-0801b9de8ec9.hero
 
 ## Project Goal 
 
-The goal for this project was to create a simple review site where users can select or add a music product to review. 
-Users can create an account and see reviews of other users for different gear.
-This site makes for a very convenient and quick way for users to review and see reviews for different music equipment they are interested to purchasin.
+The goal of the project was to create a simple, easy to use online bookstore, where users can add reviews for books, as well as purchase them from the store. Users can look through books based on their overall rating, and leave reviews of their own to recommend (or not recommend) books to other users.
 
 ## User Experience (UX)
 
@@ -57,21 +53,16 @@ This site makes for a very convenient and quick way for users to review and see 
 
 #### Overall Client Goals
 
-1. To be able to search for items within the database
-2. To be able leave reviews for different items within the database
-3. To be able to add new products to the database, if a user cannot see their desired product
+1. To be able to search for books on the site
+2. To be able to leave reviews for books on the site
+3. To be able to purchase books from the bookstore
+4. To be able to create an account to keep track of one's order history
 
-#### First Time Visit Goals
+#### Site Owner Goals
 
-1. To be able to sign up to the site with a unique username and password
-2. To be able to leave/delete their own reviews for a specific product
-
-#### Returning Visitor Goals
-
-1. To be able to have a unique account that they can login into (created from signing up)
-2. To be able to edit their account information, i.e. username and password
-3. To be able to view their own reviews easily.
-4. To be able to delete their personal accounts if they wish
+1. To be able to add and delete books on the bookstore where necessary
+2. To be able to take payments from users when they purchase a book.
+3. To be able to edit or delete any review on the site, as a site superuser
 
 ### Design
 
@@ -129,7 +120,7 @@ New Amsterdam ('sans-serif')
 
 #### Colour Palette
 
-![Colour Palette](docs/readme-images/colour-palette.png)
+![Colour Palette](media/colour-palette.png)
 
 ### Technologies Used
 
@@ -148,17 +139,16 @@ The programming languages used for this project were:
 * Git - Version Control
 * Github - To save and store changes to the project
 * Heroku - Used for project deployment
+* [Django](https://www.djangoproject.com/) - Python based full-stack framework of which this entire site is built
+* [jQuery](https://jquery.com/) - Library used when programming with JavaScript
 * [PostgresSQL](https://www.postgresql.org/) - Used for manage databases for local development
 * [Bootstrap (v5.3.2)](https://getbootstrap.com/) - CSS and JS framework used. Used mainly for the navbar, grid structure, and button styling.
-* [Flask](https://flask.palletsprojects.com/en/3.0.x/) - Python Framework
-* [Flask-Login](https://flask-login.readthedocs.io/en/latest/) - Used to provide session management.
-* [Flask-WTF](https://flask-wtf.readthedocs.io/en/1.2.x/) - Integration of Flask and WTForms, used for Form validation.
-* [bcrypt](https://pypi.org/project/bcrypt/) - Library used for password hashing.
 * [Google Fonts](https://fonts.google.com/)- Imported selected fonts into external stylesheet, namely "Bungee Tint", "Montserrat", and "New Amsterdam."
 * [Figma](https://www.figma.com/) - Used to create the wireframes.
 * [Coolors](https://coolors.co/) - Used to create the colour palette images.
 * [Favicon.io](https://favicon.io/) - To create favicon icons.
 * [Shields.io](https://shields.io/) - Used to create badges.
+* [Cloudinary](https://cloudinary.com/) - Used for hosting static files while deploying project
 * [Am I Responsive?](https://ui.dev/amiresponsive) - Used to create the multi-screen image you see at the start of this document.
 * [W3C Markup Validation Service](https://validator.w3.org/) - Used for testing HTML validation.
 * [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) - Used for testing CSS validation.
@@ -166,7 +156,7 @@ The programming languages used for this project were:
 * [CI Python Linter](https://pep8ci.herokuapp.com/) - Used for checking the quality of the Python Code.
 
 
-### Features
+### Features (to be edited)
 
 #### Main User Features
 
@@ -213,7 +203,7 @@ The programming languages used for this project were:
 ![Categories](docs/readme-images/categories.png)
 ![Category Gear List](docs/readme-images/category-gear-list.png)
 
-#### Validation
+#### Validation (to be edited)
 
 * Measures have been implemented so that users are always unable to access pages that they should. This could be, for example, a user being able to another user's dashboard, being able to edit and delete other people's reviews, or regular users access admin only pages and functions.
 
@@ -235,7 +225,7 @@ The programming languages used for this project were:
 
 ##### 
 
-#### Admin Only Features
+#### Admin Only Features 
 
 * If a user is also an admin user, then they will have access to significantly more functonality. 
 * This includes, being able to add, edit and delete brands and categories from the database.
