@@ -31,6 +31,10 @@ header {
     background-color: #111;
 }
 
+li {
+    color: white;
+}
+
 .topnav, nav {
     background-color: 000;
 }
