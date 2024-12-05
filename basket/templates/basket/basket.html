@@ -40,9 +40,8 @@
                         {% include "basket/book-info.html" %}
                     </div>
                     <div class="col-12 col-sm-6 order-sm-last">
-                        <p class="my-0 text-white">Price Each: ${{ item.book.price }}</p>
-                        <p class="text-white"><strong>Subtotal: </strong>${{ item.book.price |
-                            calc_subtotal:item.quantity }}</p>
+                        <p class="my-0 text-white">Price Each: £{{ item.book.price }}</p>
+                        <p class="text-white"><strong>Subtotal: </strong>£{{ item.book.price | calc_subtotal:item.quantity }}</p>
                     </div>
                     <div class="col-12 col-sm-6">
                         {% include "basket/quantity-form.html" %}
@@ -81,13 +80,13 @@
                             {% include "basket/book-info.html" %}
                         </td>
                         <td class="py-3">
-                            <p class="my-0">${{ item.book.price }}</p>
+                            <p class="my-0">£{{ item.book.price }}</p>
                         </td>
                         <td class="py-3 w-25">
                             {% include "basket/quantity-form.html" %}
                         </td>
                         <td class="py-3">
-                            <p class="my-0">${{ item.book.price | calc_subtotal:item.quantity }}</p>
+                            <p class="my-0">£{{ item.book.price | calc_subtotal:item.quantity }}</p>
                         </td>
                     </tr>
                     {% endfor %}
