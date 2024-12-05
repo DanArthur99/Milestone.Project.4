@@ -61,7 +61,7 @@ th, td {
 }
 
 .table {
-    --bs-table-bg: rgba(245, 245, 245, 0);
+    --bs-table-bg: rgba(245, 245, 245, 0) !important;
 }
 
 
