@@ -60,6 +60,10 @@ th, td {
     text-transform: uppercase;
 }
 
+.table {
+    background: rgba(245, 245, 245, 0) !important;
+}
+
 .table > th, .table > td {
     background: rgba(245, 245, 245, 0) !important;
 }
