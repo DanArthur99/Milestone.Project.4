@@ -63,6 +63,9 @@ th, td {
 .table > th, .table > td {
     background: rgba(245, 245, 245, 0) !important;
 }
+.table>:not(caption)>*>* {
+    background: rgba(245, 245, 245, 0) !important;
+}
 
 
 .main-logo-link {
