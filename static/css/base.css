@@ -60,17 +60,9 @@ th, td {
     text-transform: uppercase;
 }
 
-.table {
-    background: rgba(245, 245, 245, 0) !important;
+#order-table {
+    background: rgba(245, 245, 245, 0);
 }
-
-.table > th, .table > td {
-    background: rgba(245, 245, 245, 0) !important;
-}
-.table>:not(caption)>*>* {
-    background: rgba(245, 245, 245, 0) !important;
-}
-
 
 .main-logo-link {
     width: fit-content;
