@@ -87,9 +87,14 @@ def delete_review(request, review_id):
     if not request.user.is_superuser and request.user != review.user :
         messages.error(request, "Oops, looks like this functionality is forbidden")
         return redirect(reverse('homepage'))
-
-    book = review.book
-    review.delete()
-
-    messages.success(request, 'Review deleted!')
-    return redirect(reverse('about_book', args=[book.id]))
+    if request.method == "POST":
+        book = review.book
+        review.delete()
+        messages.success(request, 'Review deleted!')
+        return redirect(reverse('about_book', args=[book.id]))
+    
+    template = "reviews/delete_review.html"
+    context = {
+        "review": review
+    }
+    return render(request, template, context)

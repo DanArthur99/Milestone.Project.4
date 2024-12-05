@@ -31,8 +31,8 @@ header {
     background-color: #111;
 }
 
-li {
-    color: white;
+.errorList {
+    color: white !important;
 }
 
 .topnav, nav {
