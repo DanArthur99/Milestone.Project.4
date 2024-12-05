@@ -78,3 +78,18 @@ def edit_review(request, review_id):
     }
 
     return render(request, template, context)
+
+@login_required
+def delete_review(request, review_id):
+    """ Delete a review from the about book page """
+    review = get_object_or_404(Review, pk=review_id)
+
+    if not request.user.is_superuser and request.user != review.user :
+        messages.error(request, "Oops, looks like this functionality is forbidden")
+        return redirect(reverse('homepage'))
+
+    book = review.book
+    review.delete()
+
+    messages.success(request, 'Review deleted!')
+    return redirect(reverse('about_book', args=(book.id)))

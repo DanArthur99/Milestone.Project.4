@@ -23,6 +23,10 @@ html, body {
     max-width: 100%;
 }
 
+.line-break {
+    height: 3px;
+}
+
 header {
     background-color: #111;
 }
