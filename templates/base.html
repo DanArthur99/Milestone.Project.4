@@ -12,6 +12,9 @@
     {% block corecss %}
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gravitas+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     {% endblock %}
@@ -44,7 +47,7 @@
                     <h2 class="logo-font text-white my-0">Books For <em>You</em></h2>
                 </a>
             </div>
-            
+
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
                 <form method="GET" action="{% url 'books' %}">
                     <div class="input-group w-100">
@@ -114,35 +117,39 @@
         <div class="col-12 text-center">
             <div class="message-container w-100">
                 {% for message in messages %}
-                    {% with message.level as level %}
-                        {% if level == 40 %}
-                        <div class="alert danger-alert rounded-0 m-0 p-0" role="alert">
-                            <span class="text-white">{{ message }}</span>
-                            <button type="button" class="message-remover-danger btn text-white"><i class="x-danger fa-solid fa-x"></i></button>
-                        </div>
-                        {% elif level == 30 %}
-                        <div class="alert warning-alert rounded-0 m-0 p-0" role="alert">
-                            <span class="text-black">{{ message }}</span>
-                            <button type="button" class="message-remover-warning btn text-black"><i class="x-warning fa-solid fa-x"></i></button>
-                        </div>  
-                        {% elif level == 25 %}
-                        <div class="alert success-alert rounded-0 m-0 p-0" role="alert">
-                            <span class="text-white">{{ message }}</span>
-                            <button type="button" class="message-remover-success btn text-white"><i class="x-success fa-solid fa-x"></i></button>
-                        </div>
-                        {% else %}
-                        <div class="alert info-alert rounded-0 m-0 p-0" role="alert">
-                            <span class="text-white">{{ message }}</span>
-                            <button type="button" class="message-remover-info btn text-white"><i class="x-info fa-solid fa-x"></i></button>
-                        </div>
-                        {% endif %}
-                    {% endwith %}
+                {% with message.level as level %}
+                {% if level == 40 %}
+                <div class="alert danger-alert rounded-0 m-0 p-0" role="alert">
+                    <span class="text-white">{{ message }}</span>
+                    <button type="button" class="message-remover-danger btn text-white"><i
+                            class="x-danger fa-solid fa-x"></i></button>
+                </div>
+                {% elif level == 30 %}
+                <div class="alert warning-alert rounded-0 m-0 p-0" role="alert">
+                    <span class="text-black">{{ message }}</span>
+                    <button type="button" class="message-remover-warning btn text-black"><i
+                            class="x-warning fa-solid fa-x"></i></button>
+                </div>
+                {% elif level == 25 %}
+                <div class="alert success-alert rounded-0 m-0 p-0" role="alert">
+                    <span class="text-white">{{ message }}</span>
+                    <button type="button" class="message-remover-success btn text-white"><i
+                            class="x-success fa-solid fa-x"></i></button>
+                </div>
+                {% else %}
+                <div class="alert info-alert rounded-0 m-0 p-0" role="alert">
+                    <span class="text-white">{{ message }}</span>
+                    <button type="button" class="message-remover-info btn text-white"><i
+                            class="x-info fa-solid fa-x"></i></button>
+                </div>
+                {% endif %}
+                {% endwith %}
                 {% endfor %}
             </div>
-        {% endif %}
+            {% endif %}
         </div>
     </div>
-        
+
 
     {% block page_header %}
     {% endblock %}
@@ -151,7 +158,7 @@
     {% endblock %}
 
     {% block postloadjs %}
-        <script src="{% static 'js/message_script.js' %}"></script>
+    <script src="{% static 'js/message_script.js' %}"></script>
     {% endblock %}
 </body>
 
