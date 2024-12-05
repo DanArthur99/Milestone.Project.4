@@ -61,7 +61,7 @@ th, td {
 }
 
 th, td {
-    background-color: rgba(245, 245, 245, 0);
+    background: rgba(245, 245, 245, 0) !important; 
 }
 
 .main-logo-link {
