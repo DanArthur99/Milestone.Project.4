@@ -60,6 +60,10 @@ th, td {
     text-transform: uppercase;
 }
 
+.table-responsive {
+    background-color: rgba(245, 245, 245, 0);
+}
+
 .main-logo-link {
     width: fit-content;
 }
