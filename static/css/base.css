@@ -60,7 +60,7 @@ th, td {
     text-transform: uppercase;
 }
 
-.table-responsive {
+th, td {
     background-color: rgba(245, 245, 245, 0);
 }
 

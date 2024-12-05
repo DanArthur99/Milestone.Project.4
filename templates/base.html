@@ -87,7 +87,7 @@
                         <a class="{% if total %}text-warning font-weight-bold{% else %}text-white{% endif %} nav-link"
                             href="{% url 'view_basket' %}">
                             <div class="text-center">
-                                <div><i class="fas fa-shopping-bag fa-lg"></i></div>
+                                <div><i class="fa-solid fa-basket-shopping"></i></div>
                                 <p class="my-0">
                                     {% if total %}
                                     £{{ total|floatformat:2 }}
