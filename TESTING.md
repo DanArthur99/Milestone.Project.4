@@ -121,9 +121,7 @@ All .views, .urls, .models, and .contexts pass the CI python linter with no erro
 
 ![W3C Login](media/login-w3c.png)
 
-### Stylesheet Validators
-
-#### base.css
+### Stylesheet Validator
 
 ![W3C-Stylesheet](media/base-css-w3c.png)
 
