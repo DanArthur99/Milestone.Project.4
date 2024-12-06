@@ -7,6 +7,7 @@ from checkout.webhook_handler import StripeWH_Handler
 
 import stripe
 
+# Credits to ckz8780 for the Stripe Webhook and Webhook handler functions
 
 @require_POST
 @csrf_exempt

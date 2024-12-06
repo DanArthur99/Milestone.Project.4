@@ -6,6 +6,8 @@
     https://stripe.com/docs/stripe-js
 */
 
+// All credits go to ckz8780
+
 var stripePublicKey = $('#id_stripe_public_key').text().slice(1, -1);
 var clientSecret = $('#id_client_secret').text().slice(1, -1);
 var stripe = Stripe(stripePublicKey);

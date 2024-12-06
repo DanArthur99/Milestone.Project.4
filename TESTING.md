@@ -68,6 +68,7 @@ User edit review access test|A regular user is not authorised to access the edit
 User delete review access test|The user is not authorised to delete any other user's reviews|Copy user delete review url then log into another user (non-admin) and paste url|Flash message appears saying user not authorised|Pass
 User add book|A user is not authorized to access to functionality so should be booted away|Copy add book url from admin account then log in to a regular user account. Paste and press enter|An error message appears saying that is action is forbidden for the user and user is redirected|Pass
 User delete book|A user is not authorized to access this functionality so should be booted away|Copy delete book url from admin account then log in to a regular user account|An error message appears saying that is action is forbidden for the user and user is redirected|Pass
+404 test|User should be redirected to a 404 page if the URL is unknown|Enter a random string after the base url|User is taken to a site themed 404 page|Pass
 
 #### Admin Functionality
 

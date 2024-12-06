@@ -14,6 +14,7 @@ from profiles.models import UserProfile
 import json
 import time
 
+# Credits to ckz8780 for the Stripe Webhook and Webhook handler functions
 
 class StripeWH_Handler:
     """Handle Stripe webhooks"""
