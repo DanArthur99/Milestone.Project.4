@@ -85,9 +85,11 @@ All .views, .urls, .models, and .contexts pass the CI python linter with no erro
 
 ## JavaScript Linter
 
+## W3C Validation Checker
+
 ### Home Page
 
-![Home]
+![Home](media/home-w3c.png)
 
 ### Login Page
 
