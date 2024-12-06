@@ -172,21 +172,20 @@ Email test on order completion|User should recieve an order confirmation email o
 
 ![Wave Sign Up](docs/readme-images/wave-sign-up.png)
 
-### Login Page
+### Books Page
 
-![Wave Login](docs/readme-images/wave-login-page.png)
+![Wave Books](media/books-wave-1.png)
+![Wave Books 2](media/books-wave-2.png)
 
-### Brands Page
+### About Book
 
-![Wave Brands Page](docs/readme-images/wave-brands.png)
+![About Book](media/about-book-wave-1.png)
+![About Books 2](media/about-book-wave-2.png)
 
-### Categories Page
+### Basket
 
-![Wave Categories Page](docs/readme-images/wave-categories.png)
-
-### Search Page
-
-![Wave Search](docs/readme-images/wave-search.png)
+![Basket](media/basket-wave-1.png)
+![Basket 2](media/basket-wave-2.png)
 
 ## Bugs
 
