@@ -50,8 +50,8 @@ Login and sign up blank field test|If the user tries to submit either of these f
 
 **Test**|**Expected Outcome**|**Test Action**|**Result**|**Pass/Fail**
 :-----:|:-----:|:-----:|:-----:|:-----:
-Search function|User is able to use the search bar to search for for products in the database|Type in fender in the search bar and click submit|Results appear on next page|Pass
-Search blank test|User cannnot do a blank search. The form should not submit when nothing in the search bar|Blank search|User is prompted to enter something in the search bar|Pass
+Search function|User is able to use the search bar to search for for books |Type in harry in the search bar and click submit|Results appear on next page|Pass
+Search blank test|Blank search is possible however it will just load all the books and an error pop up shoul appear|Blank search|User is prompted to enter something in the search bar via an error message|Pass
 Add review|The user is able to select a product and write a review for this product which is then publically displayed|review is submitted|Review is now display on the product dashboard|Pass
 Add review blank test|The user cannot submit a review with a blank field|Submit review with blank field|User is prompted to fill in field and form is not submitted|Pass
 Add review duplicate test|The user cannot write more than one review per product. It will display a message saying you've already submitted a review|Try to submit a second review for a product|Flash message appears saying you've already written a review|Pass
