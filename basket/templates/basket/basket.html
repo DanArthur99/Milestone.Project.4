@@ -41,7 +41,8 @@
                     </div>
                     <div class="col-12 col-sm-6 order-sm-last">
                         <p class="my-0 text-white">Price Each: £{{ item.book.price }}</p>
-                        <p class="text-white"><strong>Subtotal: </strong>£{{ item.book.price | calc_subtotal:item.quantity }}</p>
+                        <p class="text-white"><strong>Subtotal: </strong>£{{ item.book.price |
+                            calc_subtotal:item.quantity }}</p>
                     </div>
                     <div class="col-12 col-sm-6">
                         {% include "basket/quantity-form.html" %}
@@ -74,10 +75,16 @@
                     {% for item in basket_items %}
                     <tr>
                         <td class="p-3 w-25">
-                            {% include "basket/book-image.html" %}
+                            {% if item.book.imageLink %}
+                            <img class="img-fluid rounded" src="{{ item.book.imageLink.url }}"
+                                alt="{{ item.book.name }}">
+                            {% else %}
+                            <img class="img-fluid rounded" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.book.name }}">
+                            {% endif %}
                         </td>
                         <td class="py-3">
-                            {% include "basket/book-info.html" %}
+                            <p class="my-0 text-white"><strong>{{ item.book.name }}</strong></p>
+                            <p class="my-0 small text-white">SKU: {{ item.book.sku|upper }}</p>
                         </td>
                         <td class="py-3">
                             <p class="my-0">£{{ item.book.price }}</p>
@@ -92,12 +99,28 @@
                     {% endfor %}
                     <tr>
                         <td colspan="5" class="pt-5 text-right text-white">
-                            {% include "basket/basket-total.html" %}
+                            <h4 class="mt-4 text-white"><strong>Total: ${{ total|floatformat:2 }}</strong></h4>
                         </td>
                     </tr>
                     <tr>
                         <td colspan="5" class="text-right text-white">
-                            {% include "basket/checkout_buttons.html" %}
+                            <div class="col-12 col-sm-3">
+                                <a href="{% url 'books' %}" class="btn btn-brown rounded-2 btn-lg">
+                                    <span class="icon">
+                                        <i class="fas fa-chevron-left"></i>
+                                    </span>
+                                    <span class="text-uppercase">Keep Shopping</span>
+                                </a>
+                            </div>
+
+                            <div class="col-12 col-sm-3">
+                                <a href="{% url 'checkout' %}" class="btn btn-black rounded-2 mt-2 btn-lg">
+                                    <span class="text-uppercase">Secure Checkout</span>
+                                    <span class="icon">
+                                        <i class="fas fa-lock"></i>
+                                    </span>
+                                </a>
+                            </div>
                         </td>
                     </tr>
                 </table>
@@ -118,14 +141,14 @@
 
 {% block postloadjs %}
 {{ block.super }}
-<script type="text/javascript">
+<script>
     $('.btt-link').click(function (e) {
         window.scrollTo(0, 0)
     })
 </script>
 {% include 'books/includes/script.html' %}
 
-<script type="text/javascript">
+<script>
     // Update quantity on click
     $('.update-link').click(function (e) {
         var form = $(this).prev('.update-form');
