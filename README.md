@@ -159,7 +159,7 @@ The programming languages used for this project were:
 * [jQuery](https://jquery.com/) - Library used when programming with JavaScript
 * [PostgresSQL](https://www.postgresql.org/) - Used for manage databases for local development
 * [Bootstrap (v5.3.2)](https://getbootstrap.com/) - CSS and JS framework used. Used mainly for the navbar, grid structure, and button styling.
-* [Google Fonts](https://fonts.google.com/)- Imported selected fonts into external stylesheet, namely "Bungee Tint", "Montserrat", and "New Amsterdam."
+* [Google Fonts](https://fonts.google.com/)- Imported selected fonts into external stylesheet.
 * [Figma](https://www.figma.com/) - Used to create the wireframes.
 * [Coolors](https://coolors.co/) - Used to create the colour palette images.
 * [Favicon.io](https://favicon.io/) - To create favicon icons.
