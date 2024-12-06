@@ -119,7 +119,7 @@ All .views, .urls, .models, and .contexts pass the CI python linter with no erro
 
 ### Dashboard
 
-![W3C Dashboard](docs/readme-images/w3c-html-dashboard.png)
+![W3C Login](media/login-w3c.png)
 
 ### Stylesheet Validator
 
