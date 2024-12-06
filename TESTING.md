@@ -52,7 +52,7 @@ Login and sign up blank field test|If the user tries to submit either of these f
 Search function|User is able to use the search bar to search for for books |Type in harry in the search bar and click submit|Results appear on next page|Pass
 Search blank test|Blank search is possible however it will just load all the books and an error pop up shoul appear|Blank search|User is prompted to enter something in the search bar via an error message|Pass
 Add review|The user is able to select a product and write a review for this product which is then publically displayed|review is submitted|Review is now display on the product dashboard|Pass
-Add review blank test|The user cannot submit a review with a blank field|Submit review with blank field|User is prompted to fill in field and form is not submitted|Pass
+Add review blank test|The user cannot submit a review with a blank field|Submit review with blank field|User is prompted to fill in field and form is not submitted|Admin update details|The admin user is able to access the update details page of any user|from the user dashboard click update details|User's update details page loads|Pass
 Add review duplicate test|The user cannot write more than one review per product. It will display a message saying you've already submitted a review|Try to submit a second review for a product|Flash message appears saying you've already written a review|Pass
 Add Product duplicate|user cannot add a product in the database that already exists|Attempt to submit a product with an existing name|Flash message appears saying an error occurred and product is not added|Pass
 Edit review test|user is able to edit their own reviews|Click edit review and change the contents of the review|The review is updated and the changed are displayed|Pass
@@ -67,18 +67,13 @@ User edit review access test|The user is not authorised to access the edit revie
 User update details access test|The user is not authorised to access the update details page of any other user|Copy user edit review url then log into another user (non-admin) and paste url|Error message box appears saying user not authorised|Pass
 User delete review access test|The user is not authorised to delete any other user's reviews|Copy user delete review url then log into another user (non-admin) and paste url|Flash message appears saying user not authorised|Pass
 
-#### Add Book testing
+#### Admin Functionality and 'Add Book' testing
 
 **Test**|**Expected Outcome**|**Test Action**|**Result**|**Pass/Fail**
 :-----:|:-----:|:-----:|:-----:|:-----:
-Admin dashboard access|The admin user is able to acess the dashboard of any other user|Copy user (non-admin) dashbooard url then log into another user (admin) and paste url|User dashboard loads|Pass
-Admin update details|The admin user is able to access the update details page of any user|from the user dashboard click update details|User's update details page loads|Pass
-Admin delete user|the admin user is able to delete any user from the database|From the user dashboard click delete user|Modal appears for a double check then user is deleted from database when yes is clicked|Pass
-Admin edit brand|The admin user is able to edit a brand name|Click on any edit brand from the brands page then write the new brand name|Brand name is now updated|Pass
-Admin edit category|The admin user is able to edit a category name|Click on any edit category from the categories page then write the new brand name|Category name is now updated|Pass
-Admin delete brand|The admin user is able to delete a brand along with all product under that brand|Click delete brand on one of the brands from the brands page|The chosen brand is delete from the database along with all products an their reviews|Pass
-Admin delete category|The admin user is able to delete a category along with all product under that category|Click delete category on one of the categories from the categories page|The chosen category is delete from the database along with all products an their reviews|Pass
 author field blank test|The admin user cannot submit a blank field |Click add brand and click submit while brand name field is empty|user is prompted for field data|Pass
+book title field blank test|The site should prompt the user to add a book title|submit form with title left blank|form prompts for author to enter a title|Pass
+price field blank test|The site should prompt the user to add a price for the book|submit form with price left blank|form prompts for author to enter price|Pass
 Admin edit reviews|The admin is able to edit any user's reviews |Click on a user's dashboard then click on the link to see their reviews choose any review and edit it|the edit review page loads and when the admin user clicks submit the edited review is displayed|Pass
 Admin delete reviews|The admin is able to delete any user's reviews |Click on a user's dashboard then click on the link to see their reviews choose any review and click delete review|Modal appears for a double check then review is deleted from database when yes is clicked|Pass
 
