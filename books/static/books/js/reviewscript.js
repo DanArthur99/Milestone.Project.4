@@ -1,4 +1,4 @@
-let rating = $('#rating').html();
+let rating = $('#rating').text();
 
 let veryLowRatingMax = 3;
 let lowRatingsMax = 4.5;

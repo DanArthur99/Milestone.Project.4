@@ -142,7 +142,7 @@
 {% block postloadjs %}
 {{ block.super }}
 {% include 'books/includes/script.html' %}
-<script type="text/javascript">
+<script>
     $('#sort-selector').change(function() {
         var selector = $(this);
         var currentUrl = new URL(window.location);
