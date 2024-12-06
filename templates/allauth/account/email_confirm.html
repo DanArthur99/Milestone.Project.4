@@ -1,12 +1,13 @@
 {% extends "base.html" %}
-
+{% load static %}
 {% load i18n %}
 {% load account %}
+{% load widget_tweaks %}
 
 {% block head_title %}{% trans "Confirm E-mail Address" %}{% endblock %}
 
 
-{% block inner_content %}
+{% block content %}
 <div class="overlay"></div>
 <div class="sign-up-form">
     <hr>
