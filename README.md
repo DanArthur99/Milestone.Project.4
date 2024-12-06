@@ -2,11 +2,6 @@
 
 Deployed Website: [Books For You](https://books-for-you-19d767033b76.herokuapp.com/)
 
-![W3C HTML: Validated](https://img.shields.io/badge/W3C_HTML-VALIDATED-orange)
-![W3C CSS: Validated](https://img.shields.io/badge/W3C_CSS-VALIDATED-blue)
-![Contrubutors: 1](https://img.shields.io/badge/CONTRIBUTORS-1-green)
-
-
 ## CONTENTS
 
 * [Project Goal](#Project-Goal)
