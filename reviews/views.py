@@ -16,10 +16,10 @@ from books.models import Book
 @login_required
 def add_review(request, book_id):
     """Add a review"""
+    userprofile = get_object_or_404(UserProfile, user=request.user)
+    book = get_object_or_404(Book, pk=book_id)
     if request.method == 'POST':
         form = ReviewForm(request.POST, request.FILES)
-        userprofile = get_object_or_404(UserProfile, user=request.user)
-        book = get_object_or_404(Book, pk=book_id)
         if form.is_valid():
             form.instance.user = userprofile
             form.instance.book = book
@@ -36,7 +36,19 @@ def add_review(request, book_id):
                            ('Failed to add review. '
                             'Please ensure the form is valid.'))
     else:
-        form = ReviewForm()
+        existing_reviews = Review.objects.filter(book=book)
+
+        already_written = False
+        for review in existing_reviews:
+            if review.user.user == request.user:
+                already_written = True
+
+        if already_written:
+            messages.error(request,
+                           'You have already written a review for this book')
+            return redirect(reverse('about_book', args=[book.id]))
+        else:
+            form = ReviewForm()
 
     template = 'reviews/add_review.html'
     context = {

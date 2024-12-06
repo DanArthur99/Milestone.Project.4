@@ -91,9 +91,9 @@ All .views, .urls, .models, and .contexts pass the CI python linter with no erro
 
 ![Home](media/home-w3c.png)
 
-### Login Page
+### Books Page
 
-![W3C Home Page](docs/readme-images/home-page-html-validation.png)
+![W3C Home Page](media/books-w3c.png)
 
 ### Sign Up Page
 
