@@ -60,10 +60,11 @@
                                             <span class="icon">
                                                 <i class="fas fa-minus"></i>
                                             </span>
+                                            <span class="d-none">Remove Quantity 1</span>
                                         </button>
                                     </div>
                                     <input class="form-control qty_input id_qty_{{ book.id }}" type="number"
-                                        name="quantity" value="1" min="1" max="99" data-book_id="{{ book.id }}">
+                                        name="quantity" value="1" min="1" max="99" aria-label="item-quantity" data-book_id="{{ book.id }}">
                                     <div class="input-group-append">
                                         <button
                                             class="increment-qty btn btn-black rounded-end-5 increment-qty_{{ book.id }}"
@@ -71,6 +72,7 @@
                                             <span class="icon">
                                                 <i class="fas fa-plus"></i>
                                             </span>
+                                            <span class="d-none">Add Quantity 1</span>
                                         </button>
                                     </div>
                                 </div>
