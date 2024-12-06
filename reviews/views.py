@@ -53,7 +53,7 @@ def edit_review(request, review_id):
     review = get_object_or_404(Review, pk=review_id)
     book = review.book
     book_id = book.id
-    if not request.user.is_superuser and request.user != review.user:
+    if not request.user.is_superuser and request.user != review.user.user:
         messages.error(
             request, "Oops, looks like this page's access is forbidden")
         return redirect(reverse('homepage'))
@@ -89,7 +89,7 @@ def delete_review(request, review_id):
     review = get_object_or_404(Review, pk=review_id)
     book = review.book
 
-    if not request.user.is_superuser and request.user != review.user:
+    if not request.user.is_superuser and request.user != review.user.user:
         messages.error(
             request, "Oops, looks like this functionality is forbidden")
         return redirect(reverse('homepage'))
