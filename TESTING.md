@@ -42,7 +42,7 @@ Incorrect email format test|The site should prompt the user to enter an email in
 Unique Email and Username |The user cannot sign up with an email or username that already exists|Enter an existing email or username on the sign up page|Flash message appears saying an error occurred account is not created|Pass
 Update Details|The user can change their username or email address to whatever they wish and the database will update|Click update details and change username|Username changed |Pass
 Unique Email and Username #2|User cannot change their email or password to one that already exists|Enter a usernasme or email that already exists|Flash message appears saying an error occurred user is not updated|Pass
-Update Password|User is able to update their password from their dashboard. This can be whatever they wish they can then log in using the new password|Change password then attempt to log in|User is logged in with new password|Pass
+Update Password|User is able to update their password from their dashboard. They can then log in using the new password|Change password then attempt to log in|User is logged in with new password|Pass
 Login and sign up blank field test|If the user tries to submit either of these forms with a blank field then it will not submit the form and a message will appear saying the field is requeired|submit sign up form with blank field|User is prompted to fill in field form is not submitted|Pass
 
 #### CRUD Functionality
@@ -166,51 +166,17 @@ This checker and variations of it has been used throughout the routes.py file to
 
 ## Testing User Stories
 
-### Overall Client Goals
+#### Overall Client Goals
 
-1. To be able to search for items within the database
+1. To be able to search for books on the site
+2. To be able to leave reviews for books on the site
+3. To be able to purchase books from the bookstore
+4. To be able to create an account to keep track of one's order history
 
-![Search](docs/readme-images/search-results.png)
+#### Site Owner Goals
 
-2. To be able read reviews for different items within the database
-
-![Read Reviews](docs/readme-images/read-reviews.png)
-
-3. To be able to add new products to the database, if a user cannot see their desired product
-
-![Add Product](docs/readme-images/add-product.png)
-
-### First Time Visit Goals
-
-1. To be able to sign up to the site with a unique username and password
-
-![Sign Up](docs/readme-images/sign-up.png)
-![Dashboard](docs/readme-images/dashboard.png)
-
-2. To be able to leave/delete their own reviews for a specific product
-
-![Add Review](docs/readme-images/add-review.png)
-![Your Reviews](docs/readme-images/your-reviews.png)
-
-### Returning Visitor Goals
-
-1. To be able to have a unique account that they can login into (created from signing up)
-
-![Login](docs/readme-images/login-page.png)
-![Dashboard](docs/readme-images/dashboard.png)
-
-2. To be able to edit their account information, i.e. username and password
-
-![Update Details](docs/readme-images/update-details.png)
-![Update Password](docs/readme-images/update-password.png)
-
-3. To be able to view their own reviews easily.
-
-![Your Reviews](docs/readme-images/your-reviews.png)
-
-4. To be able to delete their personal accounts if they wish
-
-![Close Account Modal](docs/readme-images/delete-account-modal.png)
-![User Deleted](docs/readme-images/user-deleted.png)
+1. To be able to add and delete books on the bookstore where necessary
+2. To be able to take payments from users when they purchase a book.
+3. To be able to edit or delete any review on the site, as a site superuser
 
 

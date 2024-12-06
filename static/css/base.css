@@ -43,7 +43,7 @@ th, td {
     color: white !important;
 }
 
-.select2-selection__choice__display {
+.select2-selection__choice__display, .select2-results__option {
     color: black !important;
 }
 
