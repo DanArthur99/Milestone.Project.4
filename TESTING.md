@@ -8,6 +8,7 @@
     * [User Validation](#user-validation)
     * [Admin Features](#admin-features)
 * [PythonLinter](#python-linter)
+* [JavaScriptLinter](#javascript-linter)
 * [W3C Validator](#W3C-Validator)
 * [Wave Accessibiliy Testing](#Wave-Accessibility-TSesting)
 * [Bugs](#Bugs)
@@ -106,34 +107,11 @@ Admin delete reviews|The admin is able to delete any user's reviews |Click on a 
 
 ## Python Linter
 
-### __init.py
+All .views, .urls, .models, and .contexts pass the CI python linter with no errors.
 
-* The only error I am getting here is the fact that the import line is not at the top of the page, however in this case, this is required for the program to function properly
+![Python Linter Pass](media/python-linter-check.png)
 
-![Init.py Linter](docs/readme-images/init-linter.png)
-
-### run.py
-
-![Run.py Linter](docs/readme-images/linter-pass.png)
-
-### forms.py
-
-![Forms.py Linter](docs/readme-images/linter-pass.png)
-
-### model.py
-
-![Model.py Linter](docs/readme-images/linter-pass.png)
-
-### routes.py
-
-![Routes.py Linter](docs/readme-images/linter-pass.png)
-
-## W3C Validator
-
-* On pages that use 2 different forms, there are 2 different csrf tokens which generate the same id name. 
-I have used JavaScript to edit on the id names when the DOM Content is loaded.
-
-![id Name Change](docs/readme-images/js-id-name-change.png)
+## JavaScript Linter
 
 ### Home Page
 
@@ -200,8 +178,6 @@ I have used JavaScript to edit on the id names when the DOM Content is loaded.
 ## Bugs
 
 ### Solved Bugs
-
-* The main issues I had were to do with user validation. I had problems where users were able to access pages that they should not have authorization to. The fix was fairly simple, and used an if statement to check if the current_user was admin, or if the current_user.id matched that of the review.user_id, or the dashboard user_id, etc.
 
 ![Validity Checker](docs/readme-images/validity-chcker-if-statement.png)
 

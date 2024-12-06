@@ -20,7 +20,7 @@ import json
 
 @require_POST
 def cache_checkout_data(request):
-    """"""
+    """Used to update the data on the stripe payment intent webhook"""
     try:
         pid = request.POST.get('client_secret').split('_secret')[0]
         stripe.api_key = settings.STRIPE_SECRET_KEY
@@ -30,7 +30,7 @@ def cache_checkout_data(request):
             'username': request.user,
         })
         stripe.PaymentIntent.modify(
-            pid, 
+            pid,
             receipt_email=request.user.email,
         )
         return HttpResponse(status=200)
@@ -40,8 +40,10 @@ def cache_checkout_data(request):
                                  'again later.'))
         return HttpResponse(content=e, status=400)
 
+
 @login_required
 def checkout(request):
+    """Handles the checkout and order creation process"""
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
 
@@ -168,7 +170,7 @@ def checkout_success(request, order_number):
                 'street_address2': order.street_address2,
                 'county': order.county,
             }
-            
+
             user_profile_form = UserProfileForm(profile_data, instance=profile)
             if user_profile_form.is_valid():
                 user_profile_form.save()
@@ -186,4 +188,3 @@ def checkout_success(request, order_number):
     }
 
     return render(request, template, context)
-    

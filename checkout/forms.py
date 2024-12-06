@@ -3,6 +3,7 @@ from .models import Order
 
 
 class OrderForm(forms.ModelForm):
+    """Form model for order details"""
     class Meta:
         model = Order
         fields = ('full_name', 'phone_number',
@@ -12,8 +13,7 @@ class OrderForm(forms.ModelForm):
 
     def __init__(self, *args, **kwargs):
         """
-        Add placeholders and classes, remove auto-generated
-        labels and set autofocus on first field
+        Add placeholders and classes,
         """
         super().__init__(*args, **kwargs)
         placeholders = {
@@ -34,5 +34,6 @@ class OrderForm(forms.ModelForm):
                 else:
                     placeholder = placeholders[field]
                 self.fields[field].widget.attrs['placeholder'] = placeholder
-            self.fields[field].widget.attrs['class'] = 'stripe-style-input form-control m-3 w-75'
+            self.fields[field].widget.attrs['class'] = (
+                'stripe-style-input form-control m-3 w-75')
             self.fields[field].label = False

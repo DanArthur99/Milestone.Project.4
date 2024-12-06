@@ -26,7 +26,6 @@ Deployed Website: [Books For You](https://books-for-you-19d767033b76.herokuapp.c
 
 * [Features](#Features)
   * [Main User Features](#main-user-features)
-  * [Validation](#validation)
   * [Admin Only Features](#admin-only-features)
 
 * [Database Schema](#Database-Schema)

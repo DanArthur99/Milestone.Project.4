@@ -21,12 +21,10 @@ def add_to_basket(request, book_id):
     redirect_url = request.POST.get('redirect_url')
     basket = request.session.get('basket', {})
 
-
     if book_id in list(basket.keys()):
         basket[book_id] += quantity
-        messages.success(request,
-                        (f'Updated {book.name} '
-                        f'quantity to {basket[book_id]}'))
+        messages.success(
+            request, (f'Updated {book.name}' f'quantity to {basket[book_id]}'))
     else:
         basket[book_id] = quantity
         messages.success(request, f'Added {book.name} to your basket')
@@ -42,17 +40,14 @@ def adjust_basket(request, book_id):
     quantity = int(request.POST.get('quantity'))
     basket = request.session.get('basket', {})
 
-    
     if quantity > 0:
         basket[book_id] = quantity
-        messages.success(request,
-                        (f'Updated {book.name} '
-                        f'quantity to {basket[book_id]}'))
+        messages.success(
+            request, (f'Updated {book.name}' f'quantity to {basket[book_id]}'))
     else:
         basket.pop(book_id)
-        messages.success(request,
-                        (f'Removed {book.name} '
-                        f'from your basket'))
+        messages.success(
+            request, (f'Removed {book.name}' f'from your basket'))
 
     request.session['basket'] = basket
     return redirect(reverse('view_basket'))

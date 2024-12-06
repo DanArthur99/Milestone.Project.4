@@ -4,7 +4,7 @@ from .models import Book, Genre
 # Register your models here.
 
 class BookAdmin(admin.ModelAdmin):
-
+    """Adds book data to the admin page"""
     filter_horizontal = ('genres',)
 
 class GenreAdmin(admin.ModelAdmin):

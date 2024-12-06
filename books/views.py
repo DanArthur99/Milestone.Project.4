@@ -10,6 +10,7 @@ from reviews.models import Review
 from .forms import BookForm
 # Create your views here.
 
+
 def all_books(request):
     """ A view to show all books, including sorting and search queries """
 
@@ -25,7 +26,7 @@ def all_books(request):
         reviews = Review.objects.filter(book=book)
         if reviews:
             for review in reviews:
-                new_rating += review.user_rating    
+                new_rating += review.user_rating
             book.rating = new_rating / len(reviews)
             book.save()
         else:
@@ -71,6 +72,7 @@ def all_books(request):
 
     return render(request, 'books/books.html', context)
 
+
 def about_book(request, book_id):
     """ A view to show individual book details """
 
@@ -80,10 +82,10 @@ def about_book(request, book_id):
     reviews = Review.objects.filter(book=book)
     if reviews:
         for review in reviews:
-            new_rating += review.user_rating    
+            new_rating += review.user_rating
         book.rating = new_rating / len(reviews)
         book.save()
-    
+
     sort = None
     direction = None
 
@@ -108,6 +110,7 @@ def about_book(request, book_id):
     }
 
     return render(request, 'books/about_book.html', context)
+
 
 @login_required
 def add_book(request):
@@ -180,7 +183,7 @@ def delete_book(request, book_id):
         book.delete()
         messages.success(request, 'Book deleted!')
         return redirect(reverse('books'))
-    
+
     template = 'books/delete_book.html'
     context = {
         'book': book
