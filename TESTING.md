@@ -113,9 +113,9 @@ All .views, .urls, .models, and .contexts pass the CI python linter with no erro
 
 ![W3C Checkout Success](media/checkout-success-w3c.png)
 
-### Add Product Page
+### Sign Up Page
 
-![W3C Add Product](docs/readme-images/w3c-html-add-product.png)
+![W3C Sign Up](media/sign-up-w3c.png)
 
 ### Dashboard
 
