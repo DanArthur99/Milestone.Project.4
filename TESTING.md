@@ -129,7 +129,8 @@ All .views, .urls, .models, and .contexts pass the CI python linter with no erro
 
 ### Home Page
 
-![Wave Home Page](docs/readme-images/wave-home-page.png)
+![Wave Home Page 1](media/home-wave-1.png)
+![Wave Home Page 2](media/home-wave-2.png)
 
 ### Sign Up Page
 
