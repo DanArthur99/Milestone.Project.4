@@ -168,10 +168,6 @@ Email test on order completion|User should recieve an order confirmation email o
 ![Wave Home Page 1](media/home-wave-1.png)
 ![Wave Home Page 2](media/home-wave-2.png)
 
-### Sign Up Page
-
-![Wave Sign Up](docs/readme-images/wave-sign-up.png)
-
 ### Books Page
 
 ![Wave Books](media/books-wave-1.png)
