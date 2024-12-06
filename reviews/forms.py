@@ -3,7 +3,7 @@ from books.widgets import CustomClearableFileInput
 from .models import Review
 
 class ReviewForm(forms.ModelForm):
-
+    """form object for the review form"""
     class Meta:
         model = Review
         exclude = ('book', 'user',)

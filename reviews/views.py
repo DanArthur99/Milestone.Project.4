@@ -14,6 +14,7 @@ from books.models import Book
 
 @login_required
 def add_review(request, book_id):
+    """Add a review"""
     if request.method == 'POST':
         form = ReviewForm(request.POST, request.FILES)
         userprofile = get_object_or_404(UserProfile, user=request.user)
@@ -46,7 +47,7 @@ def add_review(request, book_id):
 
 @login_required
 def edit_review(request, review_id):
-    """"""
+    """Edit a review"""
     review = get_object_or_404(Review, pk=review_id)
     book = review.book
     book_id = book.id

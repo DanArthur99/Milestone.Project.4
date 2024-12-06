@@ -210,50 +210,22 @@ The programming languages used for this project were:
 
 * The ability to add, edit and delete any user review from the database.
 
+![Admin Edit Review](media/admin-review-edit.png)
+
 #### Potential Future Feautures
 
 Some potential features that I would like to include in the future:
 
 * Enable users to have their own reading lists, where they can simply add books to this list that they may want to purchase in the future.
-* To have the site recommend some books to the user depending on their previous purchases. For example, if the user has bought a few horror books recently, then the site will recommend some more horror books
+* To have the site recommend some books to the user depending on their previous purchases. For example, if the user has bought a few horror books recently, then the site will recommend some more horror books.
 
 ## Database Schema
 
 ### Entity Relationship Diagram
 
+![Entity Relationship Diagram](media/database-schema.png)
 
-### Tables and Relationships
-
-Below are the tables and relationaships between the 5 tables in the database, as also reflected in the ERD above.
-
-#### UserProfile
-
-* id - Primary Key
-* email 
-* password 
-* username
-* reviews - one-to-many relationship with review table
-* admin 
-
-#### Book
-
-* id - Primary Key
-* name
-* brand_id - Foreign Key - many-to-one relationship with brand table
-* category_id - Foriegn Key - many-to-one relationship with category table
-* reviews - one-to-many relationship with review table
-
-#### Genre
-
-* id - Primary Key
-* brand_name 
-* gear - one-to-many relationship with gear table
-
-#### Review
-
-* id - Primary Key
-* category_name 
-* gear - one-to-many relationship with gear table
+This entity relationship was auto generated using Pgadmin. It includes all relationships between models in the entire site date, including ones made by me, and the django and allauth models.
 
 ## Deployment & Local Development
 

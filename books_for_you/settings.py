@@ -28,7 +28,7 @@ env = environ.Env(
     DEBUG=(bool, False)
 )
 
-DEBUG = False
+DEBUG = True
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -70,8 +70,6 @@ AUTHENTICATION_BACKENDS = [
 ]
 
 SITE_ID = 1
-
-EMAIL_BACKEND = ''
 
 INSTALLED_APPS = [
     'django.contrib.admin',
