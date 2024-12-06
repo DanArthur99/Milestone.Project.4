@@ -166,7 +166,7 @@ The programming languages used for this project were:
 * [JSHint](https://jshint.com/) - JavaScript linter used for checking quality of JS code.
 
 
-### Features (to be edited)
+### Features
 
 #### Main User Features
 
