@@ -4,9 +4,11 @@
 * [Manual Testing](#Manual-Testing)
   * [Full Testing](#Full-Testing)
     * [Login and Sign Up](#login-and-sign-up-testing)
-    * [CRUD Functionality](#crud-functionality)
-    * [User Validation](#user-validation)
-    * [Admin Features](#admin-features)
+    * [User CRUD Functionality](#user-crud-functionality)
+    * [Defensive Programming Tests](#defensive-programming-tests)
+    * [Admin Functionality](#admin-functionality)
+    * [Add Book Testing](#add-book-testing)
+    * [Payment System and Checkout Testing](#payment-system-and-checkout-testing)
 * [PythonLinter](#python-linter)
 * [JavaScriptLinter](#javascript-linter)
 * [W3C Validator](#W3C-Validator)
@@ -37,15 +39,16 @@ This was also tested on the following browsers:
 Create User Account|Users data is added to the databse|Signed Up with a new username and email|New account created|Pass
 Login test|The user should be logged in once they type in their email password to the login page|Enter email and passord|User is logged on|Pass
 Incorrect email login test|The user should be informed that the user is not recognised|Enter wrong email and click submit|Flash message appears user is not logged on|Pass
-Incorrect password login test|The user should be informed that the password is not recognised|Enter wrong password and click submit|Flash message appears user is not logged on|Pass
+Incorrect password login test|The user should be informed that the password is not recognised|Enter wrong password and click submit|Error messaged appears and user is not logged on|Pass
 Incorrect email format test|The site should prompt the user to enter an email in the correct format|Enter an incorrect email format in the email field|Message pops up saying to use a valid email format|Pass
 Unique Email and Username |The user cannot sign up with an email or username that already exists|Enter an existing email or username on the sign up page|Flash message appears saying an error occurred account is not created|Pass
-Update Details|The user can change their username or email address to whatever they wish and the database will update|Click update details and change username|Username changed |Pass
+Update Details|The user can update their address details on their profile page update|Click fill out the new details and click update|Details changed |Pass
 Unique Email and Username #2|User cannot change their email or password to one that already exists|Enter a usernasme or email that already exists|Flash message appears saying an error occurred user is not updated|Pass
 Update Password|User is able to update their password from their dashboard. They can then log in using the new password|Change password then attempt to log in|User is logged in with new password|Pass
 Login and sign up blank field test|If the user tries to submit either of these forms with a blank field then it will not submit the form and a message will appear saying the field is requeired|submit sign up form with blank field|User is prompted to fill in field form is not submitted|Pass
+Confirmation Email|A confirmation email with a link should be sent to new users|sign up with a brand new email|A confirmation email appers in the recipient's inbox with a confirm email link inside|Pass
 
-#### CRUD Functionality
+#### User CRUD Functionality
 
 **Test**|**Expected Outcome**|**Test Action**|**Result**|**Pass/Fail**
 :-----:|:-----:|:-----:|:-----:|:-----:
@@ -53,37 +56,63 @@ Search function|User is able to use the search bar to search for for books |Type
 Search blank test|Blank search is possible however it will just load all the books and an error pop up shoul appear|Blank search|User is prompted to enter something in the search bar via an error message|Pass
 Add review|The user is able to select a product and write a review for this product which is then publically displayed|review is submitted|Review is now display on the product dashboard|Pass
 Add review blank test|The user cannot submit a review with a blank field|Submit review with blank field|User is prompted to fill in field and form is not submitted|Admin update details|The admin user is able to access the update details page of any user|from the user dashboard click update details|User's update details page loads|Pass
-Add review duplicate test|The user cannot write more than one review per product. It will display a message saying you've already submitted a review|Try to submit a second review for a product|Flash message appears saying you've already written a review|Pass
-Add Product duplicate|user cannot add a product in the database that already exists|Attempt to submit a product with an existing name|Flash message appears saying an error occurred and product is not added|Pass
+Add review duplicate test|The user cannot write more than one review per book. It will display an error message saying they have already written a review|Try to submit a second review for a product|Error message appears saying you've already written a review|Pass
 Edit review test|user is able to edit their own reviews|Click edit review and change the contents of the review|The review is updated and the changed are displayed|Pass
 Delete review test|user is able to delete their own reviews|Click delete review|The review is removed from the database and review is no longer displayed|Pass
 
-#### User Validation
+#### Defensive Programming Tests
 
 **Test**|**Expected Outcome**|**Test Action**|**Result**|**Pass/Fail**
 :-----:|:-----:|:-----:|:-----:|:-----:
-User dashboard access test|The user is not authorised to access the dashboard of any other user|Copy user dashboard url then log into another user (non-admin) and paste url|Flash message appears saying user not authorised|Pass
-User edit review access test|The user is not authorised to access the edit review page of any other user|Copy user edit review url then log into another user (non-admin) and paste url|Flash message appears saying user not authorised|Pass
-User update details access test|The user is not authorised to access the update details page of any other user|Copy user edit review url then log into another user (non-admin) and paste url|Error message box appears saying user not authorised|Pass
+User edit review access test|A regular user is not authorised to access the edit review page of any other user|Copy user edit review url then log into another user (non-admin) and paste url|Message appears saying user not authorised and user is redirected to homepage|Pass
 User delete review access test|The user is not authorised to delete any other user's reviews|Copy user delete review url then log into another user (non-admin) and paste url|Flash message appears saying user not authorised|Pass
+User add book|A user is not authorized to access to functionality so should be booted away|Copy add book url from admin account then log in to a regular user account. Paste and press enter|An error message appears saying that is action is forbidden for the user and user is redirected|Pass
+User delete book|A user is not authorized to access this functionality so should be booted away|Copy delete book url from admin account then log in to a regular user account|An error message appears saying that is action is forbidden for the user and user is redirected|Pass
 
-#### Admin Functionality and 'Add Book' testing
+#### Admin Functionality
 
 **Test**|**Expected Outcome**|**Test Action**|**Result**|**Pass/Fail**
 :-----:|:-----:|:-----:|:-----:|:-----:
-author field blank test|The admin user cannot submit a blank field |Click add brand and click submit while brand name field is empty|user is prompted for field data|Pass
-book title field blank test|The site should prompt the user to add a book title|submit form with title left blank|form prompts for author to enter a title|Pass
-price field blank test|The site should prompt the user to add a price for the book|submit form with price left blank|form prompts for author to enter price|Pass
-Admin edit reviews|The admin is able to edit any user's reviews |Click on a user's dashboard then click on the link to see their reviews choose any review and edit it|the edit review page loads and when the admin user clicks submit the edited review is displayed|Pass
-Admin delete reviews|The admin is able to delete any user's reviews |Click on a user's dashboard then click on the link to see their reviews choose any review and click delete review|Modal appears for a double check then review is deleted from database when yes is clicked|Pass
+Admin edit reviews|The admin is able to edit any user's reviews |lick on any book and any review then click the delete button|the edit review page loads and when the admin user clicks submit the edited review is displayed|Pass
+Admin delete reviews|The admin is able to delete any user's reviews|click on any book and any review then click the delete button|A new page loads for a double check and the review is deleted from database when yes is clicked|Pass
+
+#### Add Book testing
+
+**Test**|**Expected Outcome**|**Test Action**|**Result**|**Pass/Fail**
+:-----:|:-----:|:-----:|:-----:|:-----:
+author field blank test|The admin user cannot submit a blank field |Click submit with author field empty|user is prompted for field data|Pass
+book title field blank test|The site should prompt the user to add a book title|try to submit form with title left blank|form prompts for user to enter a title|Pass
+price field blank test|The site should prompt the user to add a price for the book|try to submit form with price left blank|form prompts for user to enter price|Pass
+pages blank field test|The site should prompt the user to enter a value to the pages form field|try to submit form with pages left blank|form prompts for user to enter pages|Pass
+pages blank negative number test|The site should tell the user they must enter a value greater than or equal to 0| try to submit form with pages set as a negative number|form prompts for user to enter a value greater than or equal to 0|Pass
+language blank field test|The site should prompt the user to enter a value to the language form field|try to submit form with langauge field left blank|form prompts for user to enter language|Pass
+year of publish blank field test|The site should prompt the user to enter a year of publish|try to submit form with year of publish left blank|form prompts for user to enter a year of publish|Pass
+year of publish future year test|an error message should appear saying the value has to be smaller or equal to the current year|try to submit form with year of publish in the future|form refreshes with an error message saying they must enter a value smaller than or equal to whatever the current year is|Pass
+genres unselected field test|The site should prompt the select a value from this field|try to submit form with a genre not selected|form prompts for user to choose a value|Pass
+image unchosen test|It is ok if there is not image of the book. However, a noimage image should appear in its place rather than the default alt label|add a new book with no image|The noimage png file appears in it's place|Pass
+
+#### Payment System and Checkout testing
+
+**Test**|**Expected Outcome**|**Test Action**|**Result**|**Pass/Fail**
+:-----:|:-----:|:-----:|:-----:|:-----:
+Add to basket test|A user is able to add a book to their basket|click add to basket on any 'about book' page|the book appears in their basket|Pass
+paymentintent created test|A stripe payment intent is created when a user enters the checkout page|Navigate to the checkout page, then check the connected stripe account and view stripe events|A paymentintent.create is seen|Pass
+Invalid card test|If a card number is invalid, then an error will appear to the user informing them|Enter a deliberately incorrect card number|Error message appears immediate saying card is invalid|Pass
+Phone number blank test|User should be prompted to enter a phone number|attempt to checkout without setting a phone number|User is prompted to enter a phone number|Pass
+
+
 
 ## Python Linter
 
-All .views, .urls, .models, and .contexts pass the CI python linter with no errors.
+* All .views, .urls, .models, and .contexts pass the CI python linter with no errors.
 
 ![Python Linter Pass](media/python-linter-check.png)
 
 ## JavaScript Linter
+
+* All the js scripts throughou the project passed the JS Linter. The only issue being the 'Stripe' variable being undefined. However, this is because it is obtained using the stripe CDN in the HTML.
+
+![Stripe Linter](media/stripe-js-linter.png)
 
 ## W3C Validation Checker
 
@@ -160,23 +189,46 @@ All .views, .urls, .models, and .contexts pass the CI python linter with no erro
 
 ### Solved Bugs
 
-![Validity Checker](docs/readme-images/validity-chcker-if-statement.png)
+* One problem I came across was that I was struggling to host my static files. To fix this, I used cloudinary instead of AWS and set the config settings in my settings.py file to these variables.
 
-This checker and variations of it has been used throughout the routes.py file to check if the user has the correct authorisation.
+![Cloudinary Settings](media/cloudinary-settings.png)
 
 ## Testing User Stories
 
 #### Overall Client Goals
 
 1. To be able to search for books on the site
+
+![Search](media/search-us.png)
+
 2. To be able to leave reviews for books on the site
+
+![Add Review](media/add-review-feature.png)
+![Left Review](media/left-review.png)
+
 3. To be able to purchase books from the bookstore
+
+![Checkout](media/checkout-feature.png)
+![Checkout Success](media/checkout-success.png)
+
 4. To be able to create an account to keep track of one's order history
+
+![Order History](media/order-history.png)
 
 #### Site Owner Goals
 
 1. To be able to add and delete books on the bookstore where necessary
+
+![Add Book](media/add-book-feature.png)
+
 2. To be able to take payments from users when they purchase a book.
+
+* Using Stripe, the site owner is able to take payments from customers, as evidenced by these webhooks.
+
+![Stripe](media/stripe-webhooks.png)
+
 3. To be able to edit or delete any review on the site, as a site superuser
+
+![Admin Edit Review](media/admin-review-edit.png)
 
 

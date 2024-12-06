@@ -168,6 +168,7 @@ The programming languages used for this project were:
 * [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) - Used for testing CSS validation.
 * [Wave Web Accessibility Evaluation Tool](https://wave.webaim.org/extension/) - Used for testing webpage accessibility.
 * [CI Python Linter](https://pep8ci.herokuapp.com/) - Used for checking the quality of the Python Code.
+* [JSHint](https://jshint.com/) - JavaScript linter used for checking quality of JS code.
 
 
 ### Features (to be edited)
@@ -224,7 +225,7 @@ Some potential features that I would like to include in the future:
 
 ![Entity Relationship Diagram](media/database-schema.png)
 
-This entity relationship was auto generated using Pgadmin. It includes all relationships between models in the entire site date, including ones made by me, and the django and allauth models.
+This entity relationship was generated using Pgadmin. It includes all relationships between models in the entire site database, including ones made by me, and the django and allauth models.
 
 ## Deployment & Local Development
 
@@ -293,6 +294,10 @@ To clone the repository:
 [Testing](TESTING.md)
 
 ## Credits
+
+### Code
+
+
 
 ### Media
 
