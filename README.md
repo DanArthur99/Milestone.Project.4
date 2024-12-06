@@ -297,7 +297,9 @@ To clone the repository:
 
 ### Code
 
-
+* [Stripe Webhook handling](https://github.com/ckz8780/boutique_ado_v1) - author: ckz8780
+  * Provided a good base for webhook handling implementation
 
 ### Media
-
+  * [Codemy Django Wednesday](https://www.youtube.com/watch?v=HHx3tTQWUx0&list=PLCC34OHNcOtqW9BJmgQPPzUpJ8hl49AGy) - author: Codemy.com
+    * Video series going over Django basics

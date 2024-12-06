@@ -98,8 +98,10 @@ image unchosen test|It is ok if there is not image of the book. However, a noima
 Add to basket test|A user is able to add a book to their basket|click add to basket on any 'about book' page|the book appears in their basket|Pass
 paymentintent created test|A stripe payment intent is created when a user enters the checkout page|Navigate to the checkout page, then check the connected stripe account and view stripe events|A paymentintent.create is seen|Pass
 Invalid card test|If a card number is invalid, then an error will appear to the user informing them|Enter a deliberately incorrect card number|Error message appears immediate saying card is invalid|Pass
-Phone number blank test|User should be prompted to enter a phone number|attempt to checkout without setting a phone number|User is prompted to enter a phone number|Pass
-
+Phone number blank test|User should be prompted to enter a phone number|attempt to complete order without setting a phone number|User is prompted to enter a phone number|Pass
+Street address 1 blank test|User should be prompted to fill out the field|attempt to complete order wuth setting this field|User is prompted to fill ou the field|Pass
+Town or City blank test|User should be prompted to fill out the town filed|attempt to complete order wuth setting this field|User is prompted to fill ou the field|Pass
+Email test on order completion|User should recieve an order confirmation email once an order is placed|Place an order as any user|An order confirmation is send to the user's email, containing their order number|Pass
 
 
 ## Python Linter
@@ -192,6 +194,14 @@ Phone number blank test|User should be prompted to enter a phone number|attempt 
 * One problem I came across was that I was struggling to host my static files. To fix this, I used cloudinary instead of AWS and set the config settings in my settings.py file to these variables.
 
 ![Cloudinary Settings](media/cloudinary-settings.png)
+
+* I encountered a problem where the order number that the user was receiving in thier email was not the once they were being shown on their screen. It turns out that it was duplicating every order being placed due to the checks done by the webhook handler. To fix this, I altered the syntax slightly to use get_object_or_404, using the pid as the unique key, rather than trying to use object.get( ..etc... ). This appears to have fixed the issue.
+
+![Altered Get Object](media/altered-get-object.png)
+
+### Known Bugs
+
+* At the moment, while not technically a bug, duplicate book entries are possible. This is not a major issue as it doesn't massively affect a normal user's experience, as well as being entirely controlled by the admin side. However, this would be something I would like to ammend in the future.
 
 ## Testing User Stories
 
