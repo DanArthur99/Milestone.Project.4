@@ -43,6 +43,10 @@ th, td {
     color: white !important;
 }
 
+.select2-selection__choice__display {
+    color: black !important;
+}
+
 /* from Bulma */
 .icon {
     align-items: center;

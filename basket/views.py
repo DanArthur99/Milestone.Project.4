@@ -3,16 +3,16 @@ from django.shortcuts import (
 )
 from django.urls import reverse
 from django.contrib import messages
-
+from django.contrib.auth.decorators import login_required
 from books.models import Book
 
-
+@login_required
 def view_basket(request):
     """ A view that renders the basket contents page """
 
     return render(request, 'basket/basket.html')
 
-
+@login_required
 def add_to_basket(request, book_id):
     """ Add a quantity of the specified book to the shopping basket """
 
@@ -32,7 +32,7 @@ def add_to_basket(request, book_id):
     request.session['basket'] = basket
     return redirect(redirect_url)
 
-
+@login_required
 def adjust_basket(request, book_id):
     """Adjust the quantity of the specified book to the specified amount"""
 
@@ -52,7 +52,7 @@ def adjust_basket(request, book_id):
     request.session['basket'] = basket
     return redirect(reverse('view_basket'))
 
-
+@login_required
 def remove_from_basket(request, book_id):
     """Remove the book from the shopping basket"""
 
