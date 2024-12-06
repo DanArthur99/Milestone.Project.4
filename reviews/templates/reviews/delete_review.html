@@ -23,7 +23,7 @@
                 <form method="POST" action="{% url 'delete_review' review.id %}" class="form mb-2" enctype="multipart/form-data">
                     {% csrf_token %}
                     <div class="text-right">
-                        <a class="btn btn-danger rounded-0 text-white" href="{% url 'books' %}">No</a>
+                        <a class="btn btn-danger rounded-0 text-white" href="{% url 'about_book' book.id %}">No</a>
                         <button class="btn btn-black rounded-0 text-white" type="submit">Yes</button>
                     </div>
                 </form>

@@ -83,18 +83,19 @@ def edit_review(request, review_id):
 def delete_review(request, review_id):
     """ Delete a review from the about book page """
     review = get_object_or_404(Review, pk=review_id)
+    book = review.book
 
     if not request.user.is_superuser and request.user != review.user :
         messages.error(request, "Oops, looks like this functionality is forbidden")
         return redirect(reverse('homepage'))
-    if request.method == "POST":
-        book = review.book
+    if request.method == "POST": 
         review.delete()
         messages.success(request, 'Review deleted!')
         return redirect(reverse('about_book', args=[book.id]))
     
     template = "reviews/delete_review.html"
     context = {
+        "book": book,
         "review": review
     }
     return render(request, template, context)

@@ -17,33 +17,37 @@
 
                 <form method="POST" action="{% url 'account_signup' %}">
                     {% csrf_token %}
-
+                    <ul class="text-white">
+                        {% for key, value in form.errors.items %}
+                            <li>{% if key != '__all__' %}{{ key }} {% endif %}{{ value }}</li>
+                        {% endfor %}
+                    </ul>
                     <div class="input-group mb-2 justify-content-center">
                         <label for="username" class="form-label w-100 text-center text-white">Username:</label>
-                        {{ form.username|attr:"class:form-control rounded-3" }}
+                        {{ form.username|attr:"class:form-control rounded-3"|attr:"id:username" }}
                     </div>
 
             
                     <div class="input-group mb-2 justify-content-center">
                         <label for="email" class="form-label w-100 text-center text-white">Email:</label>
-                        {{ form.email|attr:"class:form-control rounded-3" }}
+                        {{ form.email|attr:"class:form-control rounded-3"|attr:"id:email" }}
                     </div>
 
                     
                     <div class="input-group mb-2 justify-content-center">
                         <label for="email2" class="form-label w-100 text-center text-white">Confirm Email:</label>
-                        {{ form.email2|attr:"class:form-control rounded-3" }} 
+                        {{ form.email2|attr:"class:form-control rounded-3"|attr:"id:email2" }} 
                     </div>
                    
                     <div class="input-group mb-2 justify-content-center">
                         <label for="login" class="form-label w-100 text-center text-white">Password:</label>
-                        {{ form.password1|attr:"class:form-control rounded-3" }}
+                        {{ form.password1|attr:"class:form-control rounded-3"|attr:"id:password1" }}
                     </div>
 
                     
                     <div class="input-group mb-4 justify-content-center">
                         <label for="login" class="form-label w-100 text-center text-white">Confirm Password:</label>
-                        {{ form.password2|attr:"class:form-control rounded-3" }}
+                        {{ form.password2|attr:"class:form-control rounded-3"|attr:"id:password2" }}
                     </div>
 
                     <div class="text-center">

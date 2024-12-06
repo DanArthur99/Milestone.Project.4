@@ -104,6 +104,7 @@ def about_book(request, book_id):
         'book': book,
         'reviews': reviews,
         'current_sorting': current_sorting,
+        'user': request.user
     }
 
     return render(request, 'books/about_book.html', context)

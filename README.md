@@ -131,6 +131,9 @@ The goal of the project was to create a simple, easy to use online bookstore, wh
 
 #### Typography
 
+The Website uses the "Crimson Text" font family from Google Fonts thoughout the entire website.
+I choice this font to match the library-esque theme of the site, as opposed to going for a more sylistic looking typeface.
+
 #### Colour Palette
 
 ![Color Palette](media/color-pallette.png)
@@ -172,7 +175,30 @@ The programming languages used for this project were:
 
 #### Main User Features
 
-* 
+* Users are able to create an account with their email, and give themselves a username.
+
+![Sign Up Feature](media/sign-up-feature.png)
+
+* Users are able to use the search bar to search for a book
+
+![Seach Feature](media/search-feature.png)
+
+* Users are also able to then sort these by name, rating, or price
+
+![Sort Feature](media/sort-feature.png)
+
+* Users can post reviews for books across the site
+
+![Add Review Feature](media/add-review-feature.png)
+![Review Feature](media/review-feature.png)
+
+* They can also edit these reviews, but only the ones they have posted.
+
+![Edit Review Feature](media/edit-review-feature.png)
+
+* Users can add items to they're shopping bag, and purchase these items
+
+![Checkout Feature](media/checkout-feature.png)
 
 ##### 
 
@@ -180,7 +206,9 @@ The programming languages used for this project were:
 
 * The ability to add, edit and delete books from the database.
 
-* The ability to add, edit and delete any user review from the database
+![Add Book Feature](media/add-book-feature.png)
+
+* The ability to add, edit and delete any user review from the database.
 
 #### Potential Future Feautures
 
@@ -261,36 +289,33 @@ Github Pages and Heroku was used to deploy the live website. The instructions to
 
 To fork the repository:
 
-  1. Log in or Sign Up to Github.
-  2. Go to the repository for this project, DanArthur99/Milestone.Project.4
-  3. Click the Fork button in the top right corner.
+1. Log in or Sign Up to Github.
+2. Go to the repository for this project, DanArthur99/Milestone.Project.4
+3. Click the Fork button in the top right corner.
 
 #### Cloning a Repository
 
 To clone the repository:
 
-  1. Log in or Sign Up to GitHub.
-  2. Go to the repository for this project, DanArthur99 / Milestone-Project-3.
-  3. Click on the code button, select whether you would like to clone with HTTPS, SSH or GitHub CLI and copy the link shown.
-  4. Open the terminal in your IDE and set your working directory to the location you want to use for the cloned repository.
-  5. Type 'git clone' into the terminal window, and paste the link from step 3, then press enter.
-  6. Your cloned repository should now be located in your chosen directory
-  7. Open your terminal window, and type in the following command, " pip install -r requirements.txt ". This will install all dependencies for this project onto your local machine or virtual environment.
-
-  8. Create an .env file that contains the following variables:
-    * CLOUDINARY_API_KEY
-    * CLOUDINARY_API_SECRET
-    * CLOUDINARY_CLOUD_NAME
-    * EMAIL_HOST_PASS
-    * EMAIL_HOST_USER
-    * SECRET_KEY
-    * STRIPE_PUBLIC_KEY
-    * STRIPE_SECRET_KEY
-    * STRIPE_WH_SECRET
-  
-  9. Assign these variables with all of your own secret keys.
-
-  10. You are now ready ready for local development.
+1. Log in or Sign Up to GitHub.
+2. Go to the repository for this project, DanArthur99/Milestone.Project.4
+3. Click on the code button, select whether you would like to clone with HTTPS, SSH or GitHub CLI and copy the link shown.
+4. Open the terminal in your IDE and set your working directory to the location you want to use for the cloned repository.
+5. Type 'git clone' into the terminal window, and paste the link from step 3, then press enter.
+6. Your cloned repository should now be located in your chosen directory
+7. Open your terminal window, and type in the following command, " pip install -r requirements.txt ". This will install all dependencies for this project onto you local machine or virtual environment.
+8. Create an .env file that contains the following variables:
+  * CLOUDINARY_API_KEY
+  * CLOUDINARY_API_SECRET
+  * CLOUDINARY_CLOUD_NAME
+  * EMAIL_HOST_PASS
+  * EMAIL_HOST_USER
+  * SECRET_KEY
+  * STRIPE_PUBLIC_KEY
+  * STRIPE_SECRET_KEY
+  * STRIPE_WH_SECRET  
+9. Assign these variables with all of your own secret keys.
+10. You are now ready ready for local development.
 
 ## Testing
 
