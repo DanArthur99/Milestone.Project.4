@@ -118,7 +118,7 @@
                         <h6 class="card-subtitle mb-2 text-body-secondary">{{ review.user_rating }} / 10</h6>
                         <h6 class="card-subtitle mb-2 text-body-primary">review by: {{ review.user }}</h6>
                         <p class="card-text">{{ review.content }}</p>
-                        {% if request.user.is_superuser or request.user == review.user %}
+                        {% if request.user.is_superuser or request.user == review.user.user %}
                         <div class="mt-2">
                             <a href="{% url 'edit_review' review.id %}">Edit</a>
                             <a class="text-danger" href="{% url 'delete_review' review.id %}">Delete</a>
