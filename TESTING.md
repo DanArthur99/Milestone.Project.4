@@ -71,7 +71,6 @@ User delete review access test|The user is not authorised to delete any other us
 
 **Test**|**Expected Outcome**|**Test Action**|**Result**|**Pass/Fail**
 :-----:|:-----:|:-----:|:-----:|:-----:
-
 Admin dashboard access|The admin user is able to acess the dashboard of any other user|Copy user (non-admin) dashbooard url then log into another user (admin) and paste url|User dashboard loads|Pass
 Admin update details|The admin user is able to access the update details page of any user|from the user dashboard click update details|User's update details page loads|Pass
 Admin delete user|the admin user is able to delete any user from the database|From the user dashboard click delete user|Modal appears for a double check then user is deleted from database when yes is clicked|Pass
@@ -80,14 +79,6 @@ Admin edit category|The admin user is able to edit a category name|Click on any 
 Admin delete brand|The admin user is able to delete a brand along with all product under that brand|Click delete brand on one of the brands from the brands page|The chosen brand is delete from the database along with all products an their reviews|Pass
 Admin delete category|The admin user is able to delete a category along with all product under that category|Click delete category on one of the categories from the categories page|The chosen category is delete from the database along with all products an their reviews|Pass
 author field blank test|The admin user cannot submit a blank field |Click add brand and click submit while brand name field is empty|user is prompted for field data|Pass
-Add Category blank test|The admin user cannot submit a blank field |Click add category and click submit while category name field is empty|user is prompted for field data|Pass
-Edit Brand blank test|The admin user cannot submit a blank field |Click edit brand and click submit while brand name field is empty|user is prompted for field data|Pass
-Edit Category blank test|The admin user cannot submit a blank field |Click edit category and click submit while category name field is empty|user is prompted for field data|Pass
-Add Brand duplcate test|The admin user cannot add a brand name that already exists|Submit a brand name that already exists in the database|Flash message appears saying an error occurred brand is not added to database|Pass
-Add Category duplicate test|The admin user cannot add a category name that already exists|Submit a category name that already exists in the database|Flash message appears saying an error occurred category is not added to database|Pass
-Edit Brand duplicate test|The admin user cannot add a brand name that already exists|Submit a brand name that already exists in the database|Flash message appears saying an error occurred brand is not updated|Pass
-Edit Category duplicate test|The admin user cannot add a category name that already exist|Submit a category name that already exists in the database|Flash message appears saying an error occurred category is not updated|Pass
-Admin delete product test|The admin is able to delete any product from the database along with its reviews|Click delete product on the product dashboard|Modal appears for a double check then product is deleted from database when yes is clicked along with all reviews of that product|Pass
 Admin edit reviews|The admin is able to edit any user's reviews |Click on a user's dashboard then click on the link to see their reviews choose any review and edit it|the edit review page loads and when the admin user clicks submit the edited review is displayed|Pass
 Admin delete reviews|The admin is able to delete any user's reviews |Click on a user's dashboard then click on the link to see their reviews choose any review and click delete review|Modal appears for a double check then review is deleted from database when yes is clicked|Pass
 
