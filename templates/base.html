@@ -52,7 +52,8 @@
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
                 <form method="GET" action="{% url 'books' %}">
                     <div class="input-group w-100">
-                        <input class="form-control border border-white rounded-start-5" type="text" name="q"
+                        <label for="search" class="d-none"></label>
+                        <input class="form-control border border-white rounded-start-5" id="search" type="text" name="q"
                             placeholder="Search for a book or an author">
                         <div class="input-group-append">
                             <button class="form-control btn btn-white border border-white rounded-end-5" type="submit">
