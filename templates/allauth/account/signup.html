@@ -40,14 +40,20 @@
                     </div>
                    
                     <div class="input-group mb-2 justify-content-center">
-                        <label for="login" class="form-label w-100 text-center text-white">Password:</label>
-                        {{ form.password1|attr:"class:form-control rounded-3"|attr:"id:password1" }}
+                        <label for="password1" class="form-label w-100 text-center text-white">Password:</label>
+                        {{ form.password1|attr:"class:form-control rounded-3"|attr:"id:password1"|attr:"aria-describedby: " }}
                     </div>
 
-                    
+                    <ul class="text-white" id="id_password1_helptext">
+                        <li>Your password can’t be too similar to your other personal information</li>
+                        <li>Your password must contain at least 8 characters.</li>
+                        <li>Your password can’t be a commonly used password.</li>
+                        <li>Your password can’t be entirely numeric.</li>
+                    </ul>
+
                     <div class="input-group mb-4 justify-content-center">
-                        <label for="login" class="form-label w-100 text-center text-white">Confirm Password:</label>
-                        {{ form.password2|attr:"class:form-control rounded-3"|attr:"id:password2" }}
+                        <label for="password2" class="form-label w-100 text-center text-white">Confirm Password:</label>
+                        {{ form.password2|attr:"class:form-control rounded-3"|attr:"id:password2"}}
                     </div>
 
                     <div class="text-center">

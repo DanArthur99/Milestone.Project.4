@@ -93,23 +93,25 @@ All .views, .urls, .models, and .contexts pass the CI python linter with no erro
 
 ### Books Page
 
-![W3C Home Page](media/books-w3c.png)
+![W3C Books Page](media/books-w3c.png)
 
-### Sign Up Page
+### About Book Page
 
-![W3C Sign Up](docs/readme-images/w3c-html-sign-up.png)
+![W3C About Book Page](media/about-book-w3c.png)
 
-### Brands Page
+### Basket Page
 
-![W3C Brands](docs/readme-images/w3c-brands-page.png)
+![W3C Basket Page](media/basket-w3c.png)
 
-### Categories Page
+### Checkout Page
 
-![W3C Categories](docs/readme-images/w3c-html-categories.png)
+![W3C Checkout Page](media/checkout-w3c.png)
 
-### Search Page
+* Only 1 warning comes up about there being no text in the h1 tag. However this is because the font awesome spinner is inside instead.
 
-![W3C Search](docs/readme-images/w3c-search.png)
+### Checkout Success Page
+
+![W3C Checkout Success](media/checkout-success-w3c.png)
 
 ### Add Product Page
 
